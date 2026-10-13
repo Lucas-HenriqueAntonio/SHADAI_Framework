@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\caption{Allocation-distribution fairness under different $\epsilon$ values. Values are reported as mean and 95\% confidence interval over 30 simulation seeds.}
+\label{tab:jain_fairness_epsilon}
+\begin{tabular}{c|cc}
+\hline
+$\epsilon$ & Jain's Fairness Index & Unique Vehicles \\
+\hline
+0.00 & 0.8570 [0.8403, 0.8737] & 41.90 [40.44, 43.36] \\
+0.10 & 0.8743 [0.8566, 0.8919] & 43.00 [41.61, 44.39] \\
+\textbf{0.20} & 0.8917 [0.8787, 0.9047] & 44.53 [43.11, 45.95] \\
+0.30 & 0.8953 [0.8821, 0.9085] & 44.77 [43.74, 45.80] \\
+0.50 & 0.9128 [0.8977, 0.9280] & 45.83 [44.41, 47.25] \\
+1.00 & 0.9295 [0.9178, 0.9413] & 47.33 [46.03, 48.63] \\
+\hline
+\end{tabular}
+\vspace{1mm}
+\parbox{0.96\columnwidth}{\footnotesize Jain's index is computed from the number of task allocations received by each vehicle that was selected at least once during a simulation run. Therefore, it quantifies the uniformity of allocation distribution among selected vehicles, rather than fairness over the complete eligible-vehicle population.}
+\end{table}

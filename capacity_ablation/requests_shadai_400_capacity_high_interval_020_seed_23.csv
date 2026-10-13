@@ -1,0 +1,180 @@
+experimento,seed,rng_scheme,telemetry_scheme,request_interval,cooldown_steps,step,servico,active_vehicles,eligible_candidates,allocated,failure_reason,selected_vehicle,completion_step
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,20,Processamento de Imagem Urbana,17,12,True,,5,80
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,40,Atualização de Modelos Locais (ML),34,34,True,,23,120
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,60,Diagnóstico Veicular,51,12,True,,13,100
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,80,Diagnóstico Veicular,66,23,True,,7,120
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,100,Agregação de Dados de Sensores,82,8,True,,56,130
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,120,Agregação de Dados de Sensores,98,13,True,,81,150
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,140,Reencaminhamento de Dados (Edge Relay),109,0,False,no_eligible_candidates,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,160,Reencaminhamento de Dados (Edge Relay),121,0,False,no_eligible_candidates,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,180,Diagnóstico Veicular,128,42,True,,69,220
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,200,Processamento de Imagem Urbana,124,93,True,,145,260
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,220,Reencaminhamento de Dados (Edge Relay),134,0,False,no_eligible_candidates,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,240,Processamento de Imagem Urbana,145,123,True,,172,300
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,260,Atualização de Modelos Locais (ML),145,145,True,,84,340
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,280,Processamento de Imagem Urbana,153,111,True,,171,340
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,300,Diagnóstico Veicular,145,43,True,,172,340
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,320,Processamento de Imagem Urbana,150,132,True,,43,380
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,340,Processamento de Imagem Urbana,148,104,True,,264,400
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,360,Atualização de Modelos Locais (ML),158,158,True,,265,440
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,380,Processamento de Imagem Urbana,153,132,True,,244,440
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,400,Processamento de Imagem Urbana,151,121,True,,319,460
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,420,Agregação de Dados de Sensores,160,6,True,,328,450
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,440,Agregação de Dados de Sensores,161,10,True,,289,470
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,460,Reencaminhamento de Dados (Edge Relay),163,0,False,no_eligible_candidates,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,480,Agregação de Dados de Sensores,155,17,True,,223,510
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,500,Atualização de Modelos Locais (ML),157,157,True,,400,580
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,520,Diagnóstico Veicular,151,27,True,,374,560
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,540,Processamento de Imagem Urbana,150,123,True,,295,600
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,560,Processamento de Imagem Urbana,145,119,True,,308,620
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,580,Reencaminhamento de Dados (Edge Relay),140,0,False,no_eligible_candidates,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,600,Agregação de Dados de Sensores,145,10,True,,419,630
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,620,Processamento de Imagem Urbana,139,110,True,,502,680
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,640,Agregação de Dados de Sensores,148,11,True,,498,670
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,660,Processamento de Imagem Urbana,153,108,True,,402,720
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,680,Processamento de Imagem Urbana,154,110,True,,483,740
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,700,Agregação de Dados de Sensores,150,17,True,,534,730
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,720,Diagnóstico Veicular,160,37,True,,584,760
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,740,Reencaminhamento de Dados (Edge Relay),160,0,False,no_eligible_candidates,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,760,Processamento de Imagem Urbana,164,123,True,,587,820
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,780,Agregação de Dados de Sensores,169,11,True,,471,810
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,800,Reencaminhamento de Dados (Edge Relay),156,0,False,no_eligible_candidates,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,820,Agregação de Dados de Sensores,160,11,True,,659,850
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,840,Atualização de Modelos Locais (ML),158,158,True,,641,920
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,860,Agregação de Dados de Sensores,154,8,True,,622,890
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,880,Atualização de Modelos Locais (ML),150,150,True,,627,960
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,900,Atualização de Modelos Locais (ML),156,156,True,,677,980
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,920,Atualização de Modelos Locais (ML),155,155,True,,599,1000
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,940,Processamento de Imagem Urbana,150,130,True,,779,1000
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,960,Reencaminhamento de Dados (Edge Relay),152,0,False,no_eligible_candidates,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,980,Reencaminhamento de Dados (Edge Relay),146,0,False,no_eligible_candidates,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1000,Diagnóstico Veicular,154,32,True,,734,1040
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1020,Processamento de Imagem Urbana,132,116,True,,715,1080
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1040,Agregação de Dados de Sensores,122,12,True,,811,1070
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1060,Reencaminhamento de Dados (Edge Relay),102,0,False,no_eligible_candidates,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1080,Agregação de Dados de Sensores,93,7,True,,741,1110
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1100,Agregação de Dados de Sensores,68,4,True,,740,1130
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1120,Reencaminhamento de Dados (Edge Relay),57,0,False,no_eligible_candidates,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1140,Agregação de Dados de Sensores,51,4,True,,740,1170
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1160,Diagnóstico Veicular,31,3,True,,748,1200
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1180,Atualização de Modelos Locais (ML),26,26,True,,723,1260
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1200,Atualização de Modelos Locais (ML),18,18,True,,833,1280
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1220,Reencaminhamento de Dados (Edge Relay),13,0,False,no_eligible_candidates,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1240,Processamento de Imagem Urbana,2,1,True,,823,1300
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1260,Diagnóstico Veicular,2,0,False,no_eligible_candidates,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1280,Processamento de Imagem Urbana,1,1,True,,823,1340
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1300,Reencaminhamento de Dados (Edge Relay),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1320,Atualização de Modelos Locais (ML),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1340,Reencaminhamento de Dados (Edge Relay),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1360,Reencaminhamento de Dados (Edge Relay),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1380,Processamento de Imagem Urbana,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1400,Agregação de Dados de Sensores,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1420,Processamento de Imagem Urbana,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1440,Diagnóstico Veicular,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1460,Processamento de Imagem Urbana,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1480,Reencaminhamento de Dados (Edge Relay),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1500,Agregação de Dados de Sensores,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1520,Atualização de Modelos Locais (ML),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1540,Processamento de Imagem Urbana,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1560,Reencaminhamento de Dados (Edge Relay),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1580,Atualização de Modelos Locais (ML),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1600,Diagnóstico Veicular,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1620,Agregação de Dados de Sensores,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1640,Reencaminhamento de Dados (Edge Relay),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1660,Reencaminhamento de Dados (Edge Relay),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1680,Agregação de Dados de Sensores,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1700,Reencaminhamento de Dados (Edge Relay),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1720,Reencaminhamento de Dados (Edge Relay),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1740,Agregação de Dados de Sensores,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1760,Agregação de Dados de Sensores,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1780,Atualização de Modelos Locais (ML),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1800,Processamento de Imagem Urbana,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1820,Diagnóstico Veicular,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1840,Agregação de Dados de Sensores,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1860,Diagnóstico Veicular,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1880,Reencaminhamento de Dados (Edge Relay),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1900,Atualização de Modelos Locais (ML),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1920,Processamento de Imagem Urbana,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1940,Atualização de Modelos Locais (ML),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1960,Reencaminhamento de Dados (Edge Relay),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,1980,Atualização de Modelos Locais (ML),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2000,Diagnóstico Veicular,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2020,Diagnóstico Veicular,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2040,Atualização de Modelos Locais (ML),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2060,Diagnóstico Veicular,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2080,Reencaminhamento de Dados (Edge Relay),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2100,Reencaminhamento de Dados (Edge Relay),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2120,Atualização de Modelos Locais (ML),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2140,Reencaminhamento de Dados (Edge Relay),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2160,Atualização de Modelos Locais (ML),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2180,Diagnóstico Veicular,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2200,Reencaminhamento de Dados (Edge Relay),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2220,Atualização de Modelos Locais (ML),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2240,Reencaminhamento de Dados (Edge Relay),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2260,Diagnóstico Veicular,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2280,Agregação de Dados de Sensores,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2300,Agregação de Dados de Sensores,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2320,Processamento de Imagem Urbana,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2340,Processamento de Imagem Urbana,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2360,Atualização de Modelos Locais (ML),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2380,Agregação de Dados de Sensores,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2400,Reencaminhamento de Dados (Edge Relay),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2420,Diagnóstico Veicular,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2440,Processamento de Imagem Urbana,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2460,Processamento de Imagem Urbana,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2480,Reencaminhamento de Dados (Edge Relay),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2500,Processamento de Imagem Urbana,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2520,Reencaminhamento de Dados (Edge Relay),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2540,Diagnóstico Veicular,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2560,Processamento de Imagem Urbana,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2580,Agregação de Dados de Sensores,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2600,Diagnóstico Veicular,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2620,Atualização de Modelos Locais (ML),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2640,Atualização de Modelos Locais (ML),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2660,Atualização de Modelos Locais (ML),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2680,Processamento de Imagem Urbana,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2700,Reencaminhamento de Dados (Edge Relay),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2720,Atualização de Modelos Locais (ML),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2740,Processamento de Imagem Urbana,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2760,Agregação de Dados de Sensores,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2780,Atualização de Modelos Locais (ML),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2800,Diagnóstico Veicular,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2820,Agregação de Dados de Sensores,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2840,Processamento de Imagem Urbana,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2860,Agregação de Dados de Sensores,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2880,Agregação de Dados de Sensores,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2900,Diagnóstico Veicular,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2920,Processamento de Imagem Urbana,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2940,Processamento de Imagem Urbana,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2960,Diagnóstico Veicular,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,2980,Agregação de Dados de Sensores,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3000,Atualização de Modelos Locais (ML),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3020,Atualização de Modelos Locais (ML),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3040,Atualização de Modelos Locais (ML),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3060,Diagnóstico Veicular,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3080,Agregação de Dados de Sensores,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3100,Diagnóstico Veicular,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3120,Atualização de Modelos Locais (ML),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3140,Processamento de Imagem Urbana,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3160,Atualização de Modelos Locais (ML),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3180,Processamento de Imagem Urbana,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3200,Atualização de Modelos Locais (ML),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3220,Agregação de Dados de Sensores,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3240,Processamento de Imagem Urbana,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3260,Agregação de Dados de Sensores,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3280,Reencaminhamento de Dados (Edge Relay),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3300,Reencaminhamento de Dados (Edge Relay),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3320,Reencaminhamento de Dados (Edge Relay),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3340,Atualização de Modelos Locais (ML),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3360,Diagnóstico Veicular,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3380,Reencaminhamento de Dados (Edge Relay),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3400,Diagnóstico Veicular,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3420,Processamento de Imagem Urbana,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3440,Diagnóstico Veicular,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3460,Diagnóstico Veicular,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3480,Processamento de Imagem Urbana,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3500,Diagnóstico Veicular,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3520,Atualização de Modelos Locais (ML),0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3540,Diagnóstico Veicular,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3560,Processamento de Imagem Urbana,0,0,False,no_active_vehicles,,
+capacity_high_interval_020_seed_23,23,split_v1,c14_capacity_v1,20,40,3580,Atualização de Modelos Locais (ML),0,0,False,no_active_vehicles,,

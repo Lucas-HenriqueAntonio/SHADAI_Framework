@@ -1,315 +1,1924 @@
+# shadai_sumo.py
+
 import traci
 import xml.etree.ElementTree as ET
 import random
 import csv
+import argparse
 import os
 
 from veiculo import Veiculo
 from lider import Plataforma
 
+
 # ============================================================
-# MODO
+# ARGUMENTOS
 # ============================================================
 
-MODO = "shadai" # "random | greedy| no_reputation
+parser = argparse.ArgumentParser(
+    description=(
+        "SHADAI SUMO simulation with normalized utility, "
+        "split RNG streams, exploration-risk telemetry, "
+        "configurable cooldown, configurable request interval "
+        "and capacity/throughput telemetry."
+    )
+)
+
+
+# ============================================================
+# LAMBDA
+# ============================================================
+
+parser.add_argument(
+    "--lambda1",
+    type=float,
+    default=0.5
+)
+
+parser.add_argument(
+    "--lambda2",
+    type=float,
+    default=0.3
+)
+
+parser.add_argument(
+    "--lambda3",
+    type=float,
+    default=0.2
+)
+
+
+# ============================================================
+# SCORE WEIGHTS
+# ============================================================
+
+parser.add_argument(
+    "--w1",
+    type=float,
+    default=0.4
+)
+
+parser.add_argument(
+    "--w2",
+    type=float,
+    default=0.3
+)
+
+parser.add_argument(
+    "--w3",
+    type=float,
+    default=0.3
+)
+
+
+# ============================================================
+# EPSILON
+# ============================================================
+
+parser.add_argument(
+    "--epsilon",
+    type=float,
+    default=0.2
+)
+
+
+# ============================================================
+# C11 - COOLDOWN
+# ============================================================
+
+parser.add_argument(
+    "--cooldown-steps",
+    type=int,
+    default=40
+)
+
+
+# ============================================================
+# C12 - REQUEST INTERVAL
+# ============================================================
+
+parser.add_argument(
+    "--request-interval",
+    type=int,
+    default=20
+)
+
+
+# ============================================================
+# EXPERIMENTO
+# ============================================================
+
+parser.add_argument(
+    "--experiment",
+    type=str,
+    default="normalized_original"
+)
+
+parser.add_argument(
+    "--seed",
+    type=int,
+    default=42
+)
+
+parser.add_argument(
+    "--headless",
+    action="store_true"
+)
+
+parser.add_argument(
+    "--output-dir",
+    type=str,
+    default="."
+)
+
+
+args = parser.parse_args()
+
+
+# ============================================================
+# PARÂMETROS
+# ============================================================
+
+LAMBDA1 = args.lambda1
+LAMBDA2 = args.lambda2
+LAMBDA3 = args.lambda3
+
+W1 = args.w1
+W2 = args.w2
+W3 = args.w3
+
+EPSILON = args.epsilon
+
+COOLDOWN_STEPS = args.cooldown_steps
+
+REQUEST_INTERVAL = args.request_interval
+
+EXPERIMENTO = args.experiment
+
+SEED = args.seed
+
+OUTPUT_DIR = args.output_dir
+
+
+os.makedirs(
+    OUTPUT_DIR,
+    exist_ok=True
+)
+
+
+# ============================================================
+# RNG
+# ============================================================
+
+RNG_SCHEME = "split_v1"
+
+TELEMETRY_SCHEME = "c14_capacity_v1"
+
+
+SEED_REQUEST = SEED + 100_000
+SEED_VEHICLE = SEED + 200_000
+SEED_RELIABILITY = SEED + 300_000
+SEED_POLICY_GATE = SEED + 400_000
+SEED_POLICY_CHOICE = SEED + 500_000
+SEED_ACTIVE_SAMPLE = SEED + 600_000
+
+
+RNG_REQUEST = random.Random(
+    SEED_REQUEST
+)
+
+RNG_VEHICLE = random.Random(
+    SEED_VEHICLE
+)
+
+RNG_RELIABILITY = random.Random(
+    SEED_RELIABILITY
+)
+
+RNG_POLICY_GATE = random.Random(
+    SEED_POLICY_GATE
+)
+
+RNG_POLICY_CHOICE = random.Random(
+    SEED_POLICY_CHOICE
+)
+
+RNG_ACTIVE_SAMPLE = random.Random(
+    SEED_ACTIVE_SAMPLE
+)
+
+
+# ============================================================
+# VALIDAÇÕES
+# ============================================================
+
+if abs(
+    LAMBDA1 + LAMBDA2 + LAMBDA3 - 1.0
+) > 1e-6:
+
+    raise ValueError(
+        "lambda1 + lambda2 + lambda3 must sum to 1.0."
+    )
+
+
+if any(
+    x < 0
+    for x in [
+        LAMBDA1,
+        LAMBDA2,
+        LAMBDA3
+    ]
+):
+
+    raise ValueError(
+        "Lambda weights cannot be negative."
+    )
+
+
+if abs(
+    W1 + W2 + W3 - 1.0
+) > 1e-6:
+
+    raise ValueError(
+        "w1 + w2 + w3 must sum to 1.0."
+    )
+
+
+if any(
+    x < 0
+    for x in [
+        W1,
+        W2,
+        W3
+    ]
+):
+
+    raise ValueError(
+        "Score weights cannot be negative."
+    )
+
+
+if not (
+    0.0 <= EPSILON <= 1.0
+):
+
+    raise ValueError(
+        "epsilon must be between 0.0 and 1.0."
+    )
+
+
+if COOLDOWN_STEPS < 0:
+
+    raise ValueError(
+        "cooldown_steps must be >= 0."
+    )
+
+
+if REQUEST_INTERVAL <= 0:
+
+    raise ValueError(
+        "request_interval must be > 0."
+    )
+
 
 # ============================================================
 # CENÁRIO
 # ============================================================
 
+MODO = "shadai"
+
 MAX_VEICULOS = 400
 
-ATAQUE = True
-TIPO_ATAQUE = "flood"  # "ganancia" | "flood"
-
-if ATAQUE:
-    PERCENTUAL_MALICIOSOS = 0.2
-    if TIPO_ATAQUE == "ganancia":
-        SUFIXO = "ganancia"
-    elif TIPO_ATAQUE == "flood":
-        SUFIXO = "flood"
-else:
-    PERCENTUAL_MALICIOSOS = 0.0
-    SUFIXO = "normal"
 
 # ============================================================
-# CONFIG SUMO
+# ATAQUES
 # ============================================================
 
-def ler_tempo_final_sumocfg(sumocfg_path):
-    tree = ET.parse(sumocfg_path)
-    root = tree.getroot()
-    end = root.find("./time/end")
+ATAQUE = False
 
-    if end is not None:
-        return int(end.attrib["value"])
+PERCENTUAL_MALICIOSOS = 0.0
 
-    return 3600
+
+# ============================================================
+# CUSTOS
+# ============================================================
+
+CUSTO_BASE_MIN = 3.0
+CUSTO_BASE_MAX = 8.0
+
 
 # ============================================================
 # SERVIÇOS
 # ============================================================
 
 SERVICOS = [
-    {"nome": "Processamento de Imagem Urbana", "energia": 18, "duracao": 60, "preco": 45.0},
-    {"nome": "Agregação de Dados de Sensores", "energia": 8, "duracao": 30, "preco": 22.0},
-    {"nome": "Reencaminhamento de Dados (Edge Relay)", "energia": 5, "duracao": 25, "preco": 15.0},
-    {"nome": "Atualização de Modelos Locais (ML)", "energia": 22, "duracao": 80, "preco": 60.0},
-    {"nome": "Diagnóstico Veicular", "energia": 10, "duracao": 40, "preco": 28.0}
+
+    {
+        "nome":
+            "Processamento de Imagem Urbana",
+        "energia":
+            18,
+        "duracao":
+            60,
+        "preco":
+            45.0
+    },
+
+    {
+        "nome":
+            "Agregação de Dados de Sensores",
+        "energia":
+            8,
+        "duracao":
+            30,
+        "preco":
+            22.0
+    },
+
+    {
+        "nome":
+            "Reencaminhamento de Dados (Edge Relay)",
+        "energia":
+            5,
+        "duracao":
+            25,
+        "preco":
+            15.0
+    },
+
+    {
+        "nome":
+            "Atualização de Modelos Locais (ML)",
+        "energia":
+            22,
+        "duracao":
+            80,
+        "preco":
+            60.0
+    },
+
+    {
+        "nome":
+            "Diagnóstico Veicular",
+        "energia":
+            10,
+        "duracao":
+            40,
+        "preco":
+            28.0
+    }
 ]
+
+
+# ============================================================
+# NORMALIZAÇÃO
+# ============================================================
+
+PRECO_MAX = max(
+    servico["preco"]
+    for servico in SERVICOS
+)
+
+ENERGIA_SERVICO_MAX = 25.0
+
+DISTANCIA_MAX = 1000.0
+
+TEMPO_MAX = 100.0
+
 
 # ============================================================
 # ESTRUTURAS
 # ============================================================
 
 veiculos = {}
+
 servicos_ativos = []
-plataforma = Plataforma()
+
 
 # ============================================================
-# CSV
+# PLATAFORMA
 # ============================================================
 
-if ATAQUE:
-    METRICS_FILE = f"metricas_{MODO}_{MAX_VEICULOS}_{SUFIXO}.csv"
-else:
-    METRICS_FILE = f"metricas_{MODO}_{MAX_VEICULOS}.csv"
+plataforma = Plataforma(
 
-if not os.path.exists(METRICS_FILE):
-    with open(METRICS_FILE, "w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
+    epsilon=EPSILON,
+
+    w1=W1,
+
+    w2=W2,
+
+    w3=W3,
+
+    cooldown_steps=COOLDOWN_STEPS,
+
+    rng_policy_gate=RNG_POLICY_GATE,
+
+    rng_policy_choice=RNG_POLICY_CHOICE
+)
+
+
+# ============================================================
+# ARQUIVOS
+# ============================================================
+
+METRICS_FILE = os.path.join(
+
+    OUTPUT_DIR,
+
+    f"metricas_{MODO}_{MAX_VEICULOS}_{EXPERIMENTO}.csv"
+)
+
+
+ELIGIBILITY_FILE = os.path.join(
+
+    OUTPUT_DIR,
+
+    f"eligibilidade_{MODO}_{MAX_VEICULOS}_{EXPERIMENTO}.csv"
+)
+
+
+REQUESTS_FILE = os.path.join(
+
+    OUTPUT_DIR,
+
+    f"requests_{MODO}_{MAX_VEICULOS}_{EXPERIMENTO}.csv"
+)
+
+
+# ============================================================
+# CSV MÉTRICAS
+# ============================================================
+
+with open(
+    METRICS_FILE,
+    "w",
+    newline="",
+    encoding="utf-8"
+) as f:
+
+    writer = csv.writer(
+        f
+    )
+
+    writer.writerow([
+
+        "experimento",
+        "seed",
+
+        "rng_scheme",
+        "telemetry_scheme",
+
+        "lambda1",
+        "lambda2",
+        "lambda3",
+
+        "w1",
+        "w2",
+        "w3",
+
+        "epsilon",
+
+        "cooldown_steps",
+
+        "request_interval",
+
+        "modo",
+
+        "step",
+
+        "veiculo",
+
+        "servico",
+
+        "score_base",
+
+        "score",
+
+        "reputacao_norm",
+
+        "energia_norm",
+
+        "proximidade_norm",
+
+        "distancia",
+
+        "cooldown_penalty",
+
+        "last_selection_step",
+
+        "steps_since_last_selection",
+
+        "selection_mode",
+
+        "candidate_count",
+
+        "chosen_rank",
+
+        "greedy_best_vehicle",
+
+        "greedy_best_score",
+
+        "greedy_best_reputation_norm",
+
+        "greedy_best_energy_norm",
+
+        "greedy_best_proximity_norm",
+
+        "greedy_best_distance",
+
+        "exploration_regret",
+
+        "exploration_regret_relative",
+
+        "selected_greedy_best",
+
+        "utilidade",
+
+        "reputacao",
+
+        "energia"
+    ])
+
+
+# ============================================================
+# CSV ELEGIBILIDADE
+# ============================================================
+
+with open(
+    ELIGIBILITY_FILE,
+    "w",
+    newline="",
+    encoding="utf-8"
+) as f:
+
+    writer = csv.writer(
+        f
+    )
+
+    writer.writerow([
+
+        "experimento",
+        "seed",
+
+        "rng_scheme",
+        "telemetry_scheme",
+
+        "lambda1",
+        "lambda2",
+        "lambda3",
+
+        "w1",
+        "w2",
+        "w3",
+
+        "epsilon",
+
+        "cooldown_steps",
+
+        "request_interval",
+
+        "step",
+
+        "servico",
+
+        "active_vehicles",
+
+        "positive_utility",
+
+        "sufficient_energy",
+
+        "eligible",
+
+        "rejected_utility",
+
+        "rejected_energy",
+
+        "rejected_utility_only",
+
+        "rejected_energy_only",
+
+        "rejected_both",
+
+        "eligibility_rate",
+
+        "avg_utility",
+
+        "min_utility",
+
+        "max_utility"
+    ])
+
+
+# ============================================================
+# C14 - REQUEST OUTCOME LOG
+# ============================================================
+
+with open(
+    REQUESTS_FILE,
+    "w",
+    newline="",
+    encoding="utf-8"
+) as f:
+
+    writer = csv.writer(
+        f
+    )
+
+    writer.writerow([
+
+        "experimento",
+
+        "seed",
+
+        "rng_scheme",
+
+        "telemetry_scheme",
+
+        "request_interval",
+
+        "cooldown_steps",
+
+        "step",
+
+        "servico",
+
+        "active_vehicles",
+
+        "eligible_candidates",
+
+        "allocated",
+
+        "failure_reason",
+
+        "selected_vehicle",
+
+        "completion_step"
+    ])
+
+
+# ============================================================
+# CONTADORES
+# ============================================================
+
+total_requests = 0
+
+successful_allocations = 0
+
+unserved_requests = 0
+
+completed_services = 0
+
+soma_taxa_elegibilidade = 0.0
+
+total_avaliacoes = 0
+
+total_rejeitados_utility = 0
+
+total_rejeitados_energy = 0
+
+total_elegiveis = 0
+
+
+# ============================================================
+# TEMPO FINAL
+# ============================================================
+
+def ler_tempo_final_sumocfg(
+    sumocfg_path
+):
+
+    tree = ET.parse(
+        sumocfg_path
+    )
+
+    root = tree.getroot()
+
+    end = root.find(
+        "./time/end"
+    )
+
+
+    if end is not None:
+
+        return int(
+            float(
+                end.attrib[
+                    "value"
+                ]
+            )
+        )
+
+
+    return 3600
+
+
+# ============================================================
+# REQUEST LOG
+# ============================================================
+
+def registrar_request(
+
+    step,
+
+    servico,
+
+    active_vehicles,
+
+    eligible_candidates,
+
+    allocated,
+
+    failure_reason,
+
+    selected_vehicle="",
+
+    completion_step=""
+):
+
+    with open(
+        REQUESTS_FILE,
+        "a",
+        newline="",
+        encoding="utf-8"
+    ) as f:
+
+        writer = csv.writer(
+            f
+        )
+
+
         writer.writerow([
-            "modo", "step", "veiculo", "servico",
-            "score", "utilidade", "reputacao",
-            "energia", "malicioso"
-        ])
 
-# ============================================================
-# FUNÇÕES
-# ============================================================
+            EXPERIMENTO,
 
-def registrar_metricas(step, veiculo, servico, score, utilidade):
-    with open(METRICS_FILE, "a", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        writer.writerow([
-            MODO,
+            SEED,
+
+            RNG_SCHEME,
+
+            TELEMETRY_SCHEME,
+
+            REQUEST_INTERVAL,
+
+            COOLDOWN_STEPS,
+
             step,
-            veiculo.id,
-            servico["nome"],
-            round(score, 4),
-            round(utilidade, 4),
-            round(veiculo.reputacao, 4),
-            round(veiculo.energia, 4),
-            getattr(veiculo, "malicioso", False)
+
+            servico[
+                "nome"
+            ],
+
+            active_vehicles,
+
+            eligible_candidates,
+
+            allocated,
+
+            failure_reason,
+
+            selected_vehicle,
+
+            completion_step
         ])
+
+
+# ============================================================
+# REGISTRA MÉTRICAS
+# ============================================================
+
+def registrar_metricas(
+    step,
+    escolhido,
+    servico
+):
+
+    v = escolhido[
+        "veiculo"
+    ]
+
+
+    with open(
+        METRICS_FILE,
+        "a",
+        newline="",
+        encoding="utf-8"
+    ) as f:
+
+        writer = csv.writer(
+            f
+        )
+
+
+        writer.writerow([
+
+            EXPERIMENTO,
+
+            SEED,
+
+            RNG_SCHEME,
+
+            TELEMETRY_SCHEME,
+
+            LAMBDA1,
+            LAMBDA2,
+            LAMBDA3,
+
+            W1,
+            W2,
+            W3,
+
+            EPSILON,
+
+            COOLDOWN_STEPS,
+
+            REQUEST_INTERVAL,
+
+            MODO,
+
+            step,
+
+            v.id,
+
+            servico[
+                "nome"
+            ],
+
+            round(
+                escolhido[
+                    "score_base"
+                ],
+                6
+            ),
+
+            round(
+                escolhido[
+                    "score"
+                ],
+                6
+            ),
+
+            round(
+                escolhido[
+                    "reputacao_norm"
+                ],
+                6
+            ),
+
+            round(
+                escolhido[
+                    "energia_norm"
+                ],
+                6
+            ),
+
+            round(
+                escolhido[
+                    "proximidade_norm"
+                ],
+                6
+            ),
+
+            round(
+                escolhido[
+                    "distancia"
+                ],
+                6
+            ),
+
+            escolhido[
+                "cooldown_penalty"
+            ],
+
+            escolhido[
+                "last_selection_step"
+            ],
+
+            escolhido[
+                "steps_since_last_selection"
+            ],
+
+            escolhido[
+                "selection_mode"
+            ],
+
+            escolhido[
+                "candidate_count"
+            ],
+
+            escolhido[
+                "chosen_rank"
+            ],
+
+            escolhido[
+                "greedy_best_vehicle"
+            ],
+
+            round(
+                escolhido[
+                    "greedy_best_score"
+                ],
+                6
+            ),
+
+            round(
+                escolhido[
+                    "greedy_best_reputation_norm"
+                ],
+                6
+            ),
+
+            round(
+                escolhido[
+                    "greedy_best_energy_norm"
+                ],
+                6
+            ),
+
+            round(
+                escolhido[
+                    "greedy_best_proximity_norm"
+                ],
+                6
+            ),
+
+            round(
+                escolhido[
+                    "greedy_best_distance"
+                ],
+                6
+            ),
+
+            round(
+                escolhido[
+                    "exploration_regret"
+                ],
+                6
+            ),
+
+            round(
+                escolhido[
+                    "exploration_regret_relative"
+                ],
+                6
+            ),
+
+            escolhido[
+                "selected_greedy_best"
+            ],
+
+            round(
+                escolhido[
+                    "utilidade"
+                ],
+                6
+            ),
+
+            round(
+                v.reputacao,
+                6
+            ),
+
+            round(
+                v.energia,
+                6
+            )
+        ])
+
+
+# ============================================================
+# VEÍCULOS ATIVOS
+# ============================================================
 
 def atualizar_veiculos():
 
-    ids = traci.vehicle.getIDList()
+    ids_ativos = list(
+        traci.vehicle.getIDList()
+    )
 
-    if len(ids) > MAX_VEICULOS:
-        ids = random.sample(ids, MAX_VEICULOS)
 
-    for vid in ids:
+    if len(
+        ids_ativos
+    ) > MAX_VEICULOS:
 
-        pos = traci.vehicle.getPosition(vid)[0]
+        ids_ativos = (
+            RNG_ACTIVE_SAMPLE.sample(
+                ids_ativos,
+                MAX_VEICULOS
+            )
+        )
+
+
+    veiculos_ativos = []
+
+
+    for vid in ids_ativos:
+
+        pos = (
+            traci.vehicle
+            .getPosition(
+                vid
+            )[0]
+        )
+
 
         if vid not in veiculos:
 
             v = Veiculo(
+
                 vid,
-                custo_base=random.uniform(3,8),
-                capacidade=random.uniform(1,10),
+
+                custo_base=
+                    RNG_VEHICLE.uniform(
+                        CUSTO_BASE_MIN,
+                        CUSTO_BASE_MAX
+                    ),
+
+                capacidade=
+                    RNG_VEHICLE.uniform(
+                        1,
+                        10
+                    ),
+
                 pos=pos,
-                energia=random.uniform(60,120)
+
+                energia=
+                    RNG_VEHICLE.uniform(
+                        60,
+                        120
+                    ),
+
+                lambda1=LAMBDA1,
+
+                lambda2=LAMBDA2,
+
+                lambda3=LAMBDA3,
+
+                custo_max=CUSTO_BASE_MAX,
+
+                preco_max=PRECO_MAX,
+
+                energia_servico_max=
+                    ENERGIA_SERVICO_MAX,
+
+                distancia_max=
+                    DISTANCIA_MAX,
+
+                tempo_max=
+                    TEMPO_MAX
             )
 
-            # marcar malicioso
-            if random.random() < PERCENTUAL_MALICIOSOS:
-                v.malicioso = True
-                print(f"[MALICIOSO] Veículo {vid}")
 
-            veiculos[vid] = v
+            veiculos[
+                vid
+            ] = v
+
 
         else:
-            veiculos[vid].posicao = pos
 
-def finalizar_servicos(step):
+            veiculos[
+                vid
+            ].posicao = pos
 
-    finalizados = [s for s in servicos_ativos if s["fim"] <= step]
+
+        veiculos_ativos.append(
+            veiculos[
+                vid
+            ]
+        )
+
+
+    return veiculos_ativos
+
+
+# ============================================================
+# FINALIZA SERVIÇOS
+# ============================================================
+
+def finalizar_servicos(
+    step
+):
+
+    global completed_services
+
+
+    finalizados = [
+
+        s
+
+        for s in servicos_ativos
+
+        if s[
+            "fim"
+        ] <= step
+    ]
+
 
     for s in finalizados:
 
-        v = s["veiculo"]
+        v = s[
+            "veiculo"
+        ]
 
-        sucesso = True if random.random() > 0.1 else False
 
-        v.atualizar_reputacao(sucesso)
+        sucesso = (
+            RNG_RELIABILITY.random()
+            > 0.1
+        )
 
-        print(f"[Fim Serviço] {v.id} | Rep={v.reputacao}")
 
-        servicos_ativos.remove(s)
+        v.atualizar_reputacao(
+            sucesso
+        )
 
-def nova_requisicao(step):
 
-    servico = random.choice(SERVICOS)
-    plataforma.preco = servico["preco"]
-    pos_tarefa = random.uniform(0,1000)
+        completed_services += 1
 
-    print(f"\n=== Step {step} | Serviço: {servico['nome']} ===")
 
-    lista_veiculos = list(veiculos.values())
-    candidatos = plataforma.ofertar(lista_veiculos, servico, pos_tarefa)
+        servicos_ativos.remove(
+            s
+        )
 
-    # ========================================================
-    # ATAQUES
-    # ========================================================
-    if ATAQUE:
 
-        # ---------------------------
-        # ATAQUE 1: GANÂNCIA
-        # ---------------------------
-        if TIPO_ATAQUE == "ganancia":
+# ============================================================
+# ELEGIBILIDADE
+# ============================================================
 
-            for v in lista_veiculos:
+def analisar_elegibilidade(
+    step,
+    servico,
+    pos_tarefa,
+    veiculos_ativos
+):
 
-                if getattr(v, "malicioso", False):
+    utilities = []
 
-                    ja_existe = any(c["veiculo"].id == v.id for c in candidatos)
+    positive_utility = 0
 
-                    if not ja_existe:
-                        dist = v.distancia_para(pos_tarefa)
+    sufficient_energy = 0
 
-                        candidatos.append({
-                            "veiculo": v,
-                            "utilidade": 1.0,
-                            "custo_total": 50.0,
-                            "dist": dist
-                        })
+    eligible = 0
 
-                        print(f"[ATAQUE GANÂNCIA] {v.id} entrou como candidato")
+    rejected_utility = 0
 
-        # ---------------------------
-        # ATAQUE 2: FLOOD
-        # ---------------------------
-        elif TIPO_ATAQUE == "flood":
+    rejected_energy = 0
 
-            novos_candidatos = []
+    rejected_utility_only = 0
 
-            for c in candidatos:
+    rejected_energy_only = 0
 
-                novos_candidatos.append(c)
+    rejected_both = 0
 
-                v = c["veiculo"]
 
-                if getattr(v, "malicioso", False):
+    for v in veiculos_ativos:
 
-                    # duplica candidato várias vezes
-                    for _ in range(3):  # intensidade do flood
-                        novos_candidatos.append({
-                            "veiculo": v,
-                            "utilidade": c["utilidade"],
-                            "custo_total": c["custo_total"],
-                            "dist": c["dist"]
-                        })
+        (
+            utilidade,
+            _,
+            _,
+            _
+        ) = v.calcular_utilidade(
 
-                    print(f"[ATAQUE FLOOD] {v.id} multiplicado")
+            plataforma.preco,
 
-            candidatos = novos_candidatos
+            servico,
 
-    if not candidatos:
-        print("Nenhum candidato")
-        return
+            pos_tarefa
+        )
 
-    # ========================================================
-    # SELEÇÃO (INALTERADA)
-    # ========================================================
 
-    if MODO == "shadai":
+        utilities.append(
+            utilidade
+        )
 
-        escolhidos = plataforma.selecionar(candidatos, pos_tarefa)
 
-        if not escolhidos:
-            return
+        utility_ok = (
+            utilidade > 0
+        )
 
-        escolhido = escolhidos[0]
 
-    elif MODO == "random":
+        energy_ok = (
 
-        escolhido = random.choice(candidatos)
-        escolhido["score"] = plataforma.calcular_score(escolhido)
+            v.energia
 
-    elif MODO == "greedy":
+            >=
 
-        escolhido = min(candidatos, key=lambda x: x["custo_total"])
-        escolhido["score"] = plataforma.calcular_score(escolhido)
+            servico[
+                "energia"
+            ]
+        )
 
-    elif MODO == "no_reputation":
 
-        w1 = plataforma.w1
-        plataforma.w1 = 0.0
+        if utility_ok:
+            positive_utility += 1
+        else:
+            rejected_utility += 1
 
-        escolhidos = plataforma.selecionar(candidatos, pos_tarefa)
 
-        plataforma.w1 = w1
+        if energy_ok:
+            sufficient_energy += 1
+        else:
+            rejected_energy += 1
 
-        if not escolhidos:
-            return
 
-        escolhido = escolhidos[0]
+        if (
+            utility_ok
+            and
+            energy_ok
+        ):
 
-    else:
-        raise ValueError("Modo inválido")
+            eligible += 1
 
-    # ========================================================
-    # EXECUÇÃO
-    # ========================================================
+        elif (
+            not utility_ok
+            and
+            energy_ok
+        ):
 
-    v = escolhido["veiculo"]
+            rejected_utility_only += 1
 
-    print(f"Selecionado: {v.id} | Score={escolhido['score']:.2f}")
+        elif (
+            utility_ok
+            and
+            not energy_ok
+        ):
 
-    registrar_metricas(
-        step,
-        v,
-        servico,
-        escolhido["score"],
-        escolhido["utilidade"]
+            rejected_energy_only += 1
+
+        else:
+
+            rejected_both += 1
+
+
+    total = len(
+        veiculos_ativos
     )
 
-    fim = step + servico["duracao"]
+
+    eligibility_rate = (
+
+        eligible
+        /
+        total
+
+        if total > 0
+
+        else 0.0
+    )
+
+
+    avg_utility = (
+
+        sum(
+            utilities
+        )
+        /
+        len(
+            utilities
+        )
+
+        if utilities
+
+        else 0.0
+    )
+
+
+    min_utility = (
+        min(
+            utilities
+        )
+        if utilities
+        else 0.0
+    )
+
+
+    max_utility = (
+        max(
+            utilities
+        )
+        if utilities
+        else 0.0
+    )
+
+
+    with open(
+        ELIGIBILITY_FILE,
+        "a",
+        newline="",
+        encoding="utf-8"
+    ) as f:
+
+        writer = csv.writer(
+            f
+        )
+
+
+        writer.writerow([
+
+            EXPERIMENTO,
+
+            SEED,
+
+            RNG_SCHEME,
+
+            TELEMETRY_SCHEME,
+
+            LAMBDA1,
+            LAMBDA2,
+            LAMBDA3,
+
+            W1,
+            W2,
+            W3,
+
+            EPSILON,
+
+            COOLDOWN_STEPS,
+
+            REQUEST_INTERVAL,
+
+            step,
+
+            servico[
+                "nome"
+            ],
+
+            total,
+
+            positive_utility,
+
+            sufficient_energy,
+
+            eligible,
+
+            rejected_utility,
+
+            rejected_energy,
+
+            rejected_utility_only,
+
+            rejected_energy_only,
+
+            rejected_both,
+
+            round(
+                eligibility_rate,
+                6
+            ),
+
+            round(
+                avg_utility,
+                6
+            ),
+
+            round(
+                min_utility,
+                6
+            ),
+
+            round(
+                max_utility,
+                6
+            )
+        ])
+
+
+    return {
+
+        "total":
+            total,
+
+        "eligible":
+            eligible,
+
+        "rejected_utility":
+            rejected_utility,
+
+        "rejected_energy":
+            rejected_energy,
+
+        "eligibility_rate":
+            eligibility_rate
+    }
+
+
+# ============================================================
+# NOVA REQUISIÇÃO
+# ============================================================
+
+def nova_requisicao(
+    step,
+    veiculos_ativos
+):
+
+    global total_requests
+
+    global successful_allocations
+
+    global unserved_requests
+
+    global soma_taxa_elegibilidade
+
+    global total_avaliacoes
+
+    global total_rejeitados_utility
+
+    global total_rejeitados_energy
+
+    global total_elegiveis
+
+
+    servico = (
+        RNG_REQUEST.choice(
+            SERVICOS
+        )
+    )
+
+
+    plataforma.preco = (
+        servico[
+            "preco"
+        ]
+    )
+
+
+    pos_tarefa = (
+        RNG_REQUEST.uniform(
+            0,
+            DISTANCIA_MAX
+        )
+    )
+
+
+    total_requests += 1
+
+
+    # ========================================================
+    # SEM VEÍCULOS ATIVOS
+    # ========================================================
+
+    if len(
+        veiculos_ativos
+    ) == 0:
+
+        unserved_requests += 1
+
+
+        registrar_request(
+
+            step=step,
+
+            servico=servico,
+
+            active_vehicles=0,
+
+            eligible_candidates=0,
+
+            allocated=False,
+
+            failure_reason="no_active_vehicles"
+        )
+
+
+        return
+
+
+    diagnostico = (
+        analisar_elegibilidade(
+
+            step,
+
+            servico,
+
+            pos_tarefa,
+
+            veiculos_ativos
+        )
+    )
+
+
+    total_avaliacoes += (
+        diagnostico[
+            "total"
+        ]
+    )
+
+
+    soma_taxa_elegibilidade += (
+        diagnostico[
+            "eligibility_rate"
+        ]
+    )
+
+
+    total_rejeitados_utility += (
+        diagnostico[
+            "rejected_utility"
+        ]
+    )
+
+
+    total_rejeitados_energy += (
+        diagnostico[
+            "rejected_energy"
+        ]
+    )
+
+
+    total_elegiveis += (
+        diagnostico[
+            "eligible"
+        ]
+    )
+
+
+    candidatos = (
+        plataforma.ofertar(
+
+            veiculos_ativos,
+
+            servico,
+
+            pos_tarefa
+        )
+    )
+
+
+    # ========================================================
+    # SEM CANDIDATOS
+    # ========================================================
+
+    if not candidatos:
+
+        unserved_requests += 1
+
+
+        registrar_request(
+
+            step=step,
+
+            servico=servico,
+
+            active_vehicles=
+                len(
+                    veiculos_ativos
+                ),
+
+            eligible_candidates=0,
+
+            allocated=False,
+
+            failure_reason="no_eligible_candidates"
+        )
+
+
+        return
+
+
+    escolhidos = (
+        plataforma.selecionar(
+
+            candidatos,
+
+            pos_tarefa,
+
+            step
+        )
+    )
+
+
+    if not escolhidos:
+
+        unserved_requests += 1
+
+
+        registrar_request(
+
+            step=step,
+
+            servico=servico,
+
+            active_vehicles=
+                len(
+                    veiculos_ativos
+                ),
+
+            eligible_candidates=
+                len(
+                    candidatos
+                ),
+
+            allocated=False,
+
+            failure_reason="selection_failed"
+        )
+
+
+        return
+
+
+    escolhido = escolhidos[
+        0
+    ]
+
+
+    v = escolhido[
+        "veiculo"
+    ]
+
+
+    registrar_metricas(
+
+        step,
+
+        escolhido,
+
+        servico
+    )
+
+
+    successful_allocations += 1
+
+
+    fim = (
+
+        step
+
+        +
+
+        servico[
+            "duracao"
+        ]
+    )
+
+
+    registrar_request(
+
+        step=step,
+
+        servico=servico,
+
+        active_vehicles=
+            len(
+                veiculos_ativos
+            ),
+
+        eligible_candidates=
+            len(
+                candidatos
+            ),
+
+        allocated=True,
+
+        failure_reason="",
+
+        selected_vehicle=
+            v.id,
+
+        completion_step=
+            fim
+    )
+
 
     servicos_ativos.append({
-        "veiculo": v,
-        "fim": fim,
-        "nome": servico["nome"]
+
+        "veiculo":
+            v,
+
+        "fim":
+            fim,
+
+        "nome":
+            servico[
+                "nome"
+            ]
     })
 
-    v.executar_servico(servico)
+
+    v.executar_servico(
+        servico
+    )
+
 
 # ============================================================
-# LOOP
+# EXECUÇÃO
 # ============================================================
 
-def executar_shadai(sumocfg):
+def executar_shadai(
+    sumocfg
+):
 
-    tempo_final = ler_tempo_final_sumocfg(sumocfg)
+    tempo_final = (
+        ler_tempo_final_sumocfg(
+            sumocfg
+        )
+    )
 
-    traci.start(["sumo-gui","-c",sumocfg])
 
-    for step in range(tempo_final):
+    if args.headless:
+
+        sumo_binary = "sumo"
+
+    else:
+
+        sumo_binary = "sumo-gui"
+
+
+    traci.start([
+
+        sumo_binary,
+
+        "-c",
+
+        sumocfg,
+
+        "--seed",
+
+        str(
+            SEED
+        )
+    ])
+
+
+    for step in range(
+        tempo_final
+    ):
 
         traci.simulationStep()
 
-        atualizar_veiculos()
 
-        finalizar_servicos(step)
+        veiculos_ativos = (
+            atualizar_veiculos()
+        )
 
-        if step > 0 and step % 20 == 0 and len(veiculos) > 0:
-            nova_requisicao(step)
+
+        finalizar_servicos(
+            step
+        )
+
+
+        if (
+            step > 0
+
+            and
+
+            step
+            %
+            REQUEST_INTERVAL
+            ==
+            0
+        ):
+
+            nova_requisicao(
+
+                step,
+
+                veiculos_ativos
+            )
+
 
     traci.close()
-    print("Fim")
+
+
+    # ========================================================
+    # C14 - CAPACITY SUMMARY
+    # ========================================================
+
+    allocation_rate = (
+
+        successful_allocations
+        /
+        total_requests
+
+        if total_requests > 0
+
+        else 0.0
+    )
+
+
+    unserved_rate = (
+
+        unserved_requests
+        /
+        total_requests
+
+        if total_requests > 0
+
+        else 0.0
+    )
+
+
+    simulation_steps = (
+        tempo_final
+    )
+
+
+    throughput_allocations_per_1000_steps = (
+
+        successful_allocations
+        /
+        simulation_steps
+        *
+        1000.0
+
+        if simulation_steps > 0
+
+        else 0.0
+    )
+
+
+    completion_throughput_per_1000_steps = (
+
+        completed_services
+        /
+        simulation_steps
+        *
+        1000.0
+
+        if simulation_steps > 0
+
+        else 0.0
+    )
+
+
+    print("\n")
+
+    print("=" * 110)
+
+    print(
+        "C14 - CAPACITY / THROUGHPUT SUMMARY"
+    )
+
+    print("=" * 110)
+
+
+    print(
+        f"Request interval                    : "
+        f"{REQUEST_INTERVAL}"
+    )
+
+
+    print(
+        f"Total offered requests              : "
+        f"{total_requests}"
+    )
+
+
+    print(
+        f"Successful allocations              : "
+        f"{successful_allocations}"
+    )
+
+
+    print(
+        f"Unserved requests                   : "
+        f"{unserved_requests}"
+    )
+
+
+    print(
+        f"Service ratio                       : "
+        f"{allocation_rate * 100:.2f}%"
+    )
+
+
+    print(
+        f"Unserved ratio                      : "
+        f"{unserved_rate * 100:.2f}%"
+    )
+
+
+    print(
+        f"Completed services                  : "
+        f"{completed_services}"
+    )
+
+
+    print(
+        f"Allocation throughput / 1000 steps : "
+        f"{throughput_allocations_per_1000_steps:.2f}"
+    )
+
+
+    print(
+        f"Completion throughput / 1000 steps : "
+        f"{completion_throughput_per_1000_steps:.2f}"
+    )
+
+
+    print(
+        f"Pending active services at end      : "
+        f"{len(servicos_ativos)}"
+    )
+
+
+    print("=" * 110)
+
+
+# ============================================================
+# MAIN
+# ============================================================
 
 if __name__ == "__main__":
-    executar_shadai("cidade.sumocfg")
+
+    executar_shadai(
+        "cidade.sumocfg"
+    )

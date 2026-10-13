@@ -1,0 +1,69 @@
+experimento,seed,step,servico,active_vehicles,positive_utility,sufficient_energy,eligible,rejected_utility,rejected_energy,rejected_utility_only,rejected_energy_only,rejected_both,eligibility_rate,avg_utility,min_utility,max_utility
+lambda_no_energy_seed_21,21,20,Agregação de Dados de Sensores,17,2,17,2,15,0,15,0,0,0.117647,-0.150421,-0.341259,0.039345
+lambda_no_energy_seed_21,21,40,Atualização de Modelos Locais (ML),34,34,34,34,0,0,0,0,0,1.0,0.40634,0.138999,0.602289
+lambda_no_energy_seed_21,21,60,Atualização de Modelos Locais (ML),51,51,51,51,0,0,0,0,0,1.0,0.332469,0.056547,0.633991
+lambda_no_energy_seed_21,21,80,Agregação de Dados de Sensores,66,6,66,6,60,0,60,0,0,0.090909,-0.197628,-0.476787,0.102957
+lambda_no_energy_seed_21,21,100,Processamento de Imagem Urbana,82,78,82,78,4,0,4,0,0,0.95122,0.182059,-0.06697,0.385118
+lambda_no_energy_seed_21,21,120,Atualização de Modelos Locais (ML),97,97,97,97,0,0,0,0,0,1.0,0.386378,0.151503,0.616933
+lambda_no_energy_seed_21,21,140,Reencaminhamento de Dados (Edge Relay),109,0,109,0,109,0,109,0,0,0.0,-0.285101,-0.597956,-0.016452
+lambda_no_energy_seed_21,21,160,Atualização de Modelos Locais (ML),117,117,117,117,0,0,0,0,0,1.0,0.377569,0.062452,0.626928
+lambda_no_energy_seed_21,21,180,Agregação de Dados de Sensores,129,13,129,13,116,0,116,0,0,0.100775,-0.14357,-0.406638,0.092399
+lambda_no_energy_seed_21,21,200,Agregação de Dados de Sensores,126,7,126,7,119,0,119,0,0,0.055556,-0.161191,-0.436698,0.072262
+lambda_no_energy_seed_21,21,220,Agregação de Dados de Sensores,135,15,135,15,120,0,120,0,0,0.111111,-0.183942,-0.470882,0.077928
+lambda_no_energy_seed_21,21,240,Atualização de Modelos Locais (ML),144,144,144,144,0,0,0,0,0,1.0,0.393132,0.104529,0.630006
+lambda_no_energy_seed_21,21,260,Agregação de Dados de Sensores,143,7,143,7,136,0,136,0,0,0.048951,-0.155181,-0.443631,0.100596
+lambda_no_energy_seed_21,21,280,Diagnóstico Veicular,148,28,148,28,120,0,120,0,0,0.189189,-0.12374,-0.407201,0.12989
+lambda_no_energy_seed_21,21,300,Atualização de Modelos Locais (ML),144,144,144,144,0,0,0,0,0,1.0,0.31179,0.045791,0.638095
+lambda_no_energy_seed_21,21,320,Atualização de Modelos Locais (ML),147,147,147,147,0,0,0,0,0,1.0,0.400246,0.139071,0.618775
+lambda_no_energy_seed_21,21,340,Reencaminhamento de Dados (Edge Relay),147,0,147,0,147,0,147,0,0,0.0,-0.240006,-0.488701,-0.010329
+lambda_no_energy_seed_21,21,360,Agregação de Dados de Sensores,152,14,152,14,138,0,138,0,0,0.092105,-0.140934,-0.43738,0.087148
+lambda_no_energy_seed_21,21,380,Agregação de Dados de Sensores,146,6,146,6,140,0,140,0,0,0.041096,-0.200635,-0.487543,0.094597
+lambda_no_energy_seed_21,21,400,Atualização de Modelos Locais (ML),148,148,148,148,0,0,0,0,0,1.0,0.349524,0.043724,0.623184
+lambda_no_energy_seed_21,21,420,Diagnóstico Veicular,156,53,156,53,103,0,103,0,0,0.339744,-0.045105,-0.30431,0.19235
+lambda_no_energy_seed_21,21,440,Agregação de Dados de Sensores,150,23,150,23,127,0,127,0,0,0.153333,-0.143384,-0.385605,0.095744
+lambda_no_energy_seed_21,21,460,Processamento de Imagem Urbana,152,146,152,146,6,0,6,0,0,0.960526,0.182125,-0.098008,0.414489
+lambda_no_energy_seed_21,21,480,Reencaminhamento de Dados (Edge Relay),154,0,154,0,154,0,154,0,0,0.0,-0.243267,-0.503655,-0.027358
+lambda_no_energy_seed_21,21,500,Atualização de Modelos Locais (ML),157,157,157,157,0,0,0,0,0,1.0,0.352684,0.062933,0.619301
+lambda_no_energy_seed_21,21,520,Atualização de Modelos Locais (ML),153,153,153,153,0,0,0,0,0,1.0,0.40123,0.116418,0.62193
+lambda_no_energy_seed_21,21,540,Reencaminhamento de Dados (Edge Relay),154,0,154,0,154,0,154,0,0,0.0,-0.318359,-0.574562,-0.035258
+lambda_no_energy_seed_21,21,560,Reencaminhamento de Dados (Edge Relay),145,0,145,0,145,0,145,0,0,0.0,-0.235497,-0.509115,-0.001942
+lambda_no_energy_seed_21,21,580,Reencaminhamento de Dados (Edge Relay),145,1,145,1,144,0,144,0,0,0.006897,-0.248799,-0.472253,0.000783
+lambda_no_energy_seed_21,21,600,Processamento de Imagem Urbana,148,139,148,139,9,0,9,0,0,0.939189,0.178282,-0.063599,0.411202
+lambda_no_energy_seed_21,21,620,Reencaminhamento de Dados (Edge Relay),143,1,143,1,142,0,142,0,0,0.006993,-0.257163,-0.509722,0.000738
+lambda_no_energy_seed_21,21,640,Agregação de Dados de Sensores,149,17,149,17,132,0,132,0,0,0.114094,-0.153769,-0.403773,0.078041
+lambda_no_energy_seed_21,21,660,Processamento de Imagem Urbana,152,116,152,116,36,0,36,0,0,0.763158,0.117269,-0.167847,0.412292
+lambda_no_energy_seed_21,21,680,Atualização de Modelos Locais (ML),146,146,146,146,0,0,0,0,0,1.0,0.390334,0.159996,0.61815
+lambda_no_energy_seed_21,21,700,Atualização de Modelos Locais (ML),151,151,151,151,0,0,0,0,0,1.0,0.391873,0.142644,0.614174
+lambda_no_energy_seed_21,21,720,Diagnóstico Veicular,157,48,157,48,109,0,109,0,0,0.305732,-0.061537,-0.318401,0.161005
+lambda_no_energy_seed_21,21,740,Reencaminhamento de Dados (Edge Relay),159,0,159,0,159,0,159,0,0,0.0,-0.259215,-0.514894,-0.016374
+lambda_no_energy_seed_21,21,760,Reencaminhamento de Dados (Edge Relay),161,0,161,0,161,0,161,0,0,0.0,-0.250234,-0.517131,-0.00288
+lambda_no_energy_seed_21,21,780,Diagnóstico Veicular,165,29,165,29,136,0,136,0,0,0.175758,-0.145677,-0.410087,0.189765
+lambda_no_energy_seed_21,21,800,Agregação de Dados de Sensores,154,20,154,20,134,0,134,0,0,0.12987,-0.143025,-0.421405,0.085391
+lambda_no_energy_seed_21,21,820,Diagnóstico Veicular,158,36,158,36,122,0,122,0,0,0.227848,-0.089203,-0.412141,0.176759
+lambda_no_energy_seed_21,21,840,Processamento de Imagem Urbana,154,146,154,146,8,0,8,0,0,0.948052,0.176695,-0.117223,0.435172
+lambda_no_energy_seed_21,21,860,Agregação de Dados de Sensores,157,16,157,16,141,0,141,0,0,0.101911,-0.161391,-0.484602,0.092782
+lambda_no_energy_seed_21,21,880,Atualização de Modelos Locais (ML),154,154,154,154,0,0,0,0,0,1.0,0.331763,0.041192,0.613521
+lambda_no_energy_seed_21,21,900,Processamento de Imagem Urbana,158,140,158,140,18,0,18,0,0,0.886076,0.170584,-0.097749,0.399395
+lambda_no_energy_seed_21,21,920,Diagnóstico Veicular,159,50,159,50,109,0,109,0,0,0.314465,-0.061921,-0.385562,0.162339
+lambda_no_energy_seed_21,21,940,Reencaminhamento de Dados (Edge Relay),153,2,153,2,151,0,151,0,0,0.013072,-0.239093,-0.466688,0.006982
+lambda_no_energy_seed_21,21,960,Processamento de Imagem Urbana,161,154,161,154,7,0,7,0,0,0.956522,0.190388,-0.077551,0.411972
+lambda_no_energy_seed_21,21,980,Reencaminhamento de Dados (Edge Relay),151,0,151,0,151,0,151,0,0,0.0,-0.247361,-0.535893,-0.033953
+lambda_no_energy_seed_21,21,1000,Processamento de Imagem Urbana,158,154,158,154,4,0,4,0,0,0.974684,0.198558,-0.067119,0.429033
+lambda_no_energy_seed_21,21,1020,Atualização de Modelos Locais (ML),132,132,132,132,0,0,0,0,0,1.0,0.322554,0.061424,0.608498
+lambda_no_energy_seed_21,21,1040,Processamento de Imagem Urbana,116,89,116,89,27,0,27,0,0,0.767241,0.102987,-0.147672,0.395208
+lambda_no_energy_seed_21,21,1060,Diagnóstico Veicular,103,30,103,30,73,0,73,0,0,0.291262,-0.076321,-0.33915,0.18018
+lambda_no_energy_seed_21,21,1080,Atualização de Modelos Locais (ML),94,94,94,94,0,0,0,0,0,1.0,0.412096,0.115259,0.630678
+lambda_no_energy_seed_21,21,1100,Atualização de Modelos Locais (ML),73,73,73,73,0,0,0,0,0,1.0,0.321697,0.071283,0.636089
+lambda_no_energy_seed_21,21,1120,Atualização de Modelos Locais (ML),55,55,55,55,0,0,0,0,0,1.0,0.401878,0.078267,0.630261
+lambda_no_energy_seed_21,21,1140,Atualização de Modelos Locais (ML),51,51,51,51,0,0,0,0,0,1.0,0.396257,0.067286,0.632251
+lambda_no_energy_seed_21,21,1160,Reencaminhamento de Dados (Edge Relay),32,0,32,0,32,0,32,0,0,0.0,-0.265305,-0.541643,-0.01609
+lambda_no_energy_seed_21,21,1180,Atualização de Modelos Locais (ML),25,25,25,25,0,0,0,0,0,1.0,0.384222,0.133693,0.591629
+lambda_no_energy_seed_21,21,1200,Reencaminhamento de Dados (Edge Relay),16,0,16,0,16,0,16,0,0,0.0,-0.350812,-0.568717,-0.040805
+lambda_no_energy_seed_21,21,1220,Agregação de Dados de Sensores,12,1,12,1,11,0,11,0,0,0.083333,-0.235075,-0.461678,0.080889
+lambda_no_energy_seed_21,21,1240,Atualização de Modelos Locais (ML),6,6,6,6,0,0,0,0,0,1.0,0.36895,0.108265,0.578956
+lambda_no_energy_seed_21,21,1260,Agregação de Dados de Sensores,2,1,2,1,1,0,1,0,0,0.5,-0.135636,-0.280252,0.008981
+lambda_no_energy_seed_21,21,1280,Atualização de Modelos Locais (ML),1,1,1,1,0,0,0,0,0,1.0,0.328188,0.328188,0.328188
+lambda_no_energy_seed_21,21,1300,Reencaminhamento de Dados (Edge Relay),1,0,1,0,1,0,1,0,0,0.0,-0.522577,-0.522577,-0.522577
+lambda_no_energy_seed_21,21,1320,Processamento de Imagem Urbana,1,1,1,1,0,0,0,0,0,1.0,0.114004,0.114004,0.114004
+lambda_no_energy_seed_21,21,1340,Reencaminhamento de Dados (Edge Relay),1,0,1,0,1,0,1,0,0,0.0,-0.525639,-0.525639,-0.525639
+lambda_no_energy_seed_21,21,1360,Diagnóstico Veicular,1,0,1,0,1,0,1,0,0,0.0,-0.108626,-0.108626,-0.108626

@@ -1,0 +1,33 @@
+experimento,seed,rng_scheme,telemetry_scheme,lambda1,lambda2,lambda3,w1,w2,w3,epsilon,cooldown_steps,request_interval,step,servico,active_vehicles,positive_utility,sufficient_energy,eligible,rejected_utility,rejected_energy,rejected_utility_only,rejected_energy_only,rejected_both,eligibility_rate,avg_utility,min_utility,max_utility
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,40,Diagnóstico Veicular,34,3,34,3,31,0,31,0,0,0.088235,-0.10515,-0.307853,0.084246
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,80,Diagnóstico Veicular,66,16,66,16,50,0,50,0,0,0.242424,-0.075903,-0.232563,0.090516
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,120,Reencaminhamento de Dados (Edge Relay),97,0,97,0,97,0,97,0,0,0.0,-0.226299,-0.387971,-0.030082
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,160,Atualização de Modelos Locais (ML),118,118,118,118,0,0,0,0,0,1.0,0.299546,0.112578,0.502592
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,200,Diagnóstico Veicular,123,15,123,15,108,0,108,0,0,0.121951,-0.105614,-0.311379,0.105301
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,240,Diagnóstico Veicular,141,35,141,35,106,0,106,0,0,0.248227,-0.065794,-0.277089,0.124807
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,280,Diagnóstico Veicular,150,37,150,37,113,0,113,0,0,0.246667,-0.062126,-0.239586,0.107468
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,320,Diagnóstico Veicular,146,40,146,40,106,0,106,0,0,0.273973,-0.069256,-0.292591,0.126938
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,360,Atualização de Modelos Locais (ML),153,153,153,153,0,0,0,0,0,1.0,0.2753,0.067536,0.496513
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,400,Diagnóstico Veicular,150,44,150,44,106,0,106,0,0,0.293333,-0.065138,-0.287845,0.126043
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,440,Reencaminhamento de Dados (Edge Relay),161,0,161,0,161,0,161,0,0,0.0,-0.228552,-0.466743,-0.028695
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,480,Processamento de Imagem Urbana,153,107,153,107,46,0,46,0,0,0.699346,0.069273,-0.139268,0.299454
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,520,Agregação de Dados de Sensores,146,3,146,3,143,0,143,0,0,0.020548,-0.199202,-0.392601,0.061417
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,560,Atualização de Modelos Locais (ML),144,144,144,144,0,0,0,0,0,1.0,0.303985,0.110757,0.491045
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,600,Diagnóstico Veicular,149,32,149,32,117,0,117,0,0,0.214765,-0.07487,-0.262618,0.115826
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,640,Reencaminhamento de Dados (Edge Relay),153,0,153,0,153,0,153,0,0,0.0,-0.259252,-0.473991,-0.034146
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,680,Diagnóstico Veicular,154,34,154,34,120,0,120,0,0,0.220779,-0.08167,-0.308977,0.111438
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,720,Reencaminhamento de Dados (Edge Relay),161,0,161,0,161,0,161,0,0,0.0,-0.26715,-0.458905,-0.020775
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,760,Processamento de Imagem Urbana,159,139,159,139,20,0,20,0,0,0.874214,0.102061,-0.075946,0.295643
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,800,Processamento de Imagem Urbana,151,132,151,132,19,0,19,0,0,0.874172,0.097957,-0.073963,0.294825
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,840,Processamento de Imagem Urbana,152,134,152,134,18,0,18,0,0,0.881579,0.10271,-0.102916,0.300095
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,880,Diagnóstico Veicular,151,39,151,39,112,0,112,0,0,0.258278,-0.074197,-0.27901,0.1173
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,920,Reencaminhamento de Dados (Edge Relay),152,0,152,0,152,0,152,0,0,0.0,-0.228228,-0.442509,-0.026436
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,960,Processamento de Imagem Urbana,157,140,157,140,17,0,17,0,0,0.89172,0.121171,-0.067041,0.290093
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,1000,Reencaminhamento de Dados (Edge Relay),154,0,154,0,154,0,154,0,0,0.0,-0.257012,-0.453723,-0.0517
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,1040,Atualização de Modelos Locais (ML),119,119,119,119,0,0,0,0,0,1.0,0.28638,0.062043,0.48302
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,1080,Agregação de Dados de Sensores,93,5,93,5,88,0,88,0,0,0.053763,-0.13549,-0.34227,0.030986
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,1120,Agregação de Dados de Sensores,55,4,55,4,51,0,51,0,0,0.072727,-0.13362,-0.361393,0.026396
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,1160,Reencaminhamento de Dados (Edge Relay),31,0,31,0,31,0,31,0,0,0.0,-0.213752,-0.420998,-0.053683
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,1200,Atualização de Modelos Locais (ML),15,15,15,15,0,0,0,0,0,1.0,0.274908,0.150569,0.417902
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,1240,Diagnóstico Veicular,5,0,5,0,5,0,5,0,0,0.0,-0.082507,-0.14296,-0.028171
+capacity_moderate_interval_040_seed_24,24,split_v1,c14_capacity_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,1280,Agregação de Dados de Sensores,1,0,1,0,1,0,1,0,0,0.0,-0.255618,-0.255618,-0.255618
