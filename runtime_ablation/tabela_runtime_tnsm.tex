@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering
+\caption{Computational overhead of SHADAI under increasing offered workloads. Runtime was measured using a high-resolution monotonic wall-clock timer in headless execution. Values are aggregated over 30 simulation seeds.}
+\label{tab:shadai_runtime}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l|cccccccc}
+\hline
+Workload & Interval & Selections & Candidates & Offer (ms) & Selection (ms) & Selection P95 (ms) & Decision (ms) & Total Algorithm Time (ms) \\
+\hline
+Low & 60 & 17.3 & 62.9 & 0.1300 & 0.0691 & 0.1505 & 0.2071 & 3.97 \\
+Moderate & 40 & 25.6 & 63.4 & 0.1260 & 0.0682 & 0.1499 & 0.2036 & 5.80 \\
+\textbf{High (baseline)} & 20 & 51.0 & 62.0 & 0.1265 & 0.0661 & 0.1452 & 0.2005 & 11.58 \\
+Very High & 10 & 102.0 & 62.5 & 0.1227 & 0.0640 & 0.1415 & 0.1934 & 22.50 \\
+\hline
+\end{tabular}%
+}
+\vspace{1mm}
+\parbox{0.98\textwidth}{\footnotesize Offer time measures candidate construction and eligibility filtering performed by the platform. Selection time measures score computation, cooldown adjustment, candidate ordering, and the $\epsilon$-greedy choice. Decision time is their sum for requests reaching the selection stage. Runtime values are hardware-dependent and represent computational overhead rather than communication, task-execution, or end-to-end service latency.}
+\end{table*}

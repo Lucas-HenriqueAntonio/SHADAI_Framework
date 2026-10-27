@@ -1,0 +1,50 @@
+experimento,seed,rng_scheme,telemetry_scheme,attack_scheme,malicious_ratio,selection_step,completion_step,vehicle,malicious,service,reliability_draw,success,reputation_before,reputation_after,reputation_delta
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,40,80,3,True,Diagnóstico Veicular,0.743451103,False,5.662855,6.662855,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,60,90,27,True,Agregação de Dados de Sensores,0.009026773,False,7.339151,8.339151,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,20,100,5,False,Atualização de Modelos Locais (ML),0.036647299,False,7.941636,6.941636,-1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,120,160,38,False,Diagnóstico Veicular,0.882886113,True,8.480473,9.480473,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,100,180,29,True,Atualização de Modelos Locais (ML),0.056482108,False,8.9076,7.9076,-1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,160,190,78,False,Agregação de Dados de Sensores,0.622224329,True,9.807819,10.807819,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,140,220,22,True,Atualização de Modelos Locais (ML),0.102659138,False,9.945562,10.945562,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,240,270,118,False,Agregação de Dados de Sensores,0.818302022,True,8.973721,9.973721,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,320,350,192,False,Agregação de Dados de Sensores,0.266145381,True,9.225838,10.225838,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,300,360,118,False,Processamento de Imagem Urbana,0.105948693,True,9.973721,10.973721,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,420,450,234,False,Agregação de Dados de Sensores,0.385231105,True,8.600591,9.600591,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,400,480,173,False,Atualização de Modelos Locais (ML),0.011379754,False,9.932203,8.932203,-1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,440,480,248,False,Diagnóstico Veicular,0.858197507,True,9.518289,10.518289,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,460,520,321,True,Processamento de Imagem Urbana,0.114285314,False,9.66977,8.66977,-1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,500,540,402,False,Diagnóstico Veicular,0.54083462,True,8.677248,9.677248,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,520,600,332,True,Atualização de Modelos Locais (ML),0.251068697,False,6.762333,5.762333,-1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,540,600,358,False,Processamento de Imagem Urbana,0.063518166,False,8.189167,7.189167,-1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,560,600,402,False,Diagnóstico Veicular,0.58175532,True,9.677248,10.677248,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,580,640,463,True,Processamento de Imagem Urbana,0.471352255,False,9.853811,10.853811,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,640,670,402,False,Agregação de Dados de Sensores,0.012012369,False,10.677248,9.677248,-1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,660,700,517,True,Diagnóstico Veicular,0.293428072,False,8.144854,7.144854,-1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,680,710,436,False,Agregação de Dados de Sensores,0.511518711,True,8.737578,9.737578,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,700,740,477,False,Diagnóstico Veicular,0.681525791,True,9.79879,10.79879,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,760,790,533,False,Agregação de Dados de Sensores,0.749971766,True,7.073855,8.073855,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,720,800,571,True,Atualização de Modelos Locais (ML),0.600885924,False,9.678208,10.678208,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,740,820,596,False,Atualização de Modelos Locais (ML),0.707079965,True,9.80522,10.80522,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,780,840,469,False,Processamento de Imagem Urbana,0.085860903,False,9.548664,8.548664,-1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,840,920,577,True,Atualização de Modelos Locais (ML),0.732393472,False,8.675277,7.675277,-1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,860,920,606,False,Processamento de Imagem Urbana,0.844761001,True,7.172195,8.172195,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,880,940,698,False,Processamento de Imagem Urbana,0.809162496,True,9.706697,10.706697,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,900,940,571,True,Diagnóstico Veicular,0.345849974,False,10.678208,9.678208,-1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,920,960,680,False,Diagnóstico Veicular,0.29578182,True,8.616156,9.616156,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,960,990,665,True,Agregação de Dados de Sensores,0.30548885,False,9.065498,10.065498,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,1000,1040,824,False,Diagnóstico Veicular,0.341937843,True,8.919919,9.919919,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,980,1060,794,False,Atualização de Modelos Locais (ML),0.536048872,True,9.892199,10.892199,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,1020,1080,786,False,Processamento de Imagem Urbana,0.198498101,True,9.689865,10.689865,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,1060,1090,799,True,Agregação de Dados de Sensores,0.753488601,False,8.094071,7.094071,-1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,1040,1100,832,False,Processamento de Imagem Urbana,0.54114895,True,9.86598,10.86598,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,1080,1160,791,False,Atualização de Modelos Locais (ML),0.449555728,True,8.877539,9.877539,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,1100,1160,715,False,Processamento de Imagem Urbana,0.879443227,True,9.268703,10.268703,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,1120,1160,806,False,Diagnóstico Veicular,0.331857048,True,6.254474,7.254474,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,1140,1180,822,False,Diagnóstico Veicular,0.534089,True,9.116799,10.116799,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,1160,1200,784,False,Diagnóstico Veicular,0.402035364,True,8.068918,9.068918,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,1180,1210,830,True,Agregação de Dados de Sensores,0.146914457,False,7.906402,6.906402,-1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,1220,1260,766,False,Diagnóstico Veicular,0.166020107,True,9.486358,10.486358,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,1200,1280,708,True,Atualização de Modelos Locais (ML),0.778824147,False,8.129877,7.129877,-1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,1240,1280,833,False,Diagnóstico Veicular,0.625370385,True,5.121436,6.121436,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,1260,1340,823,False,Atualização de Modelos Locais (ML),0.737180152,True,6.441599,7.441599,1.0
+malicious_40_ratio_40_seed_15,15,split_v1,c17_malicious_ratio_v1,deliberate_service_failure_v1,0.4,1300,1360,823,False,Processamento de Imagem Urbana,0.000836286,False,7.441599,6.441599,-1.0

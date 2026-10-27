@@ -1,0 +1,180 @@
+experimento,seed,rng_scheme,telemetry_scheme,attack_scheme,flood_scheme,attack_type,malicious_ratio,flood_intensity,request_interval,cooldown_steps,step,servico,active_vehicles,unique_eligible_candidates,candidate_entries_after_flood,artificial_candidate_count,allocated,failure_reason,selected_vehicle,selected_malicious,completion_step
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,20,Atualização de Modelos Locais (ML),17,17,17,0,True,,5,False,100
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,40,Diagnóstico Veicular,34,8,8,0,True,,11,False,80
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,60,Agregação de Dados de Sensores,51,5,5,0,True,,27,False,90
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,80,Reencaminhamento de Dados (Edge Relay),66,0,0,0,False,no_eligible_candidates,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,100,Atualização de Modelos Locais (ML),82,82,82,0,True,,70,False,180
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,120,Diagnóstico Veicular,96,24,24,0,True,,38,False,160
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,140,Atualização de Modelos Locais (ML),109,109,109,0,True,,63,False,220
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,160,Agregação de Dados de Sensores,120,11,11,0,True,,98,False,190
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,180,Reencaminhamento de Dados (Edge Relay),129,0,0,0,False,no_eligible_candidates,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,200,Reencaminhamento de Dados (Edge Relay),124,0,0,0,False,no_eligible_candidates,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,220,Reencaminhamento de Dados (Edge Relay),133,0,0,0,False,no_eligible_candidates,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,240,Agregação de Dados de Sensores,141,15,15,0,True,,135,False,270
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,260,Reencaminhamento de Dados (Edge Relay),136,0,0,0,False,no_eligible_candidates,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,280,Reencaminhamento de Dados (Edge Relay),147,0,0,0,False,no_eligible_candidates,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,300,Processamento de Imagem Urbana,147,127,127,0,True,,147,False,360
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,320,Agregação de Dados de Sensores,146,17,17,0,True,,135,False,350
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,340,Reencaminhamento de Dados (Edge Relay),147,0,0,0,False,no_eligible_candidates,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,360,Reencaminhamento de Dados (Edge Relay),152,0,0,0,False,no_eligible_candidates,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,380,Reencaminhamento de Dados (Edge Relay),149,0,0,0,False,no_eligible_candidates,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,400,Atualização de Modelos Locais (ML),148,148,148,0,True,,231,False,480
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,420,Agregação de Dados de Sensores,156,14,14,0,True,,252,False,450
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,440,Diagnóstico Veicular,156,26,26,0,True,,364,False,480
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,460,Processamento de Imagem Urbana,160,134,134,0,True,,294,False,520
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,480,Reencaminhamento de Dados (Edge Relay),155,0,0,0,False,no_eligible_candidates,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,500,Diagnóstico Veicular,155,39,39,0,True,,402,False,540
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,520,Atualização de Modelos Locais (ML),151,151,151,0,True,,318,False,600
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,540,Processamento de Imagem Urbana,157,112,112,0,True,,294,False,600
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,560,Diagnóstico Veicular,149,46,46,0,True,,435,False,600
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,580,Processamento de Imagem Urbana,146,126,126,0,True,,465,False,640
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,600,Reencaminhamento de Dados (Edge Relay),150,0,0,0,False,no_eligible_candidates,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,620,Reencaminhamento de Dados (Edge Relay),146,0,0,0,False,no_eligible_candidates,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,640,Agregação de Dados de Sensores,150,6,6,0,True,,464,False,670
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,660,Diagnóstico Veicular,153,35,35,0,True,,517,False,700
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,680,Agregação de Dados de Sensores,148,4,4,0,True,,402,False,710
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,700,Diagnóstico Veicular,146,42,42,0,True,,533,False,740
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,720,Atualização de Modelos Locais (ML),156,156,156,0,True,,513,False,800
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,740,Atualização de Modelos Locais (ML),158,158,158,0,True,,574,False,820
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,760,Agregação de Dados de Sensores,157,7,7,0,True,,533,False,790
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,780,Processamento de Imagem Urbana,167,140,140,0,True,,558,False,840
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,800,Reencaminhamento de Dados (Edge Relay),153,0,0,0,False,no_eligible_candidates,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,820,Reencaminhamento de Dados (Edge Relay),156,0,0,0,False,no_eligible_candidates,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,840,Atualização de Modelos Locais (ML),152,152,152,0,True,,577,False,920
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,860,Processamento de Imagem Urbana,155,132,132,0,True,,705,False,920
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,880,Processamento de Imagem Urbana,157,135,135,0,True,,642,False,940
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,900,Diagnóstico Veicular,164,42,42,0,True,,663,False,940
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,920,Diagnóstico Veicular,155,27,27,0,True,,680,False,960
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,940,Reencaminhamento de Dados (Edge Relay),149,0,0,0,False,no_eligible_candidates,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,960,Agregação de Dados de Sensores,154,9,9,0,True,,718,False,990
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,980,Atualização de Modelos Locais (ML),151,151,151,0,True,,715,False,1060
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1000,Diagnóstico Veicular,156,27,27,0,True,,705,False,1040
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1020,Processamento de Imagem Urbana,136,115,115,0,True,,801,False,1080
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1040,Processamento de Imagem Urbana,119,102,102,0,True,,680,False,1100
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1060,Agregação de Dados de Sensores,104,9,9,0,True,,738,False,1090
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1080,Atualização de Modelos Locais (ML),91,91,91,0,True,,791,False,1160
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1100,Processamento de Imagem Urbana,68,60,60,0,True,,830,False,1160
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1120,Diagnóstico Veicular,56,20,20,0,True,,806,False,1160
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1140,Diagnóstico Veicular,49,16,16,0,True,,833,False,1180
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1160,Diagnóstico Veicular,25,4,4,0,True,,830,False,1200
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1180,Agregação de Dados de Sensores,21,2,2,0,True,,766,False,1210
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1200,Atualização de Modelos Locais (ML),14,14,14,0,True,,708,False,1280
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1220,Diagnóstico Veicular,12,3,3,0,True,,784,False,1260
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1240,Diagnóstico Veicular,6,1,1,0,True,,833,False,1280
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1260,Atualização de Modelos Locais (ML),4,4,4,0,True,,784,False,1340
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1280,Reencaminhamento de Dados (Edge Relay),3,0,0,0,False,no_eligible_candidates,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1300,Processamento de Imagem Urbana,1,1,1,0,True,,823,False,1360
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1320,Atualização de Modelos Locais (ML),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1340,Reencaminhamento de Dados (Edge Relay),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1360,Agregação de Dados de Sensores,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1380,Processamento de Imagem Urbana,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1400,Agregação de Dados de Sensores,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1420,Reencaminhamento de Dados (Edge Relay),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1440,Reencaminhamento de Dados (Edge Relay),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1460,Atualização de Modelos Locais (ML),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1480,Reencaminhamento de Dados (Edge Relay),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1500,Agregação de Dados de Sensores,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1520,Processamento de Imagem Urbana,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1540,Agregação de Dados de Sensores,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1560,Diagnóstico Veicular,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1580,Agregação de Dados de Sensores,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1600,Processamento de Imagem Urbana,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1620,Processamento de Imagem Urbana,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1640,Agregação de Dados de Sensores,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1660,Agregação de Dados de Sensores,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1680,Atualização de Modelos Locais (ML),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1700,Diagnóstico Veicular,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1720,Processamento de Imagem Urbana,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1740,Atualização de Modelos Locais (ML),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1760,Agregação de Dados de Sensores,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1780,Atualização de Modelos Locais (ML),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1800,Agregação de Dados de Sensores,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1820,Diagnóstico Veicular,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1840,Agregação de Dados de Sensores,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1860,Agregação de Dados de Sensores,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1880,Agregação de Dados de Sensores,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1900,Diagnóstico Veicular,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1920,Atualização de Modelos Locais (ML),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1940,Diagnóstico Veicular,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1960,Reencaminhamento de Dados (Edge Relay),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,1980,Atualização de Modelos Locais (ML),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2000,Reencaminhamento de Dados (Edge Relay),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2020,Reencaminhamento de Dados (Edge Relay),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2040,Processamento de Imagem Urbana,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2060,Diagnóstico Veicular,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2080,Atualização de Modelos Locais (ML),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2100,Atualização de Modelos Locais (ML),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2120,Atualização de Modelos Locais (ML),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2140,Processamento de Imagem Urbana,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2160,Processamento de Imagem Urbana,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2180,Atualização de Modelos Locais (ML),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2200,Atualização de Modelos Locais (ML),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2220,Atualização de Modelos Locais (ML),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2240,Processamento de Imagem Urbana,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2260,Reencaminhamento de Dados (Edge Relay),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2280,Diagnóstico Veicular,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2300,Processamento de Imagem Urbana,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2320,Agregação de Dados de Sensores,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2340,Diagnóstico Veicular,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2360,Diagnóstico Veicular,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2380,Processamento de Imagem Urbana,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2400,Reencaminhamento de Dados (Edge Relay),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2420,Atualização de Modelos Locais (ML),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2440,Atualização de Modelos Locais (ML),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2460,Agregação de Dados de Sensores,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2480,Atualização de Modelos Locais (ML),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2500,Atualização de Modelos Locais (ML),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2520,Diagnóstico Veicular,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2540,Processamento de Imagem Urbana,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2560,Diagnóstico Veicular,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2580,Agregação de Dados de Sensores,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2600,Agregação de Dados de Sensores,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2620,Reencaminhamento de Dados (Edge Relay),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2640,Processamento de Imagem Urbana,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2660,Atualização de Modelos Locais (ML),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2680,Agregação de Dados de Sensores,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2700,Processamento de Imagem Urbana,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2720,Atualização de Modelos Locais (ML),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2740,Reencaminhamento de Dados (Edge Relay),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2760,Agregação de Dados de Sensores,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2780,Diagnóstico Veicular,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2800,Atualização de Modelos Locais (ML),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2820,Processamento de Imagem Urbana,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2840,Agregação de Dados de Sensores,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2860,Atualização de Modelos Locais (ML),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2880,Reencaminhamento de Dados (Edge Relay),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2900,Processamento de Imagem Urbana,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2920,Agregação de Dados de Sensores,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2940,Reencaminhamento de Dados (Edge Relay),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2960,Processamento de Imagem Urbana,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,2980,Reencaminhamento de Dados (Edge Relay),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3000,Reencaminhamento de Dados (Edge Relay),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3020,Atualização de Modelos Locais (ML),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3040,Reencaminhamento de Dados (Edge Relay),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3060,Processamento de Imagem Urbana,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3080,Agregação de Dados de Sensores,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3100,Atualização de Modelos Locais (ML),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3120,Reencaminhamento de Dados (Edge Relay),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3140,Reencaminhamento de Dados (Edge Relay),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3160,Atualização de Modelos Locais (ML),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3180,Processamento de Imagem Urbana,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3200,Agregação de Dados de Sensores,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3220,Reencaminhamento de Dados (Edge Relay),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3240,Diagnóstico Veicular,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3260,Atualização de Modelos Locais (ML),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3280,Agregação de Dados de Sensores,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3300,Diagnóstico Veicular,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3320,Reencaminhamento de Dados (Edge Relay),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3340,Processamento de Imagem Urbana,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3360,Diagnóstico Veicular,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3380,Atualização de Modelos Locais (ML),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3400,Agregação de Dados de Sensores,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3420,Atualização de Modelos Locais (ML),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3440,Reencaminhamento de Dados (Edge Relay),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3460,Reencaminhamento de Dados (Edge Relay),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3480,Diagnóstico Veicular,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3500,Reencaminhamento de Dados (Edge Relay),0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3520,Diagnóstico Veicular,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3540,Processamento de Imagem Urbana,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3560,Agregação de Dados de Sensores,0,0,0,0,False,no_active_vehicles,,,
+c22_greedy_seed_15,15,split_v1,c18_flood_intensity_v1,none_v1,c18_flood_param_v1,none,0.0,0,20,40,3580,Processamento de Imagem Urbana,0,0,0,0,False,no_active_vehicles,,,

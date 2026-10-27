@@ -1,0 +1,22 @@
+experimento,seed,rng_scheme,telemetry_scheme,lambda1,lambda2,lambda3,w1,w2,w3,epsilon,cooldown_steps,request_interval,step,servico,active_vehicles,positive_utility,sufficient_energy,eligible,rejected_utility,rejected_energy,rejected_utility_only,rejected_energy_only,rejected_both,eligibility_rate,avg_utility,min_utility,max_utility
+runtime_low_interval_060_seed_23,23,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,60,Processamento de Imagem Urbana,51,41,51,41,10,0,10,0,0,0.803922,0.107363,-0.077386,0.309616
+runtime_low_interval_060_seed_23,23,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,120,Atualização de Modelos Locais (ML),98,98,98,98,0,0,0,0,0,1.0,0.281264,0.08066,0.467999
+runtime_low_interval_060_seed_23,23,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,180,Diagnóstico Veicular,128,24,128,24,104,0,104,0,0,0.1875,-0.098144,-0.288228,0.122236
+runtime_low_interval_060_seed_23,23,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,240,Diagnóstico Veicular,145,44,145,44,101,0,101,0,0,0.303448,-0.065675,-0.289825,0.11356
+runtime_low_interval_060_seed_23,23,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,300,Agregação de Dados de Sensores,145,7,145,7,138,0,138,0,0,0.048276,-0.13439,-0.336796,0.048431
+runtime_low_interval_060_seed_23,23,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,360,Agregação de Dados de Sensores,158,10,158,10,148,0,148,0,0,0.063291,-0.145119,-0.333744,0.049377
+runtime_low_interval_060_seed_23,23,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,420,Reencaminhamento de Dados (Edge Relay),160,0,160,0,160,0,160,0,0,0.0,-0.271477,-0.474742,-0.02212
+runtime_low_interval_060_seed_23,23,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,480,Reencaminhamento de Dados (Edge Relay),155,0,155,0,155,0,155,0,0,0.0,-0.254683,-0.467341,-0.036266
+runtime_low_interval_060_seed_23,23,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,540,Diagnóstico Veicular,150,35,150,35,115,0,115,0,0,0.233333,-0.076591,-0.29674,0.130729
+runtime_low_interval_060_seed_23,23,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,600,Processamento de Imagem Urbana,145,95,145,95,50,0,50,0,0,0.655172,0.055485,-0.135802,0.264997
+runtime_low_interval_060_seed_23,23,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,660,Reencaminhamento de Dados (Edge Relay),153,0,153,0,153,0,153,0,0,0.0,-0.225888,-0.45724,-0.02648
+runtime_low_interval_060_seed_23,23,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,720,Processamento de Imagem Urbana,160,131,160,131,29,0,29,0,0,0.81875,0.109316,-0.128738,0.313333
+runtime_low_interval_060_seed_23,23,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,780,Atualização de Modelos Locais (ML),169,169,169,169,0,0,0,0,0,1.0,0.28078,0.059176,0.500856
+runtime_low_interval_060_seed_23,23,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,840,Processamento de Imagem Urbana,158,114,158,114,44,0,44,0,0,0.721519,0.070587,-0.130824,0.313895
+runtime_low_interval_060_seed_23,23,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,900,Diagnóstico Veicular,156,43,156,43,113,0,113,0,0,0.275641,-0.078697,-0.297564,0.107008
+runtime_low_interval_060_seed_23,23,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,960,Processamento de Imagem Urbana,152,126,152,126,26,0,26,0,0,0.828947,0.111234,-0.099026,0.305703
+runtime_low_interval_060_seed_23,23,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,1020,Processamento de Imagem Urbana,132,94,132,94,38,0,38,0,0,0.712121,0.064297,-0.133306,0.262297
+runtime_low_interval_060_seed_23,23,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,1080,Atualização de Modelos Locais (ML),93,93,93,93,0,0,0,0,0,1.0,0.296302,0.094109,0.489641
+runtime_low_interval_060_seed_23,23,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,1140,Processamento de Imagem Urbana,51,44,51,44,7,0,7,0,0,0.862745,0.094742,-0.071293,0.26373
+runtime_low_interval_060_seed_23,23,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,1200,Processamento de Imagem Urbana,18,11,18,11,7,0,7,0,0,0.611111,0.023805,-0.124796,0.256076
+runtime_low_interval_060_seed_23,23,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,1260,Agregação de Dados de Sensores,2,0,2,0,2,0,2,0,0,0.0,-0.251727,-0.348603,-0.154851

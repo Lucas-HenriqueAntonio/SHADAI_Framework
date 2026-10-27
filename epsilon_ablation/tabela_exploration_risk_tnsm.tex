@@ -1,0 +1,21 @@
+\begin{table*}[t]
+\centering
+\caption{Risk of exploratory selections under the SHADAI $\epsilon$-greedy policy. Regret is computed against the counterfactual greedy-best candidate available in the same request. Values are means over 30 simulation seeds.}
+\label{tab:exploration_risk}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{c|ccccccc}
+\hline
+$\epsilon$ & Exploration & Rel. Regret & Risk $\geq10\%$ & Risk $\geq20\%$ & Greedy-Best Selected & Mean Rank & Distance Penalty \\
+\hline
+0.00 & 0.00\% & -- & -- & -- & -- & -- & -- \\
+0.10 & 10.42\% & 17.93\% & 71.44\% & 39.66\% & 11.25\% & 26.38 & 239.10 \\
+\textbf{0.20} & 20.27\% & 18.50\% & 70.64\% & 42.21\% & 9.22\% & 31.75 & 218.83 \\
+0.30 & 29.33\% & 18.30\% & 70.75\% & 43.78\% & 11.78\% & 29.81 & 205.44 \\
+0.50 & 48.24\% & 19.43\% & 74.54\% & 45.54\% & 9.70\% & 30.93 & 223.52 \\
+1.00 & 100.00\% & 19.67\% & 74.87\% & 46.19\% & 8.97\% & 31.83 & 224.50 \\
+\hline
+\end{tabular}%
+}
+\vspace{1mm}
+\parbox{0.98\textwidth}{\footnotesize The counterfactual greedy reference is the highest cooldown-adjusted platform score among the eligible candidates available at the same request. A regret of zero means that exploration happened to select the same candidate that exploitation would have selected.}
+\end{table*}

@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering
+\caption{SHADAI performance under different request workloads. The original workload uses a request interval of 20 simulation steps. Values are means over 30 simulation seeds.}
+\label{tab:workload_sensitivity}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l|cccccccc}
+\hline
+Workload & Interval & Requests & Alloc. Rate & Eligibility & Score & Distance & Selected Energy & Jain \\
+\hline
+Low & 60 & 21.4 & 80.97\% & 42.26\% & 0.8770 & 133.31 & 103.44 & 0.9560 \\
+Moderate & 40 & 32.3 & 79.12\% & 42.52\% & 0.8747 & 135.66 & 103.48 & 0.9215 \\
+\textbf{High (baseline)} & 20 & 64.9 & 78.65\% & 41.62\% & 0.8669 & 135.59 & 101.73 & 0.8817 \\
+Very High & 10 & 130.3 & 78.30\% & 41.84\% & 0.8561 & 136.72 & 99.79 & 0.8332 \\
+\hline
+\end{tabular}%
+}
+\vspace{1mm}
+\parbox{0.98\textwidth}{\footnotesize Lower request intervals represent higher offered workloads. Selected Energy denotes the available energy of the selected vehicle at decision time, before service execution. Jain's index is computed over vehicles receiving at least one allocation in each run.}
+\end{table*}
