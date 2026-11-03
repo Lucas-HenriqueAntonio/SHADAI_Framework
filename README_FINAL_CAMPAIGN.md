@@ -1,0 +1,201 @@
+# SHADAI IEEE — Final Campaign Package
+
+This package is the cleaned and campaign-ready revision of the supplied project.
+
+## 1. What changed
+
+### Core reproducibility
+- `shadai_sumo.py` now accepts `--max-vehicles`.
+- Default remains `400` for backward compatibility.
+- RNG scheme is now `split_v2`.
+- A dedicated energy-consumption RNG stream was added.
+- `veiculo.py` no longer uses the global `random` state.
+- Initial reputation is injected by the simulator.
+- Energy-consumption variation uses the injected energy RNG.
+- `Veiculo.atualizar_reputacao(sucesso)` now respects exactly the service outcome supplied by the simulator.
+- Malicious behavior is therefore owned only by the attack model in `shadai_sumo.py`.
+
+### RNG split_v2
+Master seed offsets:
+- request: +100000
+- vehicle profile / initial reputation: +200000
+- task reliability: +300000
+- epsilon policy gate: +400000
+- policy choice: +500000
+- active-vehicle sampling: +600000
+- malicious assignment: +700000
+- flood reserved stream: +800000
+- service-energy variation: +900000
+- REVS requester selection: +1000000
+
+### Scalability
+A dedicated campaign was added:
+- `run_scalability_final.py`
+- 100 / 400 / 800 active-vehicle caps
+- 30 seeds per cap
+- no recursive file discovery
+- final outputs in `scalability_final/`
+
+### Figures
+The final plot scripts no longer mix unrelated 400-vehicle campaigns.
+
+Original figures are preserved conceptually:
+- Score evolution
+- Utility evolution
+- Reputation evolution
+
+but are now generated from independent runs using:
+- across-seed mean
+- 95% confidence band
+- optional light smoothing of the aggregated curve only
+
+New figure families:
+- strategy comparison
+- C17 malicious-ratio
+- C18 flood intensity
+- static vs dynamic pricing
+- alpha/beta sensitivity
+- pricing stability
+- lambda/score-weight/epsilon/workload/capacity/runtime ablations
+
+All final figures are written to:
+`figures_final/`
+
+## 2. Historical material
+
+Previous experiment outputs were moved to:
+`archive_previous/`
+
+They are retained for audit/regression purposes and are NOT consumed by the final plotting scripts.
+
+The previous plotting scripts are preserved in:
+`archive_previous/scripts_before_final/`
+
+Potentially unused old network/helper files are in:
+`archive_previous/unused_candidates/`
+
+## 3. Required local environment
+
+The package expects:
+- Python
+- SUMO installed and available on PATH
+- TraCI
+- pandas
+- numpy
+- matplotlib
+- scipy
+
+Install Python dependencies as appropriate for your environment.
+
+## 4. Mandatory first step: reproducibility test
+
+Run:
+
+    python run_final_campaign.py --phase verify
+
+This executes the same SHADAI configuration twice with the same seed.
+
+The checker excludes only wall-clock runtime columns and the experiment label.
+All scientific/stochastic outputs must be identical.
+
+Do NOT launch the definitive campaign if this test fails.
+
+## 5. Definitive experiments
+
+After the reproducibility test passes:
+
+    python run_final_campaign.py --phase experiments
+
+This runs:
+1. final scalability 100/400/800
+2. lambda sensitivity
+3. score-weight sensitivity
+4. epsilon sensitivity
+5. cooldown
+6. workload
+7. capacity
+8. runtime
+9. malicious-ratio attack
+10. flood-intensity attack
+11. SHADAI vs Greedy
+12. SHADAI vs NoRep
+13. SHADAI vs REVS-based
+14. static vs dynamic pricing
+15. alpha/beta pricing sensitivity
+16. dynamic-pricing stability
+
+Existing ablation runners retain their experiment-specific design. The final strategy comparisons (C22/C23/C24) and the newly integrated scalability campaign explicitly use dynamic pricing with alpha=beta=0.20 so that the final SHADAI baseline is aligned across those comparisons.
+
+## 6. Analysis
+
+After all experiments finish:
+
+    python run_final_campaign.py --phase analysis
+
+or:
+
+    python run_final_analysis.py
+
+This runs the multi-seed analyzers.
+
+## 7. Figures
+
+After analysis:
+
+    python run_final_campaign.py --phase plots
+
+or:
+
+    python run_final_plots.py
+
+Final figure directories:
+- `figures_final/scalability`
+- `figures_final/strategies`
+- `figures_final/security`
+- `figures_final/pricing`
+- `figures_final/sensitivity`
+- `figures_final/ablations`
+
+Figures are exported in PNG, PDF and EPS.
+
+## 8. One-command option
+
+Only after the verify phase has passed:
+
+    python run_final_campaign.py --phase all
+
+This performs verify + experiments + analysis + plots.
+
+The experiment phase is large. The runner is restart-friendly because the existing experiment scripts check compatible outputs before rerunning where supported.
+
+## 9. Important interpretation rules
+
+### REVS
+The implemented benchmark is a REVS-based provider-selection benchmark, not a reproduction of the full blockchain/social-trust framework.
+
+Do not directly compare:
+- raw SHADAI score vs raw REVS score
+- SHADAI vehicle-to-task distance vs REVS requester-to-provider distance
+
+### Scalability
+`--max-vehicles` is the active-vehicle cap sampled from the SUMO traffic population.
+It is not the number of vehicles generated by the route file.
+
+### Runtime
+Wall-clock runtime measurements are inherently machine-dependent.
+Record final CPU/RAM/OS/Python/SUMO versions when producing manuscript runtime results.
+
+## 10. Do not use archived figures in the paper
+
+The old `figures_*` directories were archived because the previous scalability plot discovery mixed unrelated 400-vehicle campaigns.
+
+Generate the paper figures only after the final campaign using `run_final_plots.py`.
+
+## 11. Recommended paper data freeze
+
+After the final campaign completes successfully:
+1. do not change `shadai_sumo.py`, `veiculo.py`, `lider.py`, or experiment runners;
+2. keep the full output directories;
+3. record software/hardware versions;
+4. create a checksum manifest of the final source/results;
+5. use only those frozen outputs in the revised manuscript.

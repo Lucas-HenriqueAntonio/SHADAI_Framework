@@ -87,7 +87,7 @@ REQUEST_INTERVAL = 20
 # VERSIONAMENTO
 # ============================================================
 
-RNG_REQUIRED = "split_v1"
+RNG_REQUIRED = "split_v2"
 
 TELEMETRY_REQUIRED = (
     "c17_malicious_ratio_v1"

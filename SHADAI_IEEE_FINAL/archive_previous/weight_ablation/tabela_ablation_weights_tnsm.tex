@@ -1,0 +1,26 @@
+\begin{table*}[t]
+\centering
+\caption{Sensitivity and ablation analysis of the SHADAI platform score weights over 30 independent simulation seeds. Values are reported as mean and 95\% confidence interval.}
+\label{tab:weight_ablation}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lccc|ccccc}
+\hline
+Configuration & $w_1$ & $w_2$ & $w_3$ & $\hat{R}$ & $\hat{E}$ & $\hat{P}$ & Distance & Residual Energy \\
+\hline
+Baseline & 0.4000 & 0.3000 & 0.3000 & 0.8904 [0.8837, 0.8970] & 0.8520 [0.8459, 0.8580] & 0.8643 [0.8559, 0.8728] & 137.04 [128.22, 145.86] & 102.23 [101.51, 102.96] \\
+Equal & 0.3333 & 0.3333 & 0.3334 & 0.8710 [0.8633, 0.8787] & 0.8586 [0.8514, 0.8658] & 0.8709 [0.8628, 0.8789] & 130.41 [122.03, 138.80] & 103.03 [102.16, 103.90] \\
+Reputation-high & 0.7000 & 0.1500 & 0.1500 & 0.9158 [0.9103, 0.9213] & 0.8022 [0.7929, 0.8114] & 0.8349 [0.8249, 0.8448] & 166.34 [155.98, 176.70] & 96.26 [95.15, 97.37] \\
+Energy-high & 0.1500 & 0.7000 & 0.1500 & 0.8188 [0.8114, 0.8262] & 0.9000 [0.8933, 0.9067] & 0.8356 [0.8268, 0.8445] & 165.24 [155.97, 174.51] & 108.00 [107.19, 108.80] \\
+Proximity-high & 0.1500 & 0.1500 & 0.7000 & 0.8463 [0.8385, 0.8541] & 0.8368 [0.8293, 0.8443] & 0.8954 [0.8883, 0.9026] & 105.64 [98.08, 113.21] & 100.42 [99.52, 101.32] \\
+No Reputation & 0.0000 & 0.5000 & 0.5000 & 0.7578 [0.7510, 0.7646] & 0.8891 [0.8819, 0.8963] & 0.8843 [0.8776, 0.8910] & 116.95 [109.78, 124.12] & 106.69 [105.83, 107.56] \\
+No Energy & 0.5714 & 0.0000 & 0.4286 & 0.9090 [0.9032, 0.9148] & 0.7251 [0.7164, 0.7338] & 0.8736 [0.8668, 0.8804] & 127.71 [120.46, 134.97] & 87.01 [85.97, 88.05] \\
+No Proximity & 0.5714 & 0.4286 & 0.0000 & 0.9036 [0.8963, 0.9108] & 0.8663 [0.8602, 0.8725] & 0.6887 [0.6759, 0.7015] & 314.91 [301.33, 328.49] & 103.96 [103.22, 104.70] \\
+\hline
+\end{tabular}%
+}
+\vspace{1mm}
+\begin{minipage}{0.98\textwidth}
+\footnotesize
+$w_1$, $w_2$, and $w_3$ respectively weight reputation, residual energy, and proximity. $\hat{R}$, $\hat{E}$, and $\hat{P}$ denote the normalized attributes of the selected vehicles. Eligibility and request allocation rates are omitted because they remained unchanged across the evaluated score-weight configurations; the score weights operate only after candidate eligibility is established.
+\end{minipage}
+\end{table*}

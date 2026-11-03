@@ -1,0 +1,41 @@
+{
+  "package_version": "SHADAI_IEEE_FINAL_2026-10-29",
+  "rng_scheme": "split_v2",
+  "master_seeds": "1..30",
+  "default_max_vehicles": 400,
+  "scalability_max_vehicles": [
+    100,
+    400,
+    800
+  ],
+  "final_scalability_pricing": {
+    "mode": "dynamic",
+    "alpha": 0.2,
+    "beta": 0.2,
+    "reference_interval": 20
+  },
+  "baseline": {
+    "lambda": [
+      0.5,
+      0.3,
+      0.2
+    ],
+    "weights": [
+      0.4,
+      0.3,
+      0.3
+    ],
+    "epsilon": 0.2,
+    "cooldown_steps": 40,
+    "request_interval": 20
+  },
+  "revs": {
+    "weights": [
+      0.7,
+      0.3
+    ],
+    "reputation_threshold": 0.5,
+    "communication_radius_m": 250.0,
+    "stay_time_mode": "raw"
+  }
+}

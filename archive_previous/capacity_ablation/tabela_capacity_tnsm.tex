@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering
+\caption{SHADAI capacity under increasing offered workload. End-to-end service ratio includes requests generated when no vehicle is active, whereas conditional service ratio considers only requests generated when at least one vehicle is available. Values are means over 30 simulation seeds.}
+\label{tab:capacity_load}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l|cccccccc}
+\hline
+Workload & Interval & Offered Req. & E2E Service & Conditional Service & No Active Vehicle & No Eligible Candidate & Alloc. Throughput & Completion Throughput \\
+\hline
+Low & 60 & 59.0 & 29.32\% & 80.97\% & 63.79\% & 6.89\% & 4.81 & 4.81 \\
+Moderate & 40 & 89.0 & 28.73\% & 79.12\% & 63.71\% & 7.57\% & 7.10 & 7.10 \\
+\textbf{High (baseline)} & 20 & 179.0 & 28.51\% & 78.65\% & 63.76\% & 7.73\% & 14.18 & 14.18 \\
+Very High & 10 & 359.0 & 28.43\% & 78.30\% & 63.70\% & 7.87\% & 28.35 & 28.35 \\
+\hline
+\end{tabular}%
+}
+\vspace{1mm}
+\parbox{0.98\textwidth}{\footnotesize Throughput is reported per 1000 simulation steps. Requests without active vehicles are classified separately from requests for which vehicles are present but no candidate satisfies the SHADAI eligibility conditions. The current implementation is a loss system: unserved requests are not queued for later processing.}
+\end{table*}

@@ -1,0 +1,23 @@
+experimento,seed,rng_scheme,telemetry_scheme,lambda1,lambda2,lambda3,w1,w2,w3,epsilon,cooldown_steps,request_interval,step,servico,active_vehicles,positive_utility,sufficient_energy,eligible,rejected_utility,rejected_energy,rejected_utility_only,rejected_energy_only,rejected_both,eligibility_rate,avg_utility,min_utility,max_utility
+load_low_interval_060_seed_16,16,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,60,Diagnóstico Veicular,51,8,51,8,43,0,43,0,0,0.156863,-0.086082,-0.266413,0.119953
+load_low_interval_060_seed_16,16,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,120,Atualização de Modelos Locais (ML),96,96,96,96,0,0,0,0,0,1.0,0.293403,0.095031,0.479358
+load_low_interval_060_seed_16,16,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,180,Reencaminhamento de Dados (Edge Relay),128,0,128,0,128,0,128,0,0,0.0,-0.218505,-0.433111,-0.030887
+load_low_interval_060_seed_16,16,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,240,Atualização de Modelos Locais (ML),141,141,141,141,0,0,0,0,0,1.0,0.312069,0.076612,0.50015
+load_low_interval_060_seed_16,16,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,300,Atualização de Modelos Locais (ML),147,147,147,147,0,0,0,0,0,1.0,0.317643,0.089718,0.49147
+load_low_interval_060_seed_16,16,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,360,Diagnóstico Veicular,154,48,154,48,106,0,106,0,0,0.311688,-0.065295,-0.279366,0.119144
+load_low_interval_060_seed_16,16,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,420,Agregação de Dados de Sensores,159,12,159,12,147,0,147,0,0,0.075472,-0.142513,-0.38493,0.058571
+load_low_interval_060_seed_16,16,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,480,Diagnóstico Veicular,158,22,158,22,136,0,136,0,0,0.139241,-0.104091,-0.321211,0.094363
+load_low_interval_060_seed_16,16,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,540,Reencaminhamento de Dados (Edge Relay),154,0,154,0,154,0,154,0,0,0.0,-0.217317,-0.428782,-0.041564
+load_low_interval_060_seed_16,16,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,600,Diagnóstico Veicular,148,42,148,42,106,0,106,0,0,0.283784,-0.059597,-0.271583,0.129932
+load_low_interval_060_seed_16,16,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,660,Diagnóstico Veicular,154,35,154,35,119,0,119,0,0,0.227273,-0.0906,-0.313823,0.097431
+load_low_interval_060_seed_16,16,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,720,Agregação de Dados de Sensores,163,6,163,6,157,0,157,0,0,0.03681,-0.180573,-0.372385,0.043203
+load_low_interval_060_seed_16,16,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,780,Atualização de Modelos Locais (ML),160,160,160,160,0,0,0,0,0,1.0,0.265785,0.050762,0.502196
+load_low_interval_060_seed_16,16,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,840,Reencaminhamento de Dados (Edge Relay),146,0,146,0,146,0,146,0,0,0.0,-0.2367,-0.443453,-0.028332
+load_low_interval_060_seed_16,16,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,900,Diagnóstico Veicular,160,42,160,42,118,0,118,0,0,0.2625,-0.083091,-0.295548,0.134189
+load_low_interval_060_seed_16,16,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,960,Processamento de Imagem Urbana,159,111,159,111,48,0,48,0,0,0.698113,0.064027,-0.131305,0.261449
+load_low_interval_060_seed_16,16,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,1020,Atualização de Modelos Locais (ML),139,139,139,139,0,0,0,0,0,1.0,0.282069,0.06013,0.487754
+load_low_interval_060_seed_16,16,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,1080,Agregação de Dados de Sensores,94,1,94,1,93,0,93,0,0,0.010638,-0.165674,-0.378971,0.015969
+load_low_interval_060_seed_16,16,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,1140,Reencaminhamento de Dados (Edge Relay),48,0,48,0,48,0,48,0,0,0.0,-0.253848,-0.426114,-0.120111
+load_low_interval_060_seed_16,16,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,1200,Reencaminhamento de Dados (Edge Relay),19,0,19,0,19,0,19,0,0,0.0,-0.282438,-0.447941,-0.15531
+load_low_interval_060_seed_16,16,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,1260,Diagnóstico Veicular,3,0,3,0,3,0,3,0,0,0.0,-0.086959,-0.144347,-0.049624
+load_low_interval_060_seed_16,16,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,1320,Atualização de Modelos Locais (ML),1,1,1,1,0,0,0,0,0,1.0,0.333148,0.333148,0.333148

@@ -41,6 +41,7 @@ parser.add_argument("--epsilon", type=float, default=0.2)
 # cooldown and workload
 parser.add_argument("--cooldown-steps", type=int, default=40)
 parser.add_argument("--request-interval", type=int, default=20)
+parser.add_argument("--max-vehicles", type=int, default=400)
 
 # C25 - pricing
 parser.add_argument(
@@ -123,6 +124,7 @@ EPSILON = args.epsilon
 
 COOLDOWN_STEPS = args.cooldown_steps
 REQUEST_INTERVAL = args.request_interval
+MAX_VEICULOS = args.max_vehicles
 
 PRICING_MODE = args.pricing_mode
 PRICING_ALPHA = args.pricing_alpha
@@ -149,7 +151,7 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 # VERSIONAMENTO
 # ============================================================
 
-RNG_SCHEME = "split_v1"
+RNG_SCHEME = "split_v2"
 
 # Kept for compatibility with C18-generated telemetry.
 TELEMETRY_SCHEME = "c18_flood_intensity_v1"
@@ -179,6 +181,7 @@ SEED_POLICY_CHOICE = SEED + 500_000
 SEED_ACTIVE_SAMPLE = SEED + 600_000
 SEED_MALICIOUS = SEED + 700_000
 SEED_FLOOD = SEED + 800_000  # reserved for future stochastic flood variants
+SEED_ENERGY = SEED + 900_000
 
 RNG_REQUEST = random.Random(SEED_REQUEST)
 RNG_VEHICLE = random.Random(SEED_VEHICLE)
@@ -188,6 +191,7 @@ RNG_POLICY_CHOICE = random.Random(SEED_POLICY_CHOICE)
 RNG_ACTIVE_SAMPLE = random.Random(SEED_ACTIVE_SAMPLE)
 RNG_MALICIOUS = random.Random(SEED_MALICIOUS)
 RNG_FLOOD = random.Random(SEED_FLOOD)
+RNG_ENERGY = random.Random(SEED_ENERGY)
 
 
 # ============================================================
@@ -215,6 +219,9 @@ if COOLDOWN_STEPS < 0:
 if REQUEST_INTERVAL <= 0:
     raise ValueError("request_interval must be > 0.")
 
+if MAX_VEICULOS <= 0:
+    raise ValueError("max_vehicles must be > 0.")
+
 if PRICING_ALPHA < 0:
     raise ValueError("pricing_alpha must be >= 0.")
 
@@ -236,7 +243,6 @@ if FLOOD_INTENSITY < 0:
 # ============================================================
 
 MODO = "shadai"
-MAX_VEICULOS = 400
 
 CUSTO_BASE_MIN = 3.0
 CUSTO_BASE_MAX = 8.0
@@ -352,6 +358,7 @@ SUMMARY_FILE = os.path.join(
 COMMON_COLUMNS = [
     "experimento",
     "seed",
+    "max_vehicles",
     "rng_scheme",
     "telemetry_scheme",
     "attack_scheme",
@@ -371,6 +378,7 @@ def common_values():
     return [
         EXPERIMENTO,
         SEED,
+        MAX_VEICULOS,
         RNG_SCHEME,
         TELEMETRY_SCHEME,
         ATTACK_SCHEME,
@@ -1512,6 +1520,15 @@ def atualizar_veiculos():
 
                 tempo_max=
                     TEMPO_MAX,
+
+                initial_reputation=
+                    RNG_VEHICLE.uniform(
+                        5,
+                        10,
+                    ),
+
+                rng_energy=
+                    RNG_ENERGY,
             )
 
             malicious_draw = (

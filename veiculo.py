@@ -19,7 +19,9 @@ class Veiculo:
         preco_max=60.0,
         energia_servico_max=25.0,
         distancia_max=1000.0,
-        tempo_max=100.0
+        tempo_max=100.0,
+        initial_reputation=None,
+        rng_energy=None
     ):
 
         self.id = id
@@ -34,9 +36,20 @@ class Veiculo:
 
         self.malicioso = False
 
-        self.reputacao = random.uniform(
-            5,
-            10
+        # Final-campaign rule: no hidden/global randomness.
+        # The simulator supplies the initial reputation explicitly.
+        self.reputacao = (
+            float(initial_reputation)
+            if initial_reputation is not None
+            else 7.5
+        )
+
+        # Energy-consumption variation uses a dedicated injected RNG.
+        # The deterministic fallback is only for standalone/unit usage.
+        self._rng_energy = (
+            rng_energy
+            if rng_energy is not None
+            else random.Random(0)
         )
 
         self.servicos_concluidos = 0
@@ -362,7 +375,7 @@ class Veiculo:
         )
 
 
-        variacao = random.uniform(
+        variacao = self._rng_energy.uniform(
             0.9,
             1.1
         )
@@ -393,18 +406,8 @@ class Veiculo:
         sucesso
     ):
 
-        if self.malicioso:
-
-            sucesso = (
-
-                False
-
-                if random.random() < 0.7
-
-                else True
-            )
-
-
+        # The simulator/attack model owns the task outcome.
+        # Reputation must update from exactly that observed outcome.
         if sucesso:
 
             self.reputacao += 1

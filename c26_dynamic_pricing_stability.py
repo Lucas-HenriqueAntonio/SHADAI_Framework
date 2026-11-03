@@ -19,7 +19,7 @@ PRICING_ALPHA = 0.20
 PRICING_BETA = 0.20
 PRICING_REFERENCE_INTERVAL = 20
 
-RNG_SCHEME = "split_v1"
+RNG_SCHEME = "split_v2"
 PRICING_SCHEME = "c25_supply_demand_dynamic_v1"
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)

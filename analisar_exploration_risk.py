@@ -20,9 +20,9 @@ except ImportError:
 
 EPSILON_DIR = "epsilon_ablation"
 
-RNG_SCHEME_REQUIRED = "split_v1"
+RNG_SCHEME_REQUIRED = "split_v2"
 
-TELEMETRY_SCHEME_REQUIRED = "c9_regret_v1"
+TELEMETRY_SCHEME_REQUIRED = "c18_flood_intensity_v1"
 
 
 CONFIGURACOES = {

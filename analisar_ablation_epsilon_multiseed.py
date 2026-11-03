@@ -25,7 +25,7 @@ EPSILON_DIR = "epsilon_ablation"
 # RNG
 # ============================================================
 
-RNG_SCHEME_REQUIRED = "split_v1"
+RNG_SCHEME_REQUIRED = "split_v2"
 
 
 # ============================================================
@@ -1111,7 +1111,7 @@ if (
     print(
 
         "\nAll expected 180 runs were found "
-        "with rng_scheme=split_v1."
+        "with rng_scheme=split_v2."
     )
 
 
@@ -2298,7 +2298,7 @@ print(
 
 print(
 
-    "All accepted runs must use rng_scheme=split_v1."
+    "All accepted runs must use rng_scheme=split_v2."
 )
 
 

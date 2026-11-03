@@ -1,0 +1,15 @@
+<configuration>
+
+    <input>
+        <net-file value="cidade_grande_tls.net.xml"/>
+        <route-files value="cidade_grande.rou.xml"/>
+    </input>
+
+    <time>
+        <begin value="0"/>
+        <!-- coloque o tempo total da simulação -->
+        <end value="3600"/>
+        <step-length value="1"/>
+    </time>
+
+</configuration>

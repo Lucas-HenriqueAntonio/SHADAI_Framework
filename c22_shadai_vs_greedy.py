@@ -43,7 +43,7 @@ REQUEST_INTERVAL = 20
 # EXPECTED SCHEMES
 # ============================================================
 
-RNG_SCHEME = "split_v1"
+RNG_SCHEME = "split_v2"
 
 
 os.makedirs(
@@ -278,6 +278,18 @@ def run_policy(
 
         "--request-interval",
         str(REQUEST_INTERVAL),
+
+        "--pricing-mode",
+        "dynamic",
+
+        "--pricing-alpha",
+        "0.20",
+
+        "--pricing-beta",
+        "0.20",
+
+        "--pricing-reference-interval",
+        "20",
 
         "--malicious-ratio",
         "0.0",

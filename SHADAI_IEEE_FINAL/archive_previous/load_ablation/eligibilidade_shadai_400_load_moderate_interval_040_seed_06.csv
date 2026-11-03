@@ -1,0 +1,34 @@
+experimento,seed,rng_scheme,telemetry_scheme,lambda1,lambda2,lambda3,w1,w2,w3,epsilon,cooldown_steps,request_interval,step,servico,active_vehicles,positive_utility,sufficient_energy,eligible,rejected_utility,rejected_energy,rejected_utility_only,rejected_energy_only,rejected_both,eligibility_rate,avg_utility,min_utility,max_utility
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,40,Diagnóstico Veicular,34,7,34,7,27,0,27,0,0,0.205882,-0.098989,-0.311926,0.130208
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,80,Processamento de Imagem Urbana,66,54,66,54,12,0,12,0,0,0.818182,0.105242,-0.045702,0.291477
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,120,Agregação de Dados de Sensores,98,6,98,6,92,0,92,0,0,0.061224,-0.172108,-0.378214,0.037699
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,160,Reencaminhamento de Dados (Edge Relay),118,0,118,0,118,0,118,0,0,0.0,-0.230623,-0.444326,-0.041359
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,200,Processamento de Imagem Urbana,121,91,121,91,30,0,30,0,0,0.752066,0.079047,-0.1292,0.296502
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,240,Reencaminhamento de Dados (Edge Relay),141,0,141,0,141,0,141,0,0,0.0,-0.220052,-0.393599,-0.04823
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,280,Processamento de Imagem Urbana,146,100,146,100,46,0,46,0,0,0.684932,0.065822,-0.116595,0.297108
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,320,Agregação de Dados de Sensores,148,7,148,7,141,0,141,0,0,0.047297,-0.152772,-0.353868,0.052454
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,360,Diagnóstico Veicular,156,22,156,22,134,0,134,0,0,0.141026,-0.111379,-0.32285,0.117119
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,400,Diagnóstico Veicular,149,29,149,29,120,0,120,0,0,0.194631,-0.086618,-0.292095,0.126131
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,440,Atualização de Modelos Locais (ML),152,152,152,152,0,0,0,0,0,1.0,0.292606,0.074913,0.485286
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,480,Atualização de Modelos Locais (ML),154,154,154,154,0,0,0,0,0,1.0,0.26419,0.066853,0.491883
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,520,Processamento de Imagem Urbana,149,129,149,129,20,0,20,0,0,0.865772,0.111361,-0.091315,0.295642
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,560,Agregação de Dados de Sensores,144,10,144,10,134,0,134,0,0,0.069444,-0.151205,-0.379765,0.060865
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,600,Diagnóstico Veicular,151,38,151,38,113,0,113,0,0,0.251656,-0.068195,-0.279156,0.121815
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,640,Atualização de Modelos Locais (ML),148,148,148,148,0,0,0,0,0,1.0,0.303914,0.092643,0.469943
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,680,Diagnóstico Veicular,150,12,150,12,138,0,138,0,0,0.08,-0.118486,-0.309765,0.084584
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,720,Reencaminhamento de Dados (Edge Relay),161,0,161,0,161,0,161,0,0,0.0,-0.223633,-0.398721,-0.040308
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,760,Atualização de Modelos Locais (ML),159,159,159,159,0,0,0,0,0,1.0,0.305167,0.124305,0.493783
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,800,Processamento de Imagem Urbana,147,127,147,127,20,0,20,0,0,0.863946,0.118027,-0.104549,0.310516
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,840,Diagnóstico Veicular,151,44,151,44,107,0,107,0,0,0.291391,-0.06408,-0.287149,0.129514
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,880,Processamento de Imagem Urbana,151,130,151,130,21,0,21,0,0,0.860927,0.109441,-0.134257,0.285373
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,920,Processamento de Imagem Urbana,154,133,154,133,21,0,21,0,0,0.863636,0.109697,-0.13329,0.30023
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,960,Atualização de Modelos Locais (ML),152,152,152,152,0,0,0,0,0,1.0,0.307312,0.097545,0.509719
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,1000,Diagnóstico Veicular,149,40,149,40,109,0,109,0,0,0.268456,-0.075768,-0.28869,0.12092
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,1040,Processamento de Imagem Urbana,121,90,121,90,31,0,31,0,0,0.743802,0.077191,-0.139271,0.298267
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,1080,Atualização de Modelos Locais (ML),93,93,93,93,0,0,0,0,0,1.0,0.303652,0.111812,0.48444
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,1120,Processamento de Imagem Urbana,53,42,53,42,11,0,11,0,0,0.792453,0.11173,-0.088331,0.31144
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,1160,Processamento de Imagem Urbana,28,25,28,25,3,0,3,0,0,0.892857,0.117808,-0.092108,0.272512
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,1200,Diagnóstico Veicular,14,3,14,3,11,0,11,0,0,0.214286,-0.100522,-0.237749,0.023524
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,1240,Processamento de Imagem Urbana,4,4,4,4,0,0,0,0,0,1.0,0.119333,0.061392,0.155794
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,1280,Processamento de Imagem Urbana,1,1,1,1,0,0,0,0,0,1.0,0.236484,0.236484,0.236484
+load_moderate_interval_040_seed_06,6,split_v1,c9_regret_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,40,1320,Processamento de Imagem Urbana,1,1,1,1,0,0,0,0,0,1.0,0.190114,0.190114,0.190114

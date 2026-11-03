@@ -1,0 +1,20 @@
+\begin{table*}[t]
+\centering
+\caption{Sensitivity of SHADAI to Flood Attack intensity. Flood intensity denotes the number of additional artificial candidacies submitted by each eligible malicious vehicle for the same service request. The malicious-vehicle ratio is fixed at 20\%, and values are averaged over 30 simulation seeds.}
+\label{tab:flood_intensity}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{c|ccccccccc}
+\hline
+Intensity & Unique Cand. & Artificial Cand. & Candidate Entries & Malicious Pool & Malicious Sel. & Exposure Ratio & Explore Malicious & Exploit Malicious & Conditional Alloc. \\
+\hline
+0 & 48.78 & 0.00 & 48.78 & 15.32\% & 18.10\% & 0.894 & 23.04\% & 16.90\% & 78.65\% \\
+1 & 48.78 & 9.77 & 58.55 & 24.56\% & 20.22\% & 0.990 & 27.66\% & 18.29\% & 78.65\% \\
+2 & 48.78 & 19.53 & 68.31 & 31.02\% & 23.28\% & 1.143 & 41.05\% & 18.74\% & 78.65\% \\
+\textbf{3} & 48.78 & 29.30 & 78.08 & 35.83\% & 24.58\% & 1.208 & 48.00\% & 18.72\% & 78.60\% \\
+5 & 48.78 & 48.83 & 97.61 & 42.57\% & 24.63\% & 1.212 & 56.85\% & 16.30\% & 78.65\% \\
+\hline
+\end{tabular}%
+}
+\vspace{1mm}
+\parbox{0.98\textwidth}{\footnotesize Flood intensity counts additional candidacy entries rather than additional service requests. An intensity of three therefore represents one legitimate candidacy plus three artificial duplicates for each eligible malicious vehicle. Duplicate entries refer to the same physical vehicle and do not cause multiple task executions or multiple energy deductions.}
+\end{table*}

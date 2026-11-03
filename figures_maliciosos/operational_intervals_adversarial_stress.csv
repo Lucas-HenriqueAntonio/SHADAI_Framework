@@ -1,0 +1,4 @@
+scenario,label,reference_active,threshold,peak_step,peak_active,operational_start,operational_end
+BASELINE,Baseline,104.9375,52.46875,775.0,160.5,75.0,1175.0
+MALICIOUS40,Malicious Attack (40%),104.9375,52.46875,775.0,160.5,75.0,1175.0
+FLOOD5,Flood Attack (intensity 5),104.9375,52.46875,775.0,160.5,75.0,1175.0

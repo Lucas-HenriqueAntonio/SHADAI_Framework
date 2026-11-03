@@ -54,7 +54,7 @@ SEEDS = list(
 )
 
 
-RNG_SCHEME_REQUIRED = "split_v1"
+RNG_SCHEME_REQUIRED = "split_v2"
 
 
 # ============================================================

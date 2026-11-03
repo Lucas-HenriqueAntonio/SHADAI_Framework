@@ -1,0 +1,60 @@
+experiment,method,seed,rng_scheme,benchmark_scheme,pricing_mode,pricing_alpha,pricing_beta,pricing_reference_interval,request_interval,revs_w1,revs_w2,reputation_threshold,communication_radius,direction_tolerance_deg,stay_time_mode,selection_step,completion_step,vehicle,service,reliability_draw,success,reputation_before,reputation_after,reputation_delta
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,20,45,7,Reencaminhamento de Dados (Edge Relay),0.942490302,True,7.475263,8.475263,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,60,85,38,Reencaminhamento de Dados (Edge Relay),0.295124099,True,5.173826,6.173826,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,80,120,45,Diagnóstico Veicular,0.378654303,True,8.80172,9.80172,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,100,140,19,Diagnóstico Veicular,0.129248701,True,5.042386,6.042386,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,120,150,1,Agregação de Dados de Sensores,0.928865868,True,8.799441,9.799441,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,160,185,69,Reencaminhamento de Dados (Edge Relay),0.131165285,True,9.833309,10.833309,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,140,200,82,Processamento de Imagem Urbana,0.21786541,True,6.274848,7.274848,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,200,230,73,Agregação de Dados de Sensores,0.593554679,True,5.937237,6.937237,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,180,240,56,Processamento de Imagem Urbana,0.307807436,True,6.75245,7.75245,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,220,260,165,Diagnóstico Veicular,0.046974816,False,8.619392,7.619392,-1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,260,285,75,Reencaminhamento de Dados (Edge Relay),0.882825552,True,9.674093,10.674093,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,240,300,122,Processamento de Imagem Urbana,0.489247422,True,8.11542,9.11542,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,280,310,154,Agregação de Dados de Sensores,0.372062637,True,7.40956,8.40956,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,300,330,190,Agregação de Dados de Sensores,0.557054139,True,9.702246,10.702246,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,360,385,211,Reencaminhamento de Dados (Edge Relay),0.175493986,True,5.266403,6.266403,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,320,400,191,Atualização de Modelos Locais (ML),0.729667402,True,5.590478,6.590478,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,340,400,265,Processamento de Imagem Urbana,0.670194253,True,5.930036,6.930036,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,380,420,306,Diagnóstico Veicular,0.566333712,True,7.666137,8.666137,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,420,445,250,Reencaminhamento de Dados (Edge Relay),0.739208426,True,7.596932,8.596932,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,440,465,173,Reencaminhamento de Dados (Edge Relay),0.031178999,False,9.215915,8.215915,-1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,400,480,331,Atualização de Modelos Locais (ML),0.767269872,True,8.232046,9.232046,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,480,520,324,Diagnóstico Veicular,0.18700319,True,5.716548,6.716548,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,500,525,213,Reencaminhamento de Dados (Edge Relay),0.617288841,True,8.411912,9.411912,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,460,540,300,Atualização de Modelos Locais (ML),0.292038676,True,8.988215,9.988215,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,520,550,375,Agregação de Dados de Sensores,0.14703519,True,5.400708,6.400708,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,540,600,250,Processamento de Imagem Urbana,0.610327147,True,8.596932,9.596932,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,560,620,422,Processamento de Imagem Urbana,0.861972379,True,6.728498,7.728498,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,580,620,296,Diagnóstico Veicular,0.91159083,True,9.748602,10.748602,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,600,625,399,Reencaminhamento de Dados (Edge Relay),0.197765735,True,5.325323,6.325323,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,620,645,336,Reencaminhamento de Dados (Edge Relay),0.205108165,True,8.289102,9.289102,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,640,670,485,Agregação de Dados de Sensores,0.589525259,True,7.234762,8.234762,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,660,685,296,Reencaminhamento de Dados (Edge Relay),0.535695591,True,10.748602,11.748602,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,680,710,502,Agregação de Dados de Sensores,0.167217761,True,8.500798,9.500798,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,700,740,542,Diagnóstico Veicular,0.859285705,True,9.271996,10.271996,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,720,750,451,Agregação de Dados de Sensores,0.934040581,True,7.808206,8.808206,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,740,780,513,Diagnóstico Veicular,0.500396622,True,9.852994,10.852994,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,760,790,425,Agregação de Dados de Sensores,0.247880508,True,7.861099,8.861099,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,780,805,537,Reencaminhamento de Dados (Edge Relay),0.113137462,True,5.843859,6.843859,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,800,825,577,Reencaminhamento de Dados (Edge Relay),0.48939007,True,5.724598,6.724598,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,820,860,502,Diagnóstico Veicular,0.748802582,True,9.500798,10.500798,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,840,870,558,Agregação de Dados de Sensores,0.962482207,True,5.972635,6.972635,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,860,890,710,Agregação de Dados de Sensores,0.347919321,True,9.016999,10.016999,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,880,920,731,Diagnóstico Veicular,0.209011335,True,9.344347,10.344347,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,900,925,656,Reencaminhamento de Dados (Edge Relay),0.935321162,True,8.195707,9.195707,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,940,980,674,Diagnóstico Veicular,0.957275088,True,5.956355,6.956355,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,920,1000,748,Atualização de Modelos Locais (ML),0.030778878,False,6.996612,5.996612,-1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,960,1000,774,Diagnóstico Veicular,0.77938684,True,8.380963,9.380963,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,1000,1040,732,Diagnóstico Veicular,0.57667528,True,6.110228,7.110228,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,980,1060,660,Atualização de Modelos Locais (ML),0.616005171,True,8.872565,9.872565,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,1040,1080,731,Diagnóstico Veicular,0.60610171,True,10.344347,11.344347,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,1020,1100,798,Atualização de Modelos Locais (ML),0.37408546,True,9.624157,10.624157,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,1060,1100,761,Diagnóstico Veicular,0.479031898,True,8.210574,9.210574,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,1080,1120,745,Diagnóstico Veicular,0.992223303,True,7.334758,8.334758,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,1100,1125,752,Reencaminhamento de Dados (Edge Relay),0.580109913,True,5.971581,6.971581,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,1120,1145,662,Reencaminhamento de Dados (Edge Relay),0.430764435,True,8.076892,9.076892,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,1140,1180,805,Diagnóstico Veicular,0.660778866,True,5.62087,6.62087,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,1180,1220,757,Diagnóstico Veicular,0.802846461,True,6.322924,7.322924,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,1160,1240,631,Atualização de Modelos Locais (ML),0.185709027,True,8.52466,9.52466,1.0
+c24_test,REVS-based,1,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,1240,1320,730,Atualização de Modelos Locais (ML),0.50706295,True,6.808991,7.808991,1.0

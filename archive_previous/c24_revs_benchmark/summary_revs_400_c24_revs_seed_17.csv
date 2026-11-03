@@ -1,0 +1,2 @@
+experiment,method,seed,rng_scheme,benchmark_scheme,pricing_mode,pricing_alpha,pricing_beta,pricing_reference_interval,request_interval,revs_w1,revs_w2,reputation_threshold,communication_radius,direction_tolerance_deg,stay_time_mode,total_requests,successful_allocations,allocation_rate,completed_tasks,successful_tasks,failed_tasks,task_success_rate,pending_tasks
+c24_revs_seed_17,REVS-based,17,split_v1,c24_revs_provider_selection_v1,dynamic,0.2,0.2,20,20,0.7,0.3,0.5,250.0,90.0,raw,179,58,0.3240223463687151,58,52,6,0.896551724137931,0

@@ -1,0 +1,20 @@
+\begin{table*}[t]
+\centering
+\caption{Sensitivity of SHADAI to the malicious-vehicle ratio. Malicious vehicles participate normally in resource allocation but deliberately fail assigned services. Values are means over 30 simulation seeds.}
+\label{tab:malicious_ratio}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{c|ccccccccc}
+\hline
+Configured & Realized & Conditional Alloc. & Malicious Sel. & Exposure Ratio & Service Success & Honest Success & Selected Rep. & Malicious Rep. & Honest Rep. \\
+\hline
+0\% & 0.00\% & 78.95\% & 0.00\% & -- & 89.58\% & 89.58\% & 8.907 & -- & 8.907 \\
+10\% & 10.36\% & 78.95\% & 9.05\% & 0.862 & 81.44\% & 89.60\% & 8.877 & 8.604 & 8.911 \\
+20\% & 20.37\% & 78.95\% & 17.26\% & 0.843 & 74.20\% & 89.72\% & 8.864 & 8.614 & 8.934 \\
+30\% & 30.22\% & 78.95\% & 26.64\% & 0.877 & 65.66\% & 89.53\% & 8.850 & 8.660 & 8.930 \\
+40\% & 40.36\% & 78.95\% & 36.45\% & 0.900 & 56.77\% & 89.34\% & 8.829 & 8.627 & 8.946 \\
+\hline
+\end{tabular}%
+}
+\vspace{1mm}
+\parbox{0.98\textwidth}{\footnotesize The exposure ratio is defined as the malicious-selection share divided by the realized malicious fraction. Values below one indicate that malicious vehicles are selected less frequently than expected from their population prevalence. Adaptation is evaluated by comparing the first and second halves of the actual allocation sequence in each run rather than by fixed simulation-time windows.}
+\end{table*}

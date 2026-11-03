@@ -1,0 +1,61 @@
+scenario,label,seed,file,metric,source_column,extraction_mode,scale_factor,minimum,maximum,mean
+MALICIOUS20,Malicious Attack (20%),1,metricas_shadai_400_malicious_20_ratio_20_seed_01.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.17391304347826086
+MALICIOUS20,Malicious Attack (20%),2,metricas_shadai_400_malicious_20_ratio_20_seed_02.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.09259259259259259
+MALICIOUS20,Malicious Attack (20%),3,metricas_shadai_400_malicious_20_ratio_20_seed_03.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.12727272727272726
+MALICIOUS20,Malicious Attack (20%),4,metricas_shadai_400_malicious_20_ratio_20_seed_04.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.25
+MALICIOUS20,Malicious Attack (20%),5,metricas_shadai_400_malicious_20_ratio_20_seed_05.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.22641509433962265
+MALICIOUS20,Malicious Attack (20%),6,metricas_shadai_400_malicious_20_ratio_20_seed_06.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.07017543859649122
+MALICIOUS20,Malicious Attack (20%),7,metricas_shadai_400_malicious_20_ratio_20_seed_07.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.22
+MALICIOUS20,Malicious Attack (20%),8,metricas_shadai_400_malicious_20_ratio_20_seed_08.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.21568627450980393
+MALICIOUS20,Malicious Attack (20%),9,metricas_shadai_400_malicious_20_ratio_20_seed_09.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.1875
+MALICIOUS20,Malicious Attack (20%),10,metricas_shadai_400_malicious_20_ratio_20_seed_10.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.21568627450980393
+MALICIOUS20,Malicious Attack (20%),11,metricas_shadai_400_malicious_20_ratio_20_seed_11.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.20754716981132076
+MALICIOUS20,Malicious Attack (20%),12,metricas_shadai_400_malicious_20_ratio_20_seed_12.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.06382978723404255
+MALICIOUS20,Malicious Attack (20%),13,metricas_shadai_400_malicious_20_ratio_20_seed_13.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.21818181818181817
+MALICIOUS20,Malicious Attack (20%),14,metricas_shadai_400_malicious_20_ratio_20_seed_14.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.17647058823529413
+MALICIOUS20,Malicious Attack (20%),15,metricas_shadai_400_malicious_20_ratio_20_seed_15.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.16326530612244897
+MALICIOUS20,Malicious Attack (20%),16,metricas_shadai_400_malicious_20_ratio_20_seed_16.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.07407407407407407
+MALICIOUS20,Malicious Attack (20%),17,metricas_shadai_400_malicious_20_ratio_20_seed_17.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.11538461538461539
+MALICIOUS20,Malicious Attack (20%),18,metricas_shadai_400_malicious_20_ratio_20_seed_18.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.125
+MALICIOUS20,Malicious Attack (20%),19,metricas_shadai_400_malicious_20_ratio_20_seed_19.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.22727272727272727
+MALICIOUS20,Malicious Attack (20%),20,metricas_shadai_400_malicious_20_ratio_20_seed_20.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.1568627450980392
+MALICIOUS20,Malicious Attack (20%),21,metricas_shadai_400_malicious_20_ratio_20_seed_21.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.1320754716981132
+MALICIOUS20,Malicious Attack (20%),22,metricas_shadai_400_malicious_20_ratio_20_seed_22.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.2542372881355932
+MALICIOUS20,Malicious Attack (20%),23,metricas_shadai_400_malicious_20_ratio_20_seed_23.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.2
+MALICIOUS20,Malicious Attack (20%),24,metricas_shadai_400_malicious_20_ratio_20_seed_24.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.061224489795918366
+MALICIOUS20,Malicious Attack (20%),25,metricas_shadai_400_malicious_20_ratio_20_seed_25.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.20833333333333334
+MALICIOUS20,Malicious Attack (20%),26,metricas_shadai_400_malicious_20_ratio_20_seed_26.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.21568627450980393
+MALICIOUS20,Malicious Attack (20%),27,metricas_shadai_400_malicious_20_ratio_20_seed_27.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.21818181818181817
+MALICIOUS20,Malicious Attack (20%),28,metricas_shadai_400_malicious_20_ratio_20_seed_28.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.14814814814814814
+MALICIOUS20,Malicious Attack (20%),29,metricas_shadai_400_malicious_20_ratio_20_seed_29.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.24
+MALICIOUS20,Malicious Attack (20%),30,metricas_shadai_400_malicious_20_ratio_20_seed_30.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.19148936170212766
+FLOOD5,Flood Attack (intensity 5),1,metricas_shadai_400_flood_05_intensity_05_seed_01.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.2391304347826087
+FLOOD5,Flood Attack (intensity 5),2,metricas_shadai_400_flood_05_intensity_05_seed_02.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.2222222222222222
+FLOOD5,Flood Attack (intensity 5),3,metricas_shadai_400_flood_05_intensity_05_seed_03.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.2
+FLOOD5,Flood Attack (intensity 5),4,metricas_shadai_400_flood_05_intensity_05_seed_04.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.38461538461538464
+FLOOD5,Flood Attack (intensity 5),5,metricas_shadai_400_flood_05_intensity_05_seed_05.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.2641509433962264
+FLOOD5,Flood Attack (intensity 5),6,metricas_shadai_400_flood_05_intensity_05_seed_06.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.14035087719298245
+FLOOD5,Flood Attack (intensity 5),7,metricas_shadai_400_flood_05_intensity_05_seed_07.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.26
+FLOOD5,Flood Attack (intensity 5),8,metricas_shadai_400_flood_05_intensity_05_seed_08.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.2549019607843137
+FLOOD5,Flood Attack (intensity 5),9,metricas_shadai_400_flood_05_intensity_05_seed_09.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.3333333333333333
+FLOOD5,Flood Attack (intensity 5),10,metricas_shadai_400_flood_05_intensity_05_seed_10.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.2549019607843137
+FLOOD5,Flood Attack (intensity 5),11,metricas_shadai_400_flood_05_intensity_05_seed_11.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.3018867924528302
+FLOOD5,Flood Attack (intensity 5),12,metricas_shadai_400_flood_05_intensity_05_seed_12.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.10638297872340426
+FLOOD5,Flood Attack (intensity 5),13,metricas_shadai_400_flood_05_intensity_05_seed_13.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.2727272727272727
+FLOOD5,Flood Attack (intensity 5),14,metricas_shadai_400_flood_05_intensity_05_seed_14.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.27450980392156865
+FLOOD5,Flood Attack (intensity 5),15,metricas_shadai_400_flood_05_intensity_05_seed_15.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.1836734693877551
+FLOOD5,Flood Attack (intensity 5),16,metricas_shadai_400_flood_05_intensity_05_seed_16.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.14814814814814814
+FLOOD5,Flood Attack (intensity 5),17,metricas_shadai_400_flood_05_intensity_05_seed_17.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.23076923076923078
+FLOOD5,Flood Attack (intensity 5),18,metricas_shadai_400_flood_05_intensity_05_seed_18.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.14583333333333334
+FLOOD5,Flood Attack (intensity 5),19,metricas_shadai_400_flood_05_intensity_05_seed_19.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.29545454545454547
+FLOOD5,Flood Attack (intensity 5),20,metricas_shadai_400_flood_05_intensity_05_seed_20.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.19607843137254902
+FLOOD5,Flood Attack (intensity 5),21,metricas_shadai_400_flood_05_intensity_05_seed_21.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.2641509433962264
+FLOOD5,Flood Attack (intensity 5),22,metricas_shadai_400_flood_05_intensity_05_seed_22.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.3389830508474576
+FLOOD5,Flood Attack (intensity 5),23,metricas_shadai_400_flood_05_intensity_05_seed_23.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.22
+FLOOD5,Flood Attack (intensity 5),24,metricas_shadai_400_flood_05_intensity_05_seed_24.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.22448979591836735
+FLOOD5,Flood Attack (intensity 5),25,metricas_shadai_400_flood_05_intensity_05_seed_25.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.3125
+FLOOD5,Flood Attack (intensity 5),26,metricas_shadai_400_flood_05_intensity_05_seed_26.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.3333333333333333
+FLOOD5,Flood Attack (intensity 5),27,metricas_shadai_400_flood_05_intensity_05_seed_27.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.2909090909090909
+FLOOD5,Flood Attack (intensity 5),28,metricas_shadai_400_flood_05_intensity_05_seed_28.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.2222222222222222
+FLOOD5,Flood Attack (intensity 5),29,metricas_shadai_400_flood_05_intensity_05_seed_29.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.36
+FLOOD5,Flood Attack (intensity 5),30,metricas_shadai_400_flood_05_intensity_05_seed_30.csv,malicious_selection,selected_malicious,binary_selected_provider_flag,1.0,0.0,1.0,0.2553191489361702

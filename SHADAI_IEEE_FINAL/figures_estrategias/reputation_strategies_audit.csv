@@ -1,0 +1,91 @@
+strategy,label,seed,file,metric,source_column,minimum,maximum,mean
+SHADAI,SHADAI,1,metricas_shadai_400_scalability_v400_seed_01.csv,reputation,reputacao_norm,0.508108,1.0,0.8780712592592593
+SHADAI,SHADAI,2,metricas_shadai_400_scalability_v400_seed_02.csv,reputation,reputacao_norm,0.587793,1.0,0.8983739682539682
+SHADAI,SHADAI,3,metricas_shadai_400_scalability_v400_seed_03.csv,reputation,reputacao_norm,0.519172,1.0,0.8873303050847458
+SHADAI,SHADAI,4,metricas_shadai_400_scalability_v400_seed_04.csv,reputation,reputacao_norm,0.536549,1.0,0.8864794745762712
+SHADAI,SHADAI,5,metricas_shadai_400_scalability_v400_seed_05.csv,reputation,reputacao_norm,0.54528,1.0,0.8738338387096775
+SHADAI,SHADAI,6,metricas_shadai_400_scalability_v400_seed_06.csv,reputation,reputacao_norm,0.548159,1.0,0.8693773548387099
+SHADAI,SHADAI,7,metricas_shadai_400_scalability_v400_seed_07.csv,reputation,reputacao_norm,0.552135,1.0,0.9044248448275861
+SHADAI,SHADAI,8,metricas_shadai_400_scalability_v400_seed_08.csv,reputation,reputacao_norm,0.542417,1.0,0.9148876071428572
+SHADAI,SHADAI,9,metricas_shadai_400_scalability_v400_seed_09.csv,reputation,reputacao_norm,0.542536,1.0,0.882289375
+SHADAI,SHADAI,10,metricas_shadai_400_scalability_v400_seed_10.csv,reputation,reputacao_norm,0.500204,1.0,0.8963022068965516
+SHADAI,SHADAI,11,metricas_shadai_400_scalability_v400_seed_11.csv,reputation,reputacao_norm,0.507784,1.0,0.8652094426229509
+SHADAI,SHADAI,12,metricas_shadai_400_scalability_v400_seed_12.csv,reputation,reputacao_norm,0.53981,1.0,0.8909929285714285
+SHADAI,SHADAI,13,metricas_shadai_400_scalability_v400_seed_13.csv,reputation,reputacao_norm,0.501627,1.0,0.8653665483870967
+SHADAI,SHADAI,14,metricas_shadai_400_scalability_v400_seed_14.csv,reputation,reputacao_norm,0.522825,1.0,0.8570882622950821
+SHADAI,SHADAI,15,metricas_shadai_400_scalability_v400_seed_15.csv,reputation,reputacao_norm,0.521016,1.0,0.8771952592592593
+SHADAI,SHADAI,16,metricas_shadai_400_scalability_v400_seed_16.csv,reputation,reputacao_norm,0.572656,1.0,0.9014248360655737
+SHADAI,SHADAI,17,metricas_shadai_400_scalability_v400_seed_17.csv,reputation,reputacao_norm,0.50409,1.0,0.8603943770491803
+SHADAI,SHADAI,18,metricas_shadai_400_scalability_v400_seed_18.csv,reputation,reputacao_norm,0.502392,1.0,0.8962632075471698
+SHADAI,SHADAI,19,metricas_shadai_400_scalability_v400_seed_19.csv,reputation,reputacao_norm,0.575658,1.0,0.8879451964285714
+SHADAI,SHADAI,20,metricas_shadai_400_scalability_v400_seed_20.csv,reputation,reputacao_norm,0.505105,1.0,0.8752543571428573
+SHADAI,SHADAI,21,metricas_shadai_400_scalability_v400_seed_21.csv,reputation,reputacao_norm,0.505019,1.0,0.8541873333333335
+SHADAI,SHADAI,22,metricas_shadai_400_scalability_v400_seed_22.csv,reputation,reputacao_norm,0.539996,1.0,0.8862622812500001
+SHADAI,SHADAI,23,metricas_shadai_400_scalability_v400_seed_23.csv,reputation,reputacao_norm,0.501082,1.0,0.8902171016949152
+SHADAI,SHADAI,24,metricas_shadai_400_scalability_v400_seed_24.csv,reputation,reputacao_norm,0.52262,1.0,0.8876128392857143
+SHADAI,SHADAI,25,metricas_shadai_400_scalability_v400_seed_25.csv,reputation,reputacao_norm,0.60234,1.0,0.8850867169811321
+SHADAI,SHADAI,26,metricas_shadai_400_scalability_v400_seed_26.csv,reputation,reputacao_norm,0.50533,1.0,0.8879069122807016
+SHADAI,SHADAI,27,metricas_shadai_400_scalability_v400_seed_27.csv,reputation,reputacao_norm,0.536373,1.0,0.9021466440677965
+SHADAI,SHADAI,28,metricas_shadai_400_scalability_v400_seed_28.csv,reputation,reputacao_norm,0.556427,1.0,0.8901648275862069
+SHADAI,SHADAI,29,metricas_shadai_400_scalability_v400_seed_29.csv,reputation,reputacao_norm,0.533494,1.0,0.891982172413793
+SHADAI,SHADAI,30,metricas_shadai_400_scalability_v400_seed_30.csv,reputation,reputacao_norm,0.514215,1.0,0.8827193928571428
+GREEDY,Greedy,1,metricas_shadai_400_c22_greedy_seed_01.csv,reputation,reputacao_norm,0.508108,1.0,0.9026850740740743
+GREEDY,Greedy,2,metricas_shadai_400_c22_greedy_seed_02.csv,reputation,reputacao_norm,0.772546,1.0,0.9328530952380952
+GREEDY,Greedy,3,metricas_shadai_400_c22_greedy_seed_03.csv,reputation,reputacao_norm,0.560748,1.0,0.9128255423728813
+GREEDY,Greedy,4,metricas_shadai_400_c22_greedy_seed_04.csv,reputation,reputacao_norm,0.624507,1.0,0.9212531355932203
+GREEDY,Greedy,5,metricas_shadai_400_c22_greedy_seed_05.csv,reputation,reputacao_norm,0.648272,1.0,0.9174033548387098
+GREEDY,Greedy,6,metricas_shadai_400_c22_greedy_seed_06.csv,reputation,reputacao_norm,0.548159,1.0,0.917613
+GREEDY,Greedy,7,metricas_shadai_400_c22_greedy_seed_07.csv,reputation,reputacao_norm,0.552135,1.0,0.9164350689655172
+GREEDY,Greedy,8,metricas_shadai_400_c22_greedy_seed_08.csv,reputation,reputacao_norm,0.636225,1.0,0.9267215535714286
+GREEDY,Greedy,9,metricas_shadai_400_c22_greedy_seed_09.csv,reputation,reputacao_norm,0.557563,1.0,0.9198772857142856
+GREEDY,Greedy,10,metricas_shadai_400_c22_greedy_seed_10.csv,reputation,reputacao_norm,0.500204,1.0,0.9332188103448275
+GREEDY,Greedy,11,metricas_shadai_400_c22_greedy_seed_11.csv,reputation,reputacao_norm,0.557657,1.0,0.917268606557377
+GREEDY,Greedy,12,metricas_shadai_400_c22_greedy_seed_12.csv,reputation,reputacao_norm,0.53981,1.0,0.9022366249999999
+GREEDY,Greedy,13,metricas_shadai_400_c22_greedy_seed_13.csv,reputation,reputacao_norm,0.540516,1.0,0.8965177096774192
+GREEDY,Greedy,14,metricas_shadai_400_c22_greedy_seed_14.csv,reputation,reputacao_norm,0.522825,1.0,0.8973486885245903
+GREEDY,Greedy,15,metricas_shadai_400_c22_greedy_seed_15.csv,reputation,reputacao_norm,0.521016,1.0,0.9141112777777778
+GREEDY,Greedy,16,metricas_shadai_400_c22_greedy_seed_16.csv,reputation,reputacao_norm,0.572656,1.0,0.9232144426229507
+GREEDY,Greedy,17,metricas_shadai_400_c22_greedy_seed_17.csv,reputation,reputacao_norm,0.536569,1.0,0.8853353278688525
+GREEDY,Greedy,18,metricas_shadai_400_c22_greedy_seed_18.csv,reputation,reputacao_norm,0.609106,1.0,0.926805754716981
+GREEDY,Greedy,19,metricas_shadai_400_c22_greedy_seed_19.csv,reputation,reputacao_norm,0.609131,1.0,0.9215282678571429
+GREEDY,Greedy,20,metricas_shadai_400_c22_greedy_seed_20.csv,reputation,reputacao_norm,0.505105,1.0,0.9101726250000001
+GREEDY,Greedy,21,metricas_shadai_400_c22_greedy_seed_21.csv,reputation,reputacao_norm,0.505019,1.0,0.8974892166666668
+GREEDY,Greedy,22,metricas_shadai_400_c22_greedy_seed_22.csv,reputation,reputacao_norm,0.589891,1.0,0.915330703125
+GREEDY,Greedy,23,metricas_shadai_400_c22_greedy_seed_23.csv,reputation,reputacao_norm,0.501082,1.0,0.9105344576271185
+GREEDY,Greedy,24,metricas_shadai_400_c22_greedy_seed_24.csv,reputation,reputacao_norm,0.711836,1.0,0.9210034821428571
+GREEDY,Greedy,25,metricas_shadai_400_c22_greedy_seed_25.csv,reputation,reputacao_norm,0.651528,1.0,0.9191947735849056
+GREEDY,Greedy,26,metricas_shadai_400_c22_greedy_seed_26.csv,reputation,reputacao_norm,0.694376,1.0,0.9172329649122808
+GREEDY,Greedy,27,metricas_shadai_400_c22_greedy_seed_27.csv,reputation,reputacao_norm,0.583113,1.0,0.9350507288135593
+GREEDY,Greedy,28,metricas_shadai_400_c22_greedy_seed_28.csv,reputation,reputacao_norm,0.577814,1.0,0.9144874482758621
+GREEDY,Greedy,29,metricas_shadai_400_c22_greedy_seed_29.csv,reputation,reputacao_norm,0.57964,1.0,0.9167683793103447
+GREEDY,Greedy,30,metricas_shadai_400_c22_greedy_seed_30.csv,reputation,reputacao_norm,0.539353,1.0,0.9328292678571428
+NOREP,No Reputation,1,metricas_shadai_400_c23_norep_seed_01.csv,reputation,reputacao_norm,0.508108,1.0,0.7337103333333336
+NOREP,No Reputation,2,metricas_shadai_400_c23_norep_seed_02.csv,reputation,reputacao_norm,0.504728,1.0,0.7716587619047618
+NOREP,No Reputation,3,metricas_shadai_400_c23_norep_seed_03.csv,reputation,reputacao_norm,0.510043,0.996011,0.7385522542372882
+NOREP,No Reputation,4,metricas_shadai_400_c23_norep_seed_04.csv,reputation,reputacao_norm,0.500599,0.983691,0.7350389152542375
+NOREP,No Reputation,5,metricas_shadai_400_c23_norep_seed_05.csv,reputation,reputacao_norm,0.504306,0.998498,0.8089727540983609
+NOREP,No Reputation,6,metricas_shadai_400_c23_norep_seed_06.csv,reputation,reputacao_norm,0.504267,1.0,0.7405806612903229
+NOREP,No Reputation,7,metricas_shadai_400_c23_norep_seed_07.csv,reputation,reputacao_norm,0.509068,0.993372,0.7690416379310343
+NOREP,No Reputation,8,metricas_shadai_400_c23_norep_seed_08.csv,reputation,reputacao_norm,0.536317,0.991635,0.7451650535714285
+NOREP,No Reputation,9,metricas_shadai_400_c23_norep_seed_09.csv,reputation,reputacao_norm,0.502832,0.978775,0.7722504464285714
+NOREP,No Reputation,10,metricas_shadai_400_c23_norep_seed_10.csv,reputation,reputacao_norm,0.500204,1.0,0.7482438965517241
+NOREP,No Reputation,11,metricas_shadai_400_c23_norep_seed_11.csv,reputation,reputacao_norm,0.519109,1.0,0.7784209836065572
+NOREP,No Reputation,12,metricas_shadai_400_c23_norep_seed_12.csv,reputation,reputacao_norm,0.501307,0.999177,0.7422700000000001
+NOREP,No Reputation,13,metricas_shadai_400_c23_norep_seed_13.csv,reputation,reputacao_norm,0.505495,1.0,0.7515815967741935
+NOREP,No Reputation,14,metricas_shadai_400_c23_norep_seed_14.csv,reputation,reputacao_norm,0.507872,0.992923,0.7627880163934426
+NOREP,No Reputation,15,metricas_shadai_400_c23_norep_seed_15.csv,reputation,reputacao_norm,0.518544,1.0,0.7364304444444444
+NOREP,No Reputation,16,metricas_shadai_400_c23_norep_seed_16.csv,reputation,reputacao_norm,0.500602,1.0,0.7674187704918031
+NOREP,No Reputation,17,metricas_shadai_400_c23_norep_seed_17.csv,reputation,reputacao_norm,0.522805,0.989041,0.7600028360655738
+NOREP,No Reputation,18,metricas_shadai_400_c23_norep_seed_18.csv,reputation,reputacao_norm,0.502392,0.996764,0.7973376037735848
+NOREP,No Reputation,19,metricas_shadai_400_c23_norep_seed_19.csv,reputation,reputacao_norm,0.500627,1.0,0.7700397499999999
+NOREP,No Reputation,20,metricas_shadai_400_c23_norep_seed_20.csv,reputation,reputacao_norm,0.505105,1.0,0.7501760714285715
+NOREP,No Reputation,21,metricas_shadai_400_c23_norep_seed_21.csv,reputation,reputacao_norm,0.505019,0.990661,0.7400240166666665
+NOREP,No Reputation,22,metricas_shadai_400_c23_norep_seed_22.csv,reputation,reputacao_norm,0.521037,1.0,0.78106096875
+NOREP,No Reputation,23,metricas_shadai_400_c23_norep_seed_23.csv,reputation,reputacao_norm,0.501082,1.0,0.7831096440677966
+NOREP,No Reputation,24,metricas_shadai_400_c23_norep_seed_24.csv,reputation,reputacao_norm,0.500027,1.0,0.7676517321428572
+NOREP,No Reputation,25,metricas_shadai_400_c23_norep_seed_25.csv,reputation,reputacao_norm,0.513519,1.0,0.7665210377358492
+NOREP,No Reputation,26,metricas_shadai_400_c23_norep_seed_26.csv,reputation,reputacao_norm,0.527407,0.996144,0.7585066315789474
+NOREP,No Reputation,27,metricas_shadai_400_c23_norep_seed_27.csv,reputation,reputacao_norm,0.505405,1.0,0.7383950338983052
+NOREP,No Reputation,28,metricas_shadai_400_c23_norep_seed_28.csv,reputation,reputacao_norm,0.511522,0.98661,0.7543834827586207
+NOREP,No Reputation,29,metricas_shadai_400_c23_norep_seed_29.csv,reputation,reputacao_norm,0.50132,1.0,0.7606421379310343
+NOREP,No Reputation,30,metricas_shadai_400_c23_norep_seed_30.csv,reputation,reputacao_norm,0.514628,1.0,0.762096107142857

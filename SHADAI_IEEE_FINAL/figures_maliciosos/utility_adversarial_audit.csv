@@ -1,0 +1,91 @@
+scenario,label,seed,file,metric,source_column,extraction_mode,scale_factor,minimum,maximum,mean
+BASELINE,Baseline,1,metricas_shadai_400_scalability_v400_seed_01.csv,utility,utilidade,direct,1.0,0.000465,0.455773,0.14103098148148147
+BASELINE,Baseline,2,metricas_shadai_400_scalability_v400_seed_02.csv,utility,utilidade,direct,1.0,0.001867,0.471687,0.14185555555555554
+BASELINE,Baseline,3,metricas_shadai_400_scalability_v400_seed_03.csv,utility,utilidade,direct,1.0,0.005174,0.465631,0.19166549152542373
+BASELINE,Baseline,4,metricas_shadai_400_scalability_v400_seed_04.csv,utility,utilidade,direct,1.0,0.00108,0.503228,0.19765774576271183
+BASELINE,Baseline,5,metricas_shadai_400_scalability_v400_seed_05.csv,utility,utilidade,direct,1.0,0.001062,0.501915,0.16165087096774192
+BASELINE,Baseline,6,metricas_shadai_400_scalability_v400_seed_06.csv,utility,utilidade,direct,1.0,0.001128,0.46615,0.2017888709677419
+BASELINE,Baseline,7,metricas_shadai_400_scalability_v400_seed_07.csv,utility,utilidade,direct,1.0,0.000107,0.487963,0.1723797586206897
+BASELINE,Baseline,8,metricas_shadai_400_scalability_v400_seed_08.csv,utility,utilidade,direct,1.0,0.000385,0.446562,0.14308903571428574
+BASELINE,Baseline,9,metricas_shadai_400_scalability_v400_seed_09.csv,utility,utilidade,direct,1.0,0.001704,0.487911,0.13806792857142858
+BASELINE,Baseline,10,metricas_shadai_400_scalability_v400_seed_10.csv,utility,utilidade,direct,1.0,0.002546,0.441359,0.1520968793103448
+BASELINE,Baseline,11,metricas_shadai_400_scalability_v400_seed_11.csv,utility,utilidade,direct,1.0,0.000312,0.483787,0.17159227868852459
+BASELINE,Baseline,12,metricas_shadai_400_scalability_v400_seed_12.csv,utility,utilidade,direct,1.0,0.000367,0.415999,0.16261185714285714
+BASELINE,Baseline,13,metricas_shadai_400_scalability_v400_seed_13.csv,utility,utilidade,direct,1.0,0.000389,0.49569,0.13123985483870967
+BASELINE,Baseline,14,metricas_shadai_400_scalability_v400_seed_14.csv,utility,utilidade,direct,1.0,0.000276,0.479147,0.13308832786885244
+BASELINE,Baseline,15,metricas_shadai_400_scalability_v400_seed_15.csv,utility,utilidade,direct,1.0,0.002353,0.482718,0.1577267962962963
+BASELINE,Baseline,16,metricas_shadai_400_scalability_v400_seed_16.csv,utility,utilidade,direct,1.0,0.000417,0.480743,0.16044509836065574
+BASELINE,Baseline,17,metricas_shadai_400_scalability_v400_seed_17.csv,utility,utilidade,direct,1.0,0.001505,0.505101,0.14856555737704918
+BASELINE,Baseline,18,metricas_shadai_400_scalability_v400_seed_18.csv,utility,utilidade,direct,1.0,0.000471,0.465004,0.14617830188679246
+BASELINE,Baseline,19,metricas_shadai_400_scalability_v400_seed_19.csv,utility,utilidade,direct,1.0,0.000188,0.492021,0.13267071428571428
+BASELINE,Baseline,20,metricas_shadai_400_scalability_v400_seed_20.csv,utility,utilidade,direct,1.0,0.004152,0.460412,0.18538878571428574
+BASELINE,Baseline,21,metricas_shadai_400_scalability_v400_seed_21.csv,utility,utilidade,direct,1.0,0.000763,0.473201,0.17026555000000002
+BASELINE,Baseline,22,metricas_shadai_400_scalability_v400_seed_22.csv,utility,utilidade,direct,1.0,0.001909,0.494684,0.14333612499999998
+BASELINE,Baseline,23,metricas_shadai_400_scalability_v400_seed_23.csv,utility,utilidade,direct,1.0,0.00061,0.442162,0.15087933898305084
+BASELINE,Baseline,24,metricas_shadai_400_scalability_v400_seed_24.csv,utility,utilidade,direct,1.0,0.000588,0.455137,0.13095921428571428
+BASELINE,Baseline,25,metricas_shadai_400_scalability_v400_seed_25.csv,utility,utilidade,direct,1.0,0.00086,0.490548,0.17203856603773585
+BASELINE,Baseline,26,metricas_shadai_400_scalability_v400_seed_26.csv,utility,utilidade,direct,1.0,0.002819,0.472099,0.1514637192982456
+BASELINE,Baseline,27,metricas_shadai_400_scalability_v400_seed_27.csv,utility,utilidade,direct,1.0,0.000709,0.486372,0.1636500847457627
+BASELINE,Baseline,28,metricas_shadai_400_scalability_v400_seed_28.csv,utility,utilidade,direct,1.0,0.003834,0.502551,0.193175
+BASELINE,Baseline,29,metricas_shadai_400_scalability_v400_seed_29.csv,utility,utilidade,direct,1.0,0.002274,0.495812,0.14046427586206894
+BASELINE,Baseline,30,metricas_shadai_400_scalability_v400_seed_30.csv,utility,utilidade,direct,1.0,0.000351,0.494894,0.1433966964285714
+MALICIOUS40,Malicious Attack (40%),1,metricas_shadai_400_malicious_40_ratio_40_seed_01.csv,utility,utilidade,direct,1.0,0.008382,0.501906,0.13024378260869565
+MALICIOUS40,Malicious Attack (40%),2,metricas_shadai_400_malicious_40_ratio_40_seed_02.csv,utility,utilidade,direct,1.0,0.00433,0.503714,0.14125131481481482
+MALICIOUS40,Malicious Attack (40%),3,metricas_shadai_400_malicious_40_ratio_40_seed_03.csv,utility,utilidade,direct,1.0,0.002974,0.465631,0.15921312727272727
+MALICIOUS40,Malicious Attack (40%),4,metricas_shadai_400_malicious_40_ratio_40_seed_04.csv,utility,utilidade,direct,1.0,0.00256,0.503228,0.19189649999999997
+MALICIOUS40,Malicious Attack (40%),5,metricas_shadai_400_malicious_40_ratio_40_seed_05.csv,utility,utilidade,direct,1.0,0.001636,0.501915,0.14749930188679244
+MALICIOUS40,Malicious Attack (40%),6,metricas_shadai_400_malicious_40_ratio_40_seed_06.csv,utility,utilidade,direct,1.0,0.006898,0.493555,0.17265859649122806
+MALICIOUS40,Malicious Attack (40%),7,metricas_shadai_400_malicious_40_ratio_40_seed_07.csv,utility,utilidade,direct,1.0,0.001262,0.478451,0.14769392
+MALICIOUS40,Malicious Attack (40%),8,metricas_shadai_400_malicious_40_ratio_40_seed_08.csv,utility,utilidade,direct,1.0,0.00024,0.446562,0.10621427450980393
+MALICIOUS40,Malicious Attack (40%),9,metricas_shadai_400_malicious_40_ratio_40_seed_09.csv,utility,utilidade,direct,1.0,0.000522,0.487911,0.126429
+MALICIOUS40,Malicious Attack (40%),10,metricas_shadai_400_malicious_40_ratio_40_seed_10.csv,utility,utilidade,direct,1.0,0.000718,0.475411,0.13920705882352938
+MALICIOUS40,Malicious Attack (40%),11,metricas_shadai_400_malicious_40_ratio_40_seed_11.csv,utility,utilidade,direct,1.0,0.001831,0.483787,0.16024416981132075
+MALICIOUS40,Malicious Attack (40%),12,metricas_shadai_400_malicious_40_ratio_40_seed_12.csv,utility,utilidade,direct,1.0,0.000493,0.433532,0.14647412765957446
+MALICIOUS40,Malicious Attack (40%),13,metricas_shadai_400_malicious_40_ratio_40_seed_13.csv,utility,utilidade,direct,1.0,0.001026,0.428001,0.10864354545454546
+MALICIOUS40,Malicious Attack (40%),14,metricas_shadai_400_malicious_40_ratio_40_seed_14.csv,utility,utilidade,direct,1.0,0.002645,0.466088,0.1275662549019608
+MALICIOUS40,Malicious Attack (40%),15,metricas_shadai_400_malicious_40_ratio_40_seed_15.csv,utility,utilidade,direct,1.0,0.001575,0.463031,0.133465693877551
+MALICIOUS40,Malicious Attack (40%),16,metricas_shadai_400_malicious_40_ratio_40_seed_16.csv,utility,utilidade,direct,1.0,0.005687,0.480743,0.1466689814814815
+MALICIOUS40,Malicious Attack (40%),17,metricas_shadai_400_malicious_40_ratio_40_seed_17.csv,utility,utilidade,direct,1.0,0.007669,0.505101,0.14784655769230767
+MALICIOUS40,Malicious Attack (40%),18,metricas_shadai_400_malicious_40_ratio_40_seed_18.csv,utility,utilidade,direct,1.0,0.006003,0.433015,0.11507506249999999
+MALICIOUS40,Malicious Attack (40%),19,metricas_shadai_400_malicious_40_ratio_40_seed_19.csv,utility,utilidade,direct,1.0,0.001194,0.492021,0.13229395454545456
+MALICIOUS40,Malicious Attack (40%),20,metricas_shadai_400_malicious_40_ratio_40_seed_20.csv,utility,utilidade,direct,1.0,0.002346,0.460412,0.15152154901960788
+MALICIOUS40,Malicious Attack (40%),21,metricas_shadai_400_malicious_40_ratio_40_seed_21.csv,utility,utilidade,direct,1.0,0.001322,0.473201,0.15043990566037732
+MALICIOUS40,Malicious Attack (40%),22,metricas_shadai_400_malicious_40_ratio_40_seed_22.csv,utility,utilidade,direct,1.0,0.002448,0.482476,0.12455993220338983
+MALICIOUS40,Malicious Attack (40%),23,metricas_shadai_400_malicious_40_ratio_40_seed_23.csv,utility,utilidade,direct,1.0,0.006546,0.453625,0.13959282
+MALICIOUS40,Malicious Attack (40%),24,metricas_shadai_400_malicious_40_ratio_40_seed_24.csv,utility,utilidade,direct,1.0,0.002686,0.4437,0.101361693877551
+MALICIOUS40,Malicious Attack (40%),25,metricas_shadai_400_malicious_40_ratio_40_seed_25.csv,utility,utilidade,direct,1.0,0.001456,0.485075,0.15530245833333334
+MALICIOUS40,Malicious Attack (40%),26,metricas_shadai_400_malicious_40_ratio_40_seed_26.csv,utility,utilidade,direct,1.0,0.000509,0.472099,0.12998723529411763
+MALICIOUS40,Malicious Attack (40%),27,metricas_shadai_400_malicious_40_ratio_40_seed_27.csv,utility,utilidade,direct,1.0,0.000466,0.393482,0.11811450909090912
+MALICIOUS40,Malicious Attack (40%),28,metricas_shadai_400_malicious_40_ratio_40_seed_28.csv,utility,utilidade,direct,1.0,0.00147,0.502551,0.17689388888888888
+MALICIOUS40,Malicious Attack (40%),29,metricas_shadai_400_malicious_40_ratio_40_seed_29.csv,utility,utilidade,direct,1.0,0.002411,0.408216,0.11473862
+MALICIOUS40,Malicious Attack (40%),30,metricas_shadai_400_malicious_40_ratio_40_seed_30.csv,utility,utilidade,direct,1.0,0.004595,0.494894,0.12699629787234043
+FLOOD5,Flood Attack (intensity 5),1,metricas_shadai_400_flood_05_intensity_05_seed_01.csv,utility,utilidade,direct,1.0,0.000296,0.462743,0.12970554347826085
+FLOOD5,Flood Attack (intensity 5),2,metricas_shadai_400_flood_05_intensity_05_seed_02.csv,utility,utilidade,direct,1.0,0.00433,0.503714,0.13399829629629628
+FLOOD5,Flood Attack (intensity 5),3,metricas_shadai_400_flood_05_intensity_05_seed_03.csv,utility,utilidade,direct,1.0,0.002974,0.465631,0.15984856363636366
+FLOOD5,Flood Attack (intensity 5),4,metricas_shadai_400_flood_05_intensity_05_seed_04.csv,utility,utilidade,direct,1.0,0.001535,0.503228,0.1943540769230769
+FLOOD5,Flood Attack (intensity 5),5,metricas_shadai_400_flood_05_intensity_05_seed_05.csv,utility,utilidade,direct,1.0,0.000506,0.44797,0.1479190754716981
+FLOOD5,Flood Attack (intensity 5),6,metricas_shadai_400_flood_05_intensity_05_seed_06.csv,utility,utilidade,direct,1.0,0.001607,0.493555,0.16684585964912277
+FLOOD5,Flood Attack (intensity 5),7,metricas_shadai_400_flood_05_intensity_05_seed_07.csv,utility,utilidade,direct,1.0,0.001262,0.478451,0.14625886000000002
+FLOOD5,Flood Attack (intensity 5),8,metricas_shadai_400_flood_05_intensity_05_seed_08.csv,utility,utilidade,direct,1.0,0.00024,0.446562,0.1176886862745098
+FLOOD5,Flood Attack (intensity 5),9,metricas_shadai_400_flood_05_intensity_05_seed_09.csv,utility,utilidade,direct,1.0,0.000522,0.487911,0.12554270833333334
+FLOOD5,Flood Attack (intensity 5),10,metricas_shadai_400_flood_05_intensity_05_seed_10.csv,utility,utilidade,direct,1.0,0.000718,0.475411,0.13594792156862748
+FLOOD5,Flood Attack (intensity 5),11,metricas_shadai_400_flood_05_intensity_05_seed_11.csv,utility,utilidade,direct,1.0,0.001831,0.463134,0.16593984905660378
+FLOOD5,Flood Attack (intensity 5),12,metricas_shadai_400_flood_05_intensity_05_seed_12.csv,utility,utilidade,direct,1.0,0.004603,0.433532,0.15226255319148937
+FLOOD5,Flood Attack (intensity 5),13,metricas_shadai_400_flood_05_intensity_05_seed_13.csv,utility,utilidade,direct,1.0,0.001026,0.417564,0.11328132727272727
+FLOOD5,Flood Attack (intensity 5),14,metricas_shadai_400_flood_05_intensity_05_seed_14.csv,utility,utilidade,direct,1.0,0.008326,0.466088,0.14017049019607844
+FLOOD5,Flood Attack (intensity 5),15,metricas_shadai_400_flood_05_intensity_05_seed_15.csv,utility,utilidade,direct,1.0,0.001575,0.463031,0.134225693877551
+FLOOD5,Flood Attack (intensity 5),16,metricas_shadai_400_flood_05_intensity_05_seed_16.csv,utility,utilidade,direct,1.0,0.005687,0.480743,0.1518338888888889
+FLOOD5,Flood Attack (intensity 5),17,metricas_shadai_400_flood_05_intensity_05_seed_17.csv,utility,utilidade,direct,1.0,0.007669,0.505101,0.1396060576923077
+FLOOD5,Flood Attack (intensity 5),18,metricas_shadai_400_flood_05_intensity_05_seed_18.csv,utility,utilidade,direct,1.0,0.006003,0.433015,0.11662391666666667
+FLOOD5,Flood Attack (intensity 5),19,metricas_shadai_400_flood_05_intensity_05_seed_19.csv,utility,utilidade,direct,1.0,0.001194,0.492021,0.13343325
+FLOOD5,Flood Attack (intensity 5),20,metricas_shadai_400_flood_05_intensity_05_seed_20.csv,utility,utilidade,direct,1.0,0.00094,0.498964,0.1619264117647059
+FLOOD5,Flood Attack (intensity 5),21,metricas_shadai_400_flood_05_intensity_05_seed_21.csv,utility,utilidade,direct,1.0,0.000163,0.473201,0.15190584905660376
+FLOOD5,Flood Attack (intensity 5),22,metricas_shadai_400_flood_05_intensity_05_seed_22.csv,utility,utilidade,direct,1.0,0.002448,0.482476,0.12060372881355932
+FLOOD5,Flood Attack (intensity 5),23,metricas_shadai_400_flood_05_intensity_05_seed_23.csv,utility,utilidade,direct,1.0,0.002543,0.453625,0.13517218
+FLOOD5,Flood Attack (intensity 5),24,metricas_shadai_400_flood_05_intensity_05_seed_24.csv,utility,utilidade,direct,1.0,0.002686,0.463023,0.11080618367346938
+FLOOD5,Flood Attack (intensity 5),25,metricas_shadai_400_flood_05_intensity_05_seed_25.csv,utility,utilidade,direct,1.0,0.001456,0.490548,0.15832633333333332
+FLOOD5,Flood Attack (intensity 5),26,metricas_shadai_400_flood_05_intensity_05_seed_26.csv,utility,utilidade,direct,1.0,0.000509,0.466499,0.1305553137254902
+FLOOD5,Flood Attack (intensity 5),27,metricas_shadai_400_flood_05_intensity_05_seed_27.csv,utility,utilidade,direct,1.0,0.000466,0.393482,0.1180664181818182
+FLOOD5,Flood Attack (intensity 5),28,metricas_shadai_400_flood_05_intensity_05_seed_28.csv,utility,utilidade,direct,1.0,0.00147,0.502551,0.17732405555555553
+FLOOD5,Flood Attack (intensity 5),29,metricas_shadai_400_flood_05_intensity_05_seed_29.csv,utility,utilidade,direct,1.0,0.002411,0.408216,0.1241783
+FLOOD5,Flood Attack (intensity 5),30,metricas_shadai_400_flood_05_intensity_05_seed_30.csv,utility,utilidade,direct,1.0,0.003636,0.494894,0.12555978723404257

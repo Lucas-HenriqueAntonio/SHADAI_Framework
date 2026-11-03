@@ -1,0 +1,4 @@
+strategy,label,metric,plot_windows,min_plot_seeds,typical_observations,minimum_observations,mean_metric,plot_min,plot_max
+SHADAI,SHADAI,reputation,22,28,58.0,29.0,0.8946169080534406,0.8711970685185185,0.908601662835249
+GREEDY,Greedy,reputation,22,28,58.0,29.0,0.924397096196779,0.9069756865079366,0.9389058793103449
+NOREP,No Reputation,reputation,22,28,58.0,29.0,0.7582791707365114,0.7457508074074074,0.7686652814814815

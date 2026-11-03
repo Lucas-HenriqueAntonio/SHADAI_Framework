@@ -1,0 +1,4 @@
+method,source,n_runs,jain_selected_vehicles_mean,jain_selected_vehicles_ci95_low,jain_selected_vehicles_ci95_high,unique_selected_vehicles_mean,unique_selected_vehicles_ci95_low,unique_selected_vehicles_ci95_high
+SHADAI,greedy_alignment\analysis\c22_multiseed.csv,30,0.8660609021821207,0.8472634451246712,0.8848583592395702,49.66666666666666,48.56447676516698,50.76885656816635
+Greedy,greedy_alignment\analysis\c22_multiseed.csv,30,0.8510525184086434,0.8340940068915224,0.8680110299257644,47.16666666666666,45.9977891135152,48.33554421981813
+No Reputation,norep_alignment\analysis\c23_multiseed.csv,30,0.9124738628558868,0.8923877418291325,0.9325599838826412,53.5,52.607965911017374,54.39203408898263

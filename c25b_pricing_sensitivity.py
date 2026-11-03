@@ -29,7 +29,7 @@ COOLDOWN_STEPS = 40
 
 PRICING_REFERENCE_INTERVAL = 20
 
-RNG_SCHEME = "split_v1"
+RNG_SCHEME = "split_v2"
 PRICING_SCHEME = "c25_supply_demand_dynamic_v1"
 
 

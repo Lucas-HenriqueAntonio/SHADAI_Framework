@@ -1,0 +1,22 @@
+experimento,seed,rng_scheme,telemetry_scheme,lambda1,lambda2,lambda3,w1,w2,w3,epsilon,cooldown_steps,request_interval,step,servico,active_vehicles,positive_utility,sufficient_energy,eligible,rejected_utility,rejected_energy,rejected_utility_only,rejected_energy_only,rejected_both,eligibility_rate,avg_utility,min_utility,max_utility
+runtime_low_interval_060_seed_29,29,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,60,Agregação de Dados de Sensores,51,1,51,1,50,0,50,0,0,0.019608,-0.119687,-0.33134,0.03735
+runtime_low_interval_060_seed_29,29,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,120,Reencaminhamento de Dados (Edge Relay),97,0,97,0,97,0,97,0,0,0.0,-0.233454,-0.462074,-0.025482
+runtime_low_interval_060_seed_29,29,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,180,Agregação de Dados de Sensores,129,14,129,14,115,0,115,0,0,0.108527,-0.138875,-0.321008,0.056192
+runtime_low_interval_060_seed_29,29,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,240,Diagnóstico Veicular,139,25,139,25,114,0,114,0,0,0.179856,-0.100516,-0.30455,0.135083
+runtime_low_interval_060_seed_29,29,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,300,Processamento de Imagem Urbana,146,132,146,132,14,0,14,0,0,0.90411,0.11899,-0.089064,0.316189
+runtime_low_interval_060_seed_29,29,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,360,Agregação de Dados de Sensores,148,16,148,16,132,0,132,0,0,0.108108,-0.129548,-0.368906,0.062022
+runtime_low_interval_060_seed_29,29,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,420,Diagnóstico Veicular,154,45,154,45,109,0,109,0,0,0.292208,-0.066844,-0.276418,0.119265
+runtime_low_interval_060_seed_29,29,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,480,Diagnóstico Veicular,155,37,155,37,118,0,118,0,0,0.23871,-0.097472,-0.31736,0.124556
+runtime_low_interval_060_seed_29,29,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,540,Atualização de Modelos Locais (ML),160,160,160,160,0,0,0,0,0,1.0,0.291454,0.076468,0.496191
+runtime_low_interval_060_seed_29,29,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,600,Reencaminhamento de Dados (Edge Relay),150,0,150,0,150,0,150,0,0,0.0,-0.263724,-0.472354,-0.023079
+runtime_low_interval_060_seed_29,29,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,660,Diagnóstico Veicular,154,44,154,44,110,0,110,0,0,0.285714,-0.067322,-0.271595,0.117439
+runtime_low_interval_060_seed_29,29,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,720,Agregação de Dados de Sensores,161,9,161,9,152,0,152,0,0,0.055901,-0.140364,-0.347277,0.045237
+runtime_low_interval_060_seed_29,29,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,780,Processamento de Imagem Urbana,163,148,163,148,15,0,15,0,0,0.907975,0.110409,-0.083064,0.312431
+runtime_low_interval_060_seed_29,29,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,840,Diagnóstico Veicular,150,21,150,21,129,0,129,0,0,0.14,-0.106069,-0.308584,0.123206
+runtime_low_interval_060_seed_29,29,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,900,Processamento de Imagem Urbana,161,142,161,142,19,0,19,0,0,0.881988,0.107773,-0.091462,0.296957
+runtime_low_interval_060_seed_29,29,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,960,Agregação de Dados de Sensores,152,13,152,13,139,0,139,0,0,0.085526,-0.136294,-0.316108,0.045506
+runtime_low_interval_060_seed_29,29,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,1020,Diagnóstico Veicular,135,17,135,17,118,0,118,0,0,0.125926,-0.112991,-0.290887,0.114316
+runtime_low_interval_060_seed_29,29,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,1080,Agregação de Dados de Sensores,96,4,96,4,92,0,92,0,0,0.041667,-0.143085,-0.343113,0.043008
+runtime_low_interval_060_seed_29,29,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,1140,Diagnóstico Veicular,46,14,46,14,32,0,32,0,0,0.304348,-0.075165,-0.242355,0.093588
+runtime_low_interval_060_seed_29,29,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,1200,Diagnóstico Veicular,19,0,19,0,19,0,19,0,0,0.0,-0.142007,-0.274728,-0.004835
+runtime_low_interval_060_seed_29,29,split_v1,c15_runtime_v1,0.5,0.3,0.2,0.4,0.3,0.3,0.2,40,60,1260,Agregação de Dados de Sensores,4,0,4,0,4,0,4,0,0,0.0,-0.223351,-0.306544,-0.17514

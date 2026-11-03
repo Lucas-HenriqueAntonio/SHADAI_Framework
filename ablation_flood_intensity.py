@@ -85,7 +85,7 @@ REQUEST_INTERVAL = 20
 # VERSIONAMENTO
 # ============================================================
 
-EXPECTED_RNG = "split_v1"
+EXPECTED_RNG = "split_v2"
 
 EXPECTED_TELEMETRY = (
     "c18_flood_intensity_v1"

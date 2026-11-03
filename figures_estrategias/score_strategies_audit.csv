@@ -1,0 +1,91 @@
+strategy,label,seed,file,metric,source_column,extraction_mode,minimum,maximum,mean
+SHADAI,SHADAI,1,metricas_shadai_400_scalability_v400_seed_01.csv,score,score,direct,0.465319,0.973475,0.8590200555555556
+SHADAI,SHADAI,2,metricas_shadai_400_scalability_v400_seed_02.csv,score,score,direct,0.333896,0.957554,0.823781349206349
+SHADAI,SHADAI,3,metricas_shadai_400_scalability_v400_seed_03.csv,score,score,direct,0.431192,0.972373,0.8727044406779663
+SHADAI,SHADAI,4,metricas_shadai_400_scalability_v400_seed_04.csv,score,score,direct,0.566493,0.966756,0.8708252711864407
+SHADAI,SHADAI,5,metricas_shadai_400_scalability_v400_seed_05.csv,score,score,direct,0.336249,0.966209,0.838112241935484
+SHADAI,SHADAI,6,metricas_shadai_400_scalability_v400_seed_06.csv,score,score,direct,0.301332,0.972013,0.8340799999999999
+SHADAI,SHADAI,7,metricas_shadai_400_scalability_v400_seed_07.csv,score,score,direct,0.438477,0.98217,0.8792443275862069
+SHADAI,SHADAI,8,metricas_shadai_400_scalability_v400_seed_08.csv,score,score,direct,0.515327,0.97229,0.8775505
+SHADAI,SHADAI,9,metricas_shadai_400_scalability_v400_seed_09.csv,score,score,direct,0.448127,0.986937,0.8579672857142857
+SHADAI,SHADAI,10,metricas_shadai_400_scalability_v400_seed_10.csv,score,score,direct,0.558791,0.973242,0.8706885172413794
+SHADAI,SHADAI,11,metricas_shadai_400_scalability_v400_seed_11.csv,score,score,direct,0.450162,0.981202,0.8422033606557378
+SHADAI,SHADAI,12,metricas_shadai_400_scalability_v400_seed_12.csv,score,score,direct,0.528834,0.971439,0.8550836964285714
+SHADAI,SHADAI,13,metricas_shadai_400_scalability_v400_seed_13.csv,score,score,direct,0.528337,0.983064,0.8691812096774193
+SHADAI,SHADAI,14,metricas_shadai_400_scalability_v400_seed_14.csv,score,score,direct,0.480925,0.969519,0.8592336393442623
+SHADAI,SHADAI,15,metricas_shadai_400_scalability_v400_seed_15.csv,score,score,direct,0.410952,0.980438,0.859312
+SHADAI,SHADAI,16,metricas_shadai_400_scalability_v400_seed_16.csv,score,score,direct,0.537841,0.987616,0.8784509344262296
+SHADAI,SHADAI,17,metricas_shadai_400_scalability_v400_seed_17.csv,score,score,direct,0.369127,0.960177,0.8173774590163935
+SHADAI,SHADAI,18,metricas_shadai_400_scalability_v400_seed_18.csv,score,score,direct,0.495481,0.983437,0.8874021509433963
+SHADAI,SHADAI,19,metricas_shadai_400_scalability_v400_seed_19.csv,score,score,direct,0.511636,0.978809,0.8591920714285715
+SHADAI,SHADAI,20,metricas_shadai_400_scalability_v400_seed_20.csv,score,score,direct,0.477993,0.978651,0.863730625
+SHADAI,SHADAI,21,metricas_shadai_400_scalability_v400_seed_21.csv,score,score,direct,0.280616,0.985891,0.8485540166666666
+SHADAI,SHADAI,22,metricas_shadai_400_scalability_v400_seed_22.csv,score,score,direct,0.305293,0.988596,0.850004203125
+SHADAI,SHADAI,23,metricas_shadai_400_scalability_v400_seed_23.csv,score,score,direct,0.516147,0.992034,0.877376966101695
+SHADAI,SHADAI,24,metricas_shadai_400_scalability_v400_seed_24.csv,score,score,direct,0.573252,0.97637,0.857917875
+SHADAI,SHADAI,25,metricas_shadai_400_scalability_v400_seed_25.csv,score,score,direct,0.598641,0.971657,0.8623210377358489
+SHADAI,SHADAI,26,metricas_shadai_400_scalability_v400_seed_26.csv,score,score,direct,0.396243,0.976439,0.8532389122807018
+SHADAI,SHADAI,27,metricas_shadai_400_scalability_v400_seed_27.csv,score,score,direct,0.491362,0.972142,0.8581016440677965
+SHADAI,SHADAI,28,metricas_shadai_400_scalability_v400_seed_28.csv,score,score,direct,0.566723,0.967699,0.8851971724137931
+SHADAI,SHADAI,29,metricas_shadai_400_scalability_v400_seed_29.csv,score,score,direct,0.489817,0.964449,0.8579788620689656
+SHADAI,SHADAI,30,metricas_shadai_400_scalability_v400_seed_30.csv,score,score,direct,0.441024,0.967405,0.8647566428571428
+GREEDY,Greedy,1,metricas_shadai_400_c22_greedy_seed_01.csv,score,score,direct,0.457752,0.973475,0.8835690925925926
+GREEDY,Greedy,2,metricas_shadai_400_c22_greedy_seed_02.csv,score,score,direct,0.333896,0.970005,0.8665236349206348
+GREEDY,Greedy,3,metricas_shadai_400_c22_greedy_seed_03.csv,score,score,direct,0.431192,0.972373,0.8979373220338984
+GREEDY,Greedy,4,metricas_shadai_400_c22_greedy_seed_04.csv,score,score,direct,0.566493,0.966756,0.8996920508474577
+GREEDY,Greedy,5,metricas_shadai_400_c22_greedy_seed_05.csv,score,score,direct,0.466103,0.973933,0.8839844032258064
+GREEDY,Greedy,6,metricas_shadai_400_c22_greedy_seed_06.csv,score,score,direct,0.301332,0.972013,0.8790882419354838
+GREEDY,Greedy,7,metricas_shadai_400_c22_greedy_seed_07.csv,score,score,direct,0.438477,0.98217,0.8909960862068964
+GREEDY,Greedy,8,metricas_shadai_400_c22_greedy_seed_08.csv,score,score,direct,0.629855,0.97229,0.9029664107142857
+GREEDY,Greedy,9,metricas_shadai_400_c22_greedy_seed_09.csv,score,score,direct,0.448127,0.986937,0.8997906785714286
+GREEDY,Greedy,10,metricas_shadai_400_c22_greedy_seed_10.csv,score,score,direct,0.629161,0.973242,0.9119653793103449
+GREEDY,Greedy,11,metricas_shadai_400_c22_greedy_seed_11.csv,score,score,direct,0.450162,0.984635,0.8962381967213116
+GREEDY,Greedy,12,metricas_shadai_400_c22_greedy_seed_12.csv,score,score,direct,0.697194,0.971439,0.8947979464285715
+GREEDY,Greedy,13,metricas_shadai_400_c22_greedy_seed_13.csv,score,score,direct,0.658713,0.983064,0.8926408064516129
+GREEDY,Greedy,14,metricas_shadai_400_c22_greedy_seed_14.csv,score,score,direct,0.716589,0.972745,0.8976672295081968
+GREEDY,Greedy,15,metricas_shadai_400_c22_greedy_seed_15.csv,score,score,direct,0.707026,0.980438,0.8933159814814813
+GREEDY,Greedy,16,metricas_shadai_400_c22_greedy_seed_16.csv,score,score,direct,0.647889,0.987616,0.9092861475409838
+GREEDY,Greedy,17,metricas_shadai_400_c22_greedy_seed_17.csv,score,score,direct,0.369127,0.960177,0.868558393442623
+GREEDY,Greedy,18,metricas_shadai_400_c22_greedy_seed_18.csv,score,score,direct,0.696194,0.983437,0.9097901886792454
+GREEDY,Greedy,19,metricas_shadai_400_c22_greedy_seed_19.csv,score,score,direct,0.698302,0.978809,0.8926217678571428
+GREEDY,Greedy,20,metricas_shadai_400_c22_greedy_seed_20.csv,score,score,direct,0.70285,0.978651,0.90415475
+GREEDY,Greedy,21,metricas_shadai_400_c22_greedy_seed_21.csv,score,score,direct,0.280616,0.966625,0.8839775166666668
+GREEDY,Greedy,22,metricas_shadai_400_c22_greedy_seed_22.csv,score,score,direct,0.297372,0.988596,0.8807179062500001
+GREEDY,Greedy,23,metricas_shadai_400_c22_greedy_seed_23.csv,score,score,direct,0.516147,0.988476,0.8990233898305084
+GREEDY,Greedy,24,metricas_shadai_400_c22_greedy_seed_24.csv,score,score,direct,0.573252,0.97637,0.8972373392857144
+GREEDY,Greedy,25,metricas_shadai_400_c22_greedy_seed_25.csv,score,score,direct,0.749942,0.971657,0.9036317924528301
+GREEDY,Greedy,26,metricas_shadai_400_c22_greedy_seed_26.csv,score,score,direct,0.396243,0.976439,0.8846790350877193
+GREEDY,Greedy,27,metricas_shadai_400_c22_greedy_seed_27.csv,score,score,direct,0.560382,0.977068,0.898492847457627
+GREEDY,Greedy,28,metricas_shadai_400_c22_greedy_seed_28.csv,score,score,direct,0.736887,0.967699,0.9075636206896552
+GREEDY,Greedy,29,metricas_shadai_400_c22_greedy_seed_29.csv,score,score,direct,0.702847,0.96448,0.8968546206896552
+GREEDY,Greedy,30,metricas_shadai_400_c22_greedy_seed_30.csv,score,score,direct,0.441024,0.984284,0.9004046428571427
+NOREP,No Reputation,1,metricas_shadai_400_c23_norep_seed_01.csv,score,score,direct,0.418332,0.997256,0.8946899444444443
+NOREP,No Reputation,2,metricas_shadai_400_c23_norep_seed_02.csv,score,score,direct,0.178316,0.990294,0.8329116666666668
+NOREP,No Reputation,3,metricas_shadai_400_c23_norep_seed_03.csv,score,score,direct,0.494354,0.996294,0.8931424576271185
+NOREP,No Reputation,4,metricas_shadai_400_c23_norep_seed_04.csv,score,score,direct,0.39624,0.992945,0.9028097627118645
+NOREP,No Reputation,5,metricas_shadai_400_c23_norep_seed_05.csv,score,score,direct,0.222716,0.996785,0.8341627540983605
+NOREP,No Reputation,6,metricas_shadai_400_c23_norep_seed_06.csv,score,score,direct,0.108273,0.98543,0.8415076129032256
+NOREP,No Reputation,7,metricas_shadai_400_c23_norep_seed_07.csv,score,score,direct,0.268108,0.989577,0.8901136896551723
+NOREP,No Reputation,8,metricas_shadai_400_c23_norep_seed_08.csv,score,score,direct,0.349586,0.992259,0.896901642857143
+NOREP,No Reputation,9,metricas_shadai_400_c23_norep_seed_09.csv,score,score,direct,0.397017,0.996351,0.8701855892857141
+NOREP,No Reputation,10,metricas_shadai_400_c23_norep_seed_10.csv,score,score,direct,0.496569,0.99967,0.8791450344827586
+NOREP,No Reputation,11,metricas_shadai_400_c23_norep_seed_11.csv,score,score,direct,0.335074,0.995547,0.8509060327868853
+NOREP,No Reputation,12,metricas_shadai_400_c23_norep_seed_12.csv,score,score,direct,0.412985,0.99135,0.8736796071428571
+NOREP,No Reputation,13,metricas_shadai_400_c23_norep_seed_13.csv,score,score,direct,0.485227,0.992012,0.8887866129032258
+NOREP,No Reputation,14,metricas_shadai_400_c23_norep_seed_14.csv,score,score,direct,0.340915,0.990854,0.87919368852459
+NOREP,No Reputation,15,metricas_shadai_400_c23_norep_seed_15.csv,score,score,direct,0.307381,0.997085,0.878064537037037
+NOREP,No Reputation,16,metricas_shadai_400_c23_norep_seed_16.csv,score,score,direct,0.357365,0.993498,0.8766382459016393
+NOREP,No Reputation,17,metricas_shadai_400_c23_norep_seed_17.csv,score,score,direct,0.267345,0.988874,0.8352373770491803
+NOREP,No Reputation,18,metricas_shadai_400_c23_norep_seed_18.csv,score,score,direct,0.301516,0.987073,0.8938188679245285
+NOREP,No Reputation,19,metricas_shadai_400_c23_norep_seed_19.csv,score,score,direct,0.436543,0.984064,0.8630783035714286
+NOREP,No Reputation,20,metricas_shadai_400_c23_norep_seed_20.csv,score,score,direct,0.438046,0.99477,0.8942308214285715
+NOREP,No Reputation,21,metricas_shadai_400_c23_norep_seed_21.csv,score,score,direct,0.19643,0.995157,0.8578562000000001
+NOREP,No Reputation,22,metricas_shadai_400_c23_norep_seed_22.csv,score,score,direct,0.259663,0.997596,0.864657078125
+NOREP,No Reputation,23,metricas_shadai_400_c23_norep_seed_23.csv,score,score,direct,0.417515,0.99389,0.8869871355932204
+NOREP,No Reputation,24,metricas_shadai_400_c23_norep_seed_24.csv,score,score,direct,0.477586,0.995238,0.8721233214285713
+NOREP,No Reputation,25,metricas_shadai_400_c23_norep_seed_25.csv,score,score,direct,0.456047,0.987768,0.8761424905660379
+NOREP,No Reputation,26,metricas_shadai_400_c23_norep_seed_26.csv,score,score,direct,0.342697,0.987883,0.8631822105263158
+NOREP,No Reputation,27,metricas_shadai_400_c23_norep_seed_27.csv,score,score,direct,0.347728,0.986115,0.8805551525423728
+NOREP,No Reputation,28,metricas_shadai_400_c23_norep_seed_28.csv,score,score,direct,0.381828,0.985337,0.9075978620689654
+NOREP,No Reputation,29,metricas_shadai_400_c23_norep_seed_29.csv,score,score,direct,0.418723,0.986879,0.873217551724138
+NOREP,No Reputation,30,metricas_shadai_400_c23_norep_seed_30.csv,score,score,direct,0.429355,0.987757,0.888632625

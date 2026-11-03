@@ -71,7 +71,7 @@ SEED = 42
 
 SHADAI_SCRIPT = "shadai_sumo.py"
 
-EXPECTED_RNG = "split_v1"
+EXPECTED_RNG = "split_v2"
 
 EXPECTED_TELEMETRY = "c15_runtime_v1"
 

@@ -80,9 +80,9 @@ COOLDOWN_STEPS = 40
 # VERSÕES
 # ============================================================
 
-RNG_SCHEME_REQUIRED = "split_v1"
+RNG_SCHEME_REQUIRED = "split_v2"
 
-TELEMETRY_SCHEME_REQUIRED = "c15_runtime_v1"
+TELEMETRY_SCHEME_REQUIRED = "c18_flood_intensity_v1"
 
 SHADAI_SCRIPT = "shadai_sumo.py"
 
