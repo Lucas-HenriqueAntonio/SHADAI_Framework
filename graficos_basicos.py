@@ -1289,19 +1289,6 @@ def draw_correlation_matrix(
             )
 
 
-    if SHOW_CORRELATION_TITLE:
-
-        ax.set_title(
-
-            "Correlation Analysis",
-
-            pad=14,
-
-            fontweight="normal",
-
-        )
-
-
     ax.set_xlim(
 
         -0.5,
