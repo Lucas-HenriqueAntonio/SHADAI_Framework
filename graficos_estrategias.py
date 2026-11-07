@@ -23,7 +23,13 @@ FIGURAS
    - Greedy
    - No Reputation
 
-4. Cumulative Jain Fairness Comparison
+4. Fairness and Provider Diversity Comparison
+   Painel esquerdo:
+   - Cumulative Jain Fairness
+   Painel direito:
+   - Cumulative Unique Selected Providers
+
+   Estratégias:
    - SHADAI
    - Greedy
    - No Reputation
@@ -57,11 +63,11 @@ Fairness:
 
   onde x_i é o número acumulado de seleções do provedor i.
 
-- o Jain acumulado é então suavizado com a mesma janela de 150 steps
-  utilizada nas demais figuras.
-
-Isso mantém a semântica do Jain final dos analyzers, mas permite visualizar
-sua evolução ao longo da simulação.
+Provider Diversity:
+- utiliza exatamente as mesmas seleções empregadas no cálculo de fairness
+- mantém o conjunto acumulado de provedores selecionados por seed
+- em cada janela temporal contabiliza o número acumulado de provedores únicos
+- aplica o mesmo smoothing temporal de 150 steps
 
 Nenhum CSV, analyzer ou resultado de simulação é alterado.
 """
@@ -147,6 +153,8 @@ SHOW_UTILITY_CI = False
 
 SHOW_FAIRNESS_CI = False
 
+SHOW_DIVERSITY_CI = False
+
 
 # =============================================================================
 # LIMITES Y
@@ -161,8 +169,6 @@ SCORE_Y_MAX = 0.93
 UTILITY_Y_MIN = 0.125
 UTILITY_Y_MAX = 0.182
 
-# Fairness é limitado a [0,1].
-# Esta faixa preserva espaço para a região inicial próxima de 1.
 FAIRNESS_Y_MIN = 0.875
 FAIRNESS_Y_MAX = 1.005
 
@@ -345,8 +351,6 @@ UTILITY_ALIASES = [
 ]
 
 
-# Coluna real da campanha final = "veiculo".
-# Aliases permanecem apenas como proteção adicional.
 PROVIDER_ALIASES = [
 
     "veiculo",
@@ -412,29 +416,11 @@ def save_figure(
     filename,
 ):
 
-    png_path = (
+    png_path = OUTPUT_DIR / f"{filename}.png"
 
-        OUTPUT_DIR
-        /
-        f"{filename}.png"
+    pdf_path = OUTPUT_DIR / f"{filename}.pdf"
 
-    )
-
-    pdf_path = (
-
-        OUTPUT_DIR
-        /
-        f"{filename}.pdf"
-
-    )
-
-    eps_path = (
-
-        OUTPUT_DIR
-        /
-        f"{filename}.eps"
-
-    )
+    eps_path = OUTPUT_DIR / f"{filename}.eps"
 
 
     fig.savefig(
@@ -608,7 +594,6 @@ def find_column(
 
             "Nenhuma coluna encontrada entre:\n"
             f"  {candidates}\n\n"
-
             "Colunas disponíveis:\n"
             f"  {list(df.columns)}"
 
@@ -627,35 +612,23 @@ def get_files(
     kind,
 ):
 
-    config = (
-
-        STRATEGIES[
-            strategy_key
-        ]
-
-    )
+    config = STRATEGIES[
+        strategy_key
+    ]
 
 
     if kind == "metric":
 
-        pattern = (
-
-            config[
-                "metric_pattern"
-            ]
-
-        )
+        pattern = config[
+            "metric_pattern"
+        ]
 
 
     elif kind == "request":
 
-        pattern = (
-
-            config[
-                "request_pattern"
-            ]
-
-        )
+        pattern = config[
+            "request_pattern"
+        ]
 
 
     else:
@@ -703,7 +676,6 @@ def get_files(
 
         )
 
-
         print(
 
             f"        last : "
@@ -719,7 +691,6 @@ def get_files(
             f"{config['label']}: "
             f"esperados 30 arquivos '{kind}', "
             f"encontrados {len(files)}.\n\n"
-
             f"Pattern:\n"
             f"  {pattern}"
 
@@ -737,10 +708,6 @@ def validate_metadata(
     df,
     path,
 ):
-
-    # =========================================================================
-    # RNG
-    # =========================================================================
 
     if "rng_scheme" in df.columns:
 
@@ -774,10 +741,6 @@ def validate_metadata(
 
                 )
 
-
-    # =========================================================================
-    # PROVIDER CAP
-    # =========================================================================
 
     if "max_vehicles" in df.columns:
 
@@ -815,10 +778,6 @@ def validate_metadata(
 
                 )
 
-
-    # =========================================================================
-    # ATTACK TYPE
-    # =========================================================================
 
     if "attack_type" in df.columns:
 
@@ -867,10 +826,6 @@ def validate_metadata(
                 )
 
 
-    # =========================================================================
-    # MALICIOUS RATIO
-    # =========================================================================
-
     if "malicious_ratio" in df.columns:
 
         values = (
@@ -915,15 +870,11 @@ def load_activity(
     strategy_key,
 ):
 
-    files = (
+    files = get_files(
 
-        get_files(
+        strategy_key,
 
-            strategy_key,
-
-            "request",
-
-        )
+        "request",
 
     )
 
@@ -1143,11 +1094,8 @@ def build_activity_summary(
         .groupby(
 
             [
-
                 "seed",
-
                 "window_start",
-
             ],
 
             as_index=False,
@@ -1263,21 +1211,13 @@ def detect_operational_interval(
     strategy_key,
 ):
 
-    activity = (
-
-        load_activity(
-            strategy_key
-        )
-
+    activity = load_activity(
+        strategy_key
     )
 
 
-    summary = (
-
-        build_activity_summary(
-            activity
-        )
-
+    summary = build_activity_summary(
+        activity
     )
 
 
@@ -1368,14 +1308,8 @@ def detect_operational_interval(
     )
 
 
-    needed = (
-        ACTIVE_CONSECUTIVE_WINDOWS
-    )
+    needed = ACTIVE_CONSECUTIVE_WINDOWS
 
-
-    # =========================================================================
-    # START
-    # =========================================================================
 
     operational_start = None
 
@@ -1416,10 +1350,6 @@ def detect_operational_interval(
 
             break
 
-
-    # =========================================================================
-    # END
-    # =========================================================================
 
     operational_end = None
 
@@ -1495,20 +1425,16 @@ def detect_operational_interval(
 
         "peak_step":
             float(
-
                 steps[
                     peak_position
                 ]
-
             ),
 
         "peak_active":
             float(
-
                 values[
                     peak_position
                 ]
-
             ),
 
         "operational_start":
@@ -1667,23 +1593,15 @@ def extract_metric_values(
     metric_name,
 ):
 
-    # =========================================================================
-    # REPUTATION
-    # =========================================================================
-
     if metric_name == "reputation":
 
-        normalized_col = (
+        normalized_col = find_column(
 
-            find_column(
+            df,
 
-                df,
+            REPUTATION_NORMALIZED_ALIASES,
 
-                REPUTATION_NORMALIZED_ALIASES,
-
-                required=False,
-
-            )
+            required=False,
 
         )
 
@@ -1711,17 +1629,13 @@ def extract_metric_values(
             )
 
 
-        raw_col = (
+        raw_col = find_column(
 
-            find_column(
+            df,
 
-                df,
+            REPUTATION_RAW_ALIASES,
 
-                REPUTATION_RAW_ALIASES,
-
-                required=True,
-
-            )
+            required=True,
 
         )
 
@@ -1782,7 +1696,9 @@ def extract_metric_values(
 
                 values,
 
-                str(raw_col),
+                str(
+                    raw_col
+                ),
 
                 "already_0_1",
 
@@ -1795,7 +1711,9 @@ def extract_metric_values(
 
                 values / 10.0,
 
-                str(raw_col),
+                str(
+                    raw_col
+                ),
 
                 "raw_0_10_div10",
 
@@ -1811,23 +1729,15 @@ def extract_metric_values(
         )
 
 
-    # =========================================================================
-    # SCORE
-    # =========================================================================
-
     if metric_name == "score":
 
-        column = (
+        column = find_column(
 
-            find_column(
+            df,
 
-                df,
+            SCORE_ALIASES,
 
-                SCORE_ALIASES,
-
-                required=True,
-
-            )
+            required=True,
 
         )
 
@@ -1844,30 +1754,24 @@ def extract_metric_values(
 
             ),
 
-            str(column),
+            str(
+                column
+            ),
 
             "direct",
 
         )
 
 
-    # =========================================================================
-    # UTILITY
-    # =========================================================================
-
     if metric_name == "utility":
 
-        column = (
+        column = find_column(
 
-            find_column(
+            df,
 
-                df,
+            UTILITY_ALIASES,
 
-                UTILITY_ALIASES,
-
-                required=True,
-
-            )
+            required=True,
 
         )
 
@@ -1884,7 +1788,9 @@ def extract_metric_values(
 
             ),
 
-            str(column),
+            str(
+                column
+            ),
 
             "direct",
 
@@ -1908,15 +1814,11 @@ def load_metric(
     metric_name,
 ):
 
-    files = (
+    files = get_files(
 
-        get_files(
+        strategy_key,
 
-            strategy_key,
-
-            "metric",
-
-        )
+        "metric",
 
     )
 
@@ -2104,29 +2006,23 @@ def load_metric(
 
             "minimum":
                 float(
-
                     work[
                         "metric"
                     ].min()
-
                 ),
 
             "maximum":
                 float(
-
                     work[
                         "metric"
                     ].max()
-
                 ),
 
             "mean":
                 float(
-
                     work[
                         "metric"
                     ].mean()
-
                 ),
 
         })
@@ -2273,12 +2169,7 @@ def smooth_seed_series(
     )
 
 
-    work = (
-
-        work
-        .reset_index()
-
-    )
+    work = work.reset_index()
 
 
     work[
@@ -2311,7 +2202,6 @@ def build_metric_summary(
 
     (
         datasets,
-
         audit,
 
     ) = load_metric(
@@ -2330,15 +2220,9 @@ def build_metric_summary(
         datasets
     ):
 
-        work = (
-
-            datasets[
-                seed
-            ]
-
-            .copy()
-
-        )
+        work = datasets[
+            seed
+        ].copy()
 
 
         work[
@@ -2397,12 +2281,8 @@ def build_metric_summary(
         )
 
 
-        per_seed = (
-
-            smooth_seed_series(
-                per_seed
-            )
-
+        per_seed = smooth_seed_series(
+            per_seed
         )
 
 
@@ -2664,7 +2544,6 @@ def build_cumulative_jain_seed(
     )
 
 
-    # Contagem acumulada das seleções por provedor.
     provider_counts = {}
 
 
@@ -2686,12 +2565,8 @@ def build_cumulative_jain_seed(
 
     for window in all_windows:
 
-        current = (
-
-            grouped.get(
-                int(window)
-            )
-
+        current = grouped.get(
+            int(window)
         )
 
 
@@ -2712,11 +2587,9 @@ def build_cumulative_jain_seed(
 
 
             selections_in_window = int(
-
                 len(
                     providers
                 )
-
             )
 
 
@@ -2737,14 +2610,10 @@ def build_cumulative_jain_seed(
                 )
 
 
-        fairness = (
+        fairness = jain_index(
 
-            jain_index(
-
-                list(
-                    provider_counts.values()
-                )
-
+            list(
+                provider_counts.values()
             )
 
         )
@@ -2753,12 +2622,13 @@ def build_cumulative_jain_seed(
         rows.append({
 
             "window_start":
-                float(window),
+                float(
+                    window
+                ),
 
             "metric_mean":
                 fairness,
 
-            # Quantidade de novas seleções naquela janela.
             "n_observations":
                 selections_in_window,
 
@@ -2787,13 +2657,6 @@ def build_cumulative_jain_seed(
         rows
     )
 
-
-    # =========================================================================
-    # SMOOTHING
-    #
-    # O Jain acumulado já possui significado mesmo em uma janela sem nova
-    # seleção. Portanto, mantemos o último valor e suavizamos em 3 janelas.
-    # =========================================================================
 
     result[
         "metric_mean"
@@ -2860,15 +2723,11 @@ def build_fairness_summary(
     strategy_key,
 ):
 
-    files = (
+    files = get_files(
 
-        get_files(
+        strategy_key,
 
-            strategy_key,
-
-            "metric",
-
-        )
+        "metric",
 
     )
 
@@ -2924,17 +2783,13 @@ def build_fairness_summary(
             )
 
 
-        provider_column = (
+        provider_column = find_column(
 
-            find_column(
+            df,
 
-                df,
+            PROVIDER_ALIASES,
 
-                PROVIDER_ALIASES,
-
-                required=True,
-
-            )
+            required=True,
 
         )
 
@@ -2967,19 +2822,13 @@ def build_fairness_summary(
         )
 
 
-        per_seed = (
+        per_seed = build_cumulative_jain_seed(
 
-            build_cumulative_jain_seed(
+            df=
+                df,
 
-                df=
-
-                    df,
-
-                provider_column=
-
-                    provider_column,
-
-            )
+            provider_column=
+                provider_column,
 
         )
 
@@ -3112,37 +2961,348 @@ def build_fairness_summary(
     )
 
 
-    result = (
+    result = finalize_summary(
 
-        finalize_summary(
+        strategy_key=
+            strategy_key,
 
-            strategy_key=
-                strategy_key,
+        metric_name=
+            "fairness",
 
-            metric_name=
-                "fairness",
+        per_seed_df=
+            per_seed_df,
 
-            per_seed_df=
-                per_seed_df,
-
-            audit=
-                audit,
-
-        )
+        audit=
+            audit,
 
     )
 
-
-    # =========================================================================
-    # DIAGNÓSTICO FINAL
-    #
-    # Esse valor deve ficar próximo do Jain multi-seed final conhecido.
-    # =========================================================================
 
     print(
 
         f"     final mean cumulative Jain: "
         f"{audit['final_cumulative_jain'].mean():.4f}"
+
+    )
+
+
+    print(
+
+        f"     final mean unique providers: "
+        f"{audit['final_unique_providers'].mean():.2f}"
+
+    )
+
+
+    return result
+
+
+# =============================================================================
+# BUILD CUMULATIVE PROVIDER DIVERSITY SUMMARY
+# =============================================================================
+
+def build_diversity_summary(
+    strategy_key,
+):
+
+    files = get_files(
+
+        strategy_key,
+
+        "metric",
+
+    )
+
+
+    frames = []
+
+    audit_records = []
+
+    observed_seeds = set()
+
+
+    for path in files:
+
+        df = pd.read_csv(
+            path
+        )
+
+
+        validate_metadata(
+            df,
+            path,
+        )
+
+
+        required = {
+
+            "seed",
+
+            "step",
+
+        }
+
+
+        missing = (
+
+            required
+            -
+            set(
+                df.columns
+            )
+
+        )
+
+
+        if missing:
+
+            raise RuntimeError(
+
+                f"{path.name}: "
+                f"colunas ausentes: "
+                f"{sorted(missing)}"
+
+            )
+
+
+        provider_column = find_column(
+
+            df,
+
+            PROVIDER_ALIASES,
+
+            required=True,
+
+        )
+
+
+        seed = int(
+
+            float(
+
+                df[
+                    "seed"
+                ].iloc[0]
+
+            )
+
+        )
+
+
+        if seed in observed_seeds:
+
+            raise RuntimeError(
+
+                f"{strategy_key}: "
+                f"seed duplicada {seed}"
+
+            )
+
+
+        observed_seeds.add(
+            seed
+        )
+
+
+        cumulative = build_cumulative_jain_seed(
+
+            df=
+                df,
+
+            provider_column=
+                provider_column,
+
+        )
+
+
+        per_seed = pd.DataFrame({
+
+            "window_start":
+
+                cumulative[
+                    "window_start"
+                ],
+
+
+            "simulation_step":
+
+                cumulative[
+                    "simulation_step"
+                ],
+
+
+            "metric_mean":
+
+                pd.to_numeric(
+
+                    cumulative[
+                        "cumulative_unique_providers"
+                    ],
+
+                    errors="coerce",
+
+                ),
+
+
+            "n_observations":
+
+                cumulative[
+                    "n_observations"
+                ],
+
+        })
+
+
+        per_seed[
+            "metric_smooth"
+        ] = (
+
+            per_seed[
+                "metric_mean"
+            ]
+
+            .rolling(
+
+                window=
+                    SMOOTHING_WINDOWS,
+
+                center=True,
+
+                min_periods=
+                    SMOOTHING_WINDOWS,
+
+            )
+
+            .mean()
+
+        )
+
+
+        per_seed[
+            "seed"
+        ] = seed
+
+
+        per_seed[
+            "strategy"
+        ] = strategy_key
+
+
+        frames.append(
+            per_seed
+        )
+
+
+        final_unique = float(
+
+            cumulative[
+                "cumulative_unique_providers"
+            ]
+
+            .iloc[-1]
+
+        )
+
+
+        final_selections = int(
+
+            cumulative[
+                "cumulative_selections"
+            ]
+
+            .iloc[-1]
+
+        )
+
+
+        audit_records.append({
+
+            "strategy":
+                strategy_key,
+
+            "label":
+                STRATEGIES[
+                    strategy_key
+                ][
+                    "label"
+                ],
+
+            "seed":
+                seed,
+
+            "file":
+                path.name,
+
+            "provider_column":
+                str(
+                    provider_column
+                ),
+
+            "final_unique_providers":
+                final_unique,
+
+            "final_selections":
+                final_selections,
+
+        })
+
+
+    missing_seeds = sorted(
+
+        EXPECTED_SEEDS
+        -
+        observed_seeds
+
+    )
+
+
+    if missing_seeds:
+
+        raise RuntimeError(
+
+            f"{strategy_key}: "
+            "seeds ausentes para diversity: "
+            f"{missing_seeds}"
+
+        )
+
+
+    per_seed_df = pd.concat(
+
+        frames,
+
+        ignore_index=True,
+
+    )
+
+
+    audit = pd.DataFrame(
+        audit_records
+    )
+
+
+    print(
+
+        f"[OK] "
+        f"{STRATEGIES[strategy_key]['label']}: "
+        f"{len(observed_seeds)} diversity seeds"
+
+    )
+
+
+    result = finalize_summary(
+
+        strategy_key=
+            strategy_key,
+
+        metric_name=
+            "diversity",
+
+        per_seed_df=
+            per_seed_df,
+
+        audit=
+            audit,
 
     )
 
@@ -3325,12 +3485,13 @@ def finalize_summary(
     )
 
 
-    # =========================================================================
-    # Fairness acumulado continua sendo definido mesmo em uma janela sem novas
-    # seleções. Para as demais métricas, mantemos o filtro de observações.
-    # =========================================================================
+    if metric_name in {
 
-    if metric_name == "fairness":
+        "fairness",
+
+        "diversity",
+
+    }:
 
         minimum_observations = 0.0
 
@@ -3489,61 +3650,46 @@ def prepare_metric_comparison(
     diagnostic_records = []
 
 
-    common_start = (
-
-        operational_context[
-            "common_start"
-        ]
-
-    )
+    common_start = operational_context[
+        "common_start"
+    ]
 
 
-    common_end = (
-
-        operational_context[
-            "common_end"
-        ]
-
-    )
+    common_end = operational_context[
+        "common_end"
+    ]
 
 
     for strategy_key in STRATEGY_ORDER:
 
         if metric_name == "fairness":
 
-            result = (
+            result = build_fairness_summary(
+                strategy_key
+            )
 
-                build_fairness_summary(
-                    strategy_key
-                )
 
+        elif metric_name == "diversity":
+
+            result = build_diversity_summary(
+                strategy_key
             )
 
 
         else:
 
-            result = (
+            result = build_metric_summary(
 
-                build_metric_summary(
+                strategy_key,
 
-                    strategy_key,
-
-                    metric_name,
-
-                )
+                metric_name,
 
             )
 
 
-        summary = (
-
-            result[
-                "summary"
-            ]
-
-            .copy()
-
-        )
+        summary = result[
+            "summary"
+        ].copy()
 
 
         summary[
@@ -3606,13 +3752,9 @@ def prepare_metric_comparison(
         )
 
 
-        valid = (
-
-            summary[
-                "used_in_plot"
-            ]
-
-        )
+        valid = summary[
+            "used_in_plot"
+        ]
 
 
         if not valid.any():
@@ -3794,24 +3936,16 @@ def draw_metric_comparison(
 
     for strategy_key in STRATEGY_ORDER:
 
-        summary = (
-
-            data[
-                "summaries"
-            ][
-                strategy_key
-            ]
-
-        )
+        summary = data[
+            "summaries"
+        ][
+            strategy_key
+        ]
 
 
-        config = (
-
-            STRATEGIES[
-                strategy_key
-            ]
-
-        )
+        config = STRATEGIES[
+            strategy_key
+        ]
 
 
         plot_y = np.where(
@@ -3864,13 +3998,9 @@ def draw_metric_comparison(
 
         if show_ci:
 
-            valid = (
-
-                summary[
-                    "used_in_plot"
-                ]
-
-            )
+            valid = summary[
+                "used_in_plot"
+            ]
 
 
             ax.fill_between(
@@ -4160,44 +4290,36 @@ def plot_temporal_metric(
     diagnostic_title,
 ):
 
-    data = (
+    data = prepare_metric_comparison(
 
-        prepare_metric_comparison(
+        metric_name=
+            metric_name,
 
-            metric_name=
-                metric_name,
-
-            operational_context=
-                operational_context,
-
-        )
+        operational_context=
+            operational_context,
 
     )
 
 
-    fig = (
+    fig = draw_metric_comparison(
 
-        draw_metric_comparison(
+        data=
+            data,
 
-            data=
-                data,
+        ylabel=
+            ylabel,
 
-            ylabel=
-                ylabel,
+        y_min=
+            y_min,
 
-            y_min=
-                y_min,
+        y_max=
+            y_max,
 
-            y_max=
-                y_max,
+        show_ci=
+            show_ci,
 
-            show_ci=
-                show_ci,
-
-            legend_location=
-                legend_location,
-
-        )
+        legend_location=
+            legend_location,
 
     )
 
@@ -4359,41 +4481,532 @@ def plot_utility_comparison(
 
 
 # =============================================================================
-# FIGURE 4 — CUMULATIVE JAIN FAIRNESS
+# FIGURE 4 — FAIRNESS + PROVIDER DIVERSITY
 # =============================================================================
 
-def plot_fairness_comparison(
+def plot_fairness_diversity_comparison(
     operational_context,
 ):
 
-    plot_temporal_metric(
-
-        operational_context=
-            operational_context,
+    fairness_data = prepare_metric_comparison(
 
         metric_name=
             "fairness",
 
-        ylabel=
-            "Cumulative Jain Fairness Index",
+        operational_context=
+            operational_context,
 
-        y_min=
-            FAIRNESS_Y_MIN,
+    )
 
-        y_max=
-            FAIRNESS_Y_MAX,
 
-        show_ci=
-            SHOW_FAIRNESS_CI,
+    diversity_data = prepare_metric_comparison(
 
-        legend_location=
+        metric_name=
+            "diversity",
+
+        operational_context=
+            operational_context,
+
+    )
+
+
+    fig, axes = plt.subplots(
+
+        1,
+
+        2,
+
+        figsize=(
+            13.0,
+            5.3,
+        ),
+
+        sharex=True,
+
+    )
+
+
+    ax_fairness = axes[0]
+
+    ax_diversity = axes[1]
+
+
+    # =========================================================================
+    # LEFT — CUMULATIVE JAIN FAIRNESS
+    # =========================================================================
+
+    for strategy_key in STRATEGY_ORDER:
+
+        summary = fairness_data[
+            "summaries"
+        ][
+            strategy_key
+        ]
+
+
+        config = STRATEGIES[
+            strategy_key
+        ]
+
+
+        plot_y = np.where(
+
+            summary[
+                "used_in_plot"
+            ],
+
+            summary[
+                "mean_smooth"
+            ],
+
+            np.nan,
+
+        )
+
+
+        ax_fairness.plot(
+
+            summary[
+                "simulation_step"
+            ],
+
+            plot_y,
+
+            label=
+                config[
+                    "label"
+                ],
+
+            color=
+                config[
+                    "color"
+                ],
+
+            linestyle=
+                config[
+                    "linestyle"
+                ],
+
+            linewidth=
+                config[
+                    "linewidth"
+                ],
+
+            zorder=3,
+
+        )
+
+
+        if SHOW_FAIRNESS_CI:
+
+            valid = summary[
+                "used_in_plot"
+            ]
+
+
+            ax_fairness.fill_between(
+
+                summary.loc[
+                    valid,
+                    "simulation_step",
+                ],
+
+                summary.loc[
+                    valid,
+                    "ci95_low",
+                ],
+
+                summary.loc[
+                    valid,
+                    "ci95_high",
+                ],
+
+                color=
+                    config[
+                        "color"
+                    ],
+
+                alpha=0.10,
+
+                linewidth=0,
+
+                zorder=1,
+
+            )
+
+
+    ax_fairness.set_xlabel(
+        "Simulation Step"
+    )
+
+
+    ax_fairness.set_ylabel(
+        "Cumulative Jain Fairness Index"
+    )
+
+
+    ax_fairness.set_ylim(
+
+        FAIRNESS_Y_MIN,
+
+        FAIRNESS_Y_MAX,
+
+    )
+
+
+    ax_fairness.set_xlim(
+
+        fairness_data[
+            "common_start"
+        ]
+
+        -
+        WINDOW_STEPS
+        *
+        0.20,
+
+        fairness_data[
+            "common_end"
+        ]
+
+        -
+        WINDOW_STEPS
+        *
+        0.30,
+
+    )
+
+
+    style_axis(
+        ax_fairness
+    )
+
+
+    ax_fairness.legend(
+
+        loc=
             "lower left",
 
-        filename=
-            "fairness_comparison_strategies",
+        frameon=True,
 
-        diagnostic_title=
-            "CUMULATIVE JAIN FAIRNESS COMPARISON BETWEEN INTERNAL STRATEGIES",
+        framealpha=1.0,
+
+        facecolor="white",
+
+        edgecolor="#D0D0D0",
+
+    )
+
+
+    # =========================================================================
+    # RIGHT — CUMULATIVE UNIQUE SELECTED PROVIDERS
+    # =========================================================================
+
+    diversity_values = []
+
+
+    for strategy_key in STRATEGY_ORDER:
+
+        summary = diversity_data[
+            "summaries"
+        ][
+            strategy_key
+        ]
+
+
+        config = STRATEGIES[
+            strategy_key
+        ]
+
+
+        plot_y = np.where(
+
+            summary[
+                "used_in_plot"
+            ],
+
+            summary[
+                "mean_smooth"
+            ],
+
+            np.nan,
+
+        )
+
+
+        valid_values = (
+
+            summary.loc[
+
+                summary[
+                    "used_in_plot"
+                ],
+
+                "mean_smooth",
+
+            ]
+
+            .dropna()
+
+            .to_numpy(
+                dtype=float
+            )
+
+        )
+
+
+        if len(valid_values) > 0:
+
+            diversity_values.extend(
+
+                valid_values.tolist()
+
+            )
+
+
+        ax_diversity.plot(
+
+            summary[
+                "simulation_step"
+            ],
+
+            plot_y,
+
+            label=
+                config[
+                    "label"
+                ],
+
+            color=
+                config[
+                    "color"
+                ],
+
+            linestyle=
+                config[
+                    "linestyle"
+                ],
+
+            linewidth=
+                config[
+                    "linewidth"
+                ],
+
+            zorder=3,
+
+        )
+
+
+        if SHOW_DIVERSITY_CI:
+
+            valid = summary[
+                "used_in_plot"
+            ]
+
+
+            ax_diversity.fill_between(
+
+                summary.loc[
+                    valid,
+                    "simulation_step",
+                ],
+
+                summary.loc[
+                    valid,
+                    "ci95_low",
+                ],
+
+                summary.loc[
+                    valid,
+                    "ci95_high",
+                ],
+
+                color=
+                    config[
+                        "color"
+                    ],
+
+                alpha=0.10,
+
+                linewidth=0,
+
+                zorder=1,
+
+            )
+
+
+    if not diversity_values:
+
+        raise RuntimeError(
+
+            "Nenhum valor válido encontrado "
+            "para cumulative provider diversity."
+
+        )
+
+
+    diversity_min = float(
+
+        np.nanmin(
+            diversity_values
+        )
+
+    )
+
+
+    diversity_max = float(
+
+        np.nanmax(
+            diversity_values
+        )
+
+    )
+
+
+    diversity_range = (
+
+        diversity_max
+        -
+        diversity_min
+
+    )
+
+
+    padding = max(
+
+        2.0,
+
+        diversity_range
+        *
+        0.08,
+
+    )
+
+
+    diversity_y_min = max(
+
+        0.0,
+
+        diversity_min
+        -
+        padding,
+
+    )
+
+
+    diversity_y_max = (
+
+        diversity_max
+        +
+        padding
+
+    )
+
+
+    ax_diversity.set_xlabel(
+        "Simulation Step"
+    )
+
+
+    ax_diversity.set_ylabel(
+        "Cumulative Unique Selected Providers"
+    )
+
+
+    ax_diversity.set_ylim(
+
+        diversity_y_min,
+
+        diversity_y_max,
+
+    )
+
+
+    ax_diversity.set_xlim(
+
+        diversity_data[
+            "common_start"
+        ]
+
+        -
+        WINDOW_STEPS
+        *
+        0.20,
+
+        diversity_data[
+            "common_end"
+        ]
+
+        -
+        WINDOW_STEPS
+        *
+        0.30,
+
+    )
+
+
+    style_axis(
+        ax_diversity
+    )
+
+
+    fig.tight_layout()
+
+
+    save_figure(
+
+        fig,
+
+        "fairness_diversity_comparison_strategies",
+
+    )
+
+
+    plt.close(
+        fig
+    )
+
+
+    save_metric_tables(
+
+        fairness_data,
+
+        "fairness",
+
+    )
+
+
+    save_metric_tables(
+
+        diversity_data,
+
+        "diversity",
+
+    )
+
+
+    print_temporal_diagnostics(
+
+        "CUMULATIVE JAIN FAIRNESS COMPARISON BETWEEN INTERNAL STRATEGIES",
+
+        fairness_data,
+
+        FAIRNESS_Y_MIN,
+
+        FAIRNESS_Y_MAX,
+
+    )
+
+
+    print_temporal_diagnostics(
+
+        "CUMULATIVE UNIQUE PROVIDER COMPARISON BETWEEN INTERNAL STRATEGIES",
+
+        diversity_data,
+
+        diversity_y_min,
+
+        diversity_y_max,
 
     )
 
@@ -4421,15 +5034,7 @@ def main():
     )
 
 
-    # =========================================================================
-    # OPERATIONAL CONTEXT
-    # =========================================================================
-
-    operational_context = (
-
-        prepare_operational_context()
-
-    )
+    operational_context = prepare_operational_context()
 
 
     # =========================================================================
@@ -4466,10 +5071,10 @@ def main():
 
 
     # =========================================================================
-    # 4 — FAIRNESS
+    # 4 — FAIRNESS + PROVIDER DIVERSITY
     # =========================================================================
 
-    plot_fairness_comparison(
+    plot_fairness_diversity_comparison(
 
         operational_context
 
@@ -4510,7 +5115,7 @@ def main():
 
         "utility_comparison_strategies.png",
 
-        "fairness_comparison_strategies.png",
+        "fairness_diversity_comparison_strategies.png",
 
     ]
 
