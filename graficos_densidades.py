@@ -219,11 +219,6 @@ SCORE_Y_MAX = (
 # Utility
 # -------------------------------------------------------------------------
 
-# A utility final é normalizada.
-#
-# Na primeira renderização deixamos automático.
-# Depois de observar a figura, definimos uma escala fixa.
-
 UTILITY_Y_MIN = 0.10
 
 UTILITY_Y_MAX = 0.19
@@ -298,19 +293,19 @@ plt.rcParams.update({
         "DejaVu Sans",
 
     "font.size":
-        12,
+        14,
 
     "axes.labelsize":
-        15,
+        17,
 
     "xtick.labelsize":
-        13,
+        15,
 
     "ytick.labelsize":
-        13,
+        15,
 
     "legend.fontsize":
-        11.5,
+        13,
 
     "pdf.fonttype":
         42,
@@ -336,10 +331,6 @@ def save_figure(
     )
 
 
-    # -------------------------------------------------------------------------
-    # PNG
-    # -------------------------------------------------------------------------
-
     fig.savefig(
 
         OUTPUT_DIR
@@ -353,10 +344,6 @@ def save_figure(
     )
 
 
-    # -------------------------------------------------------------------------
-    # PDF
-    # -------------------------------------------------------------------------
-
     fig.savefig(
 
         OUTPUT_DIR
@@ -367,10 +354,6 @@ def save_figure(
 
     )
 
-
-    # -------------------------------------------------------------------------
-    # EPS
-    # -------------------------------------------------------------------------
 
     fig.savefig(
 
@@ -587,31 +570,18 @@ def find_request_files(
 def load_metric_scenario(
     scenario,
 ):
-    """
-    Carrega Reputation, Score e Utility
-    das 30 seeds de um cenário.
-    """
 
     required_columns = {
 
         "seed",
-
         "max_vehicles",
-
         "rng_scheme",
-
         "pricing_mode",
-
         "attack_type",
-
         "malicious_ratio",
-
         "step",
-
         "reputacao",
-
         "score",
-
         "utilidade",
 
     }
@@ -628,10 +598,6 @@ def load_metric_scenario(
             path
         )
 
-
-        # =========================================================================
-        # COLUNAS
-        # =========================================================================
 
         missing = (
 
@@ -664,10 +630,6 @@ def load_metric_scenario(
 
             )
 
-
-        # =========================================================================
-        # METADADOS
-        # =========================================================================
 
         seed = int(
 
@@ -726,10 +688,6 @@ def load_metric_scenario(
 
         )
 
-
-        # =========================================================================
-        # VALIDAÇÕES
-        # =========================================================================
 
         if (
             max_vehicles
@@ -822,10 +780,6 @@ def load_metric_scenario(
             )
 
 
-        # =========================================================================
-        # DADOS
-        # =========================================================================
-
         work = df[
 
             [
@@ -841,11 +795,8 @@ def load_metric_scenario(
         for column in [
 
             "step",
-
             "reputacao",
-
             "score",
-
             "utilidade",
 
         ]:
@@ -875,9 +826,6 @@ def load_metric_scenario(
         )
 
 
-        # Cada métrica será tratada separadamente.
-        # Exigimos aqui somente step válido.
-
         work = (
 
             work
@@ -905,10 +853,6 @@ def load_metric_scenario(
             seed
         ] = work
 
-
-    # =========================================================================
-    # CONFERE AS SEEDS
-    # =========================================================================
 
     observed = set(
         datasets
@@ -989,9 +933,7 @@ def load_activity_scenario(
         required = {
 
             "seed",
-
             "step",
-
             "active_vehicles",
 
         }
@@ -1091,7 +1033,6 @@ def load_activity_scenario(
                 subset=[
 
                     "step",
-
                     "active_vehicles",
 
                 ]
@@ -1173,10 +1114,6 @@ def build_activity_summary(
     )
 
 
-    # =========================================================================
-    # DENTRO DE CADA SEED
-    # =========================================================================
-
     per_seed = (
 
         requests
@@ -1197,7 +1134,6 @@ def build_activity_summary(
             mean_active_vehicles=(
 
                 "active_vehicles",
-
                 "mean",
 
             ),
@@ -1223,10 +1159,6 @@ def build_activity_summary(
     )
 
 
-    # =========================================================================
-    # ENTRE SEEDS
-    # =========================================================================
-
     summary = (
 
         per_seed
@@ -1244,7 +1176,6 @@ def build_activity_summary(
             median_active_vehicles=(
 
                 "mean_active_vehicles",
-
                 "median",
 
             ),
@@ -1252,7 +1183,6 @@ def build_activity_summary(
             mean_active_vehicles=(
 
                 "mean_active_vehicles",
-
                 "mean",
 
             ),
@@ -1260,7 +1190,6 @@ def build_activity_summary(
             n_seeds=(
 
                 "seed",
-
                 "nunique",
 
             ),
@@ -1304,12 +1233,6 @@ def build_activity_summary(
 def detect_operational_interval(
     scenario,
 ):
-    """
-    Detecta warm-up e drain-out usando active_vehicles.
-
-    As métricas Reputation, Score e Utility
-    NÃO participam da definição do intervalo.
-    """
 
     activity = (
 
@@ -1352,10 +1275,6 @@ def detect_operational_interval(
 
         )
 
-
-    # =========================================================================
-    # REFERÊNCIA OPERACIONAL
-    # =========================================================================
 
     reference_active = float(
 
@@ -1420,20 +1339,13 @@ def detect_operational_interval(
     )
 
 
-    # =========================================================================
-    # WARM-UP
-    # =========================================================================
-
     operational_start = None
 
 
     for index in range(
 
         0,
-
-        peak_position
-        +
-        1,
+        peak_position + 1,
 
     ):
 
@@ -1441,9 +1353,7 @@ def detect_operational_interval(
 
             index
             :
-            index
-            +
-            required_windows
+            index + required_windows
 
         ]
 
@@ -1479,18 +1389,12 @@ def detect_operational_interval(
             break
 
 
-    # =========================================================================
-    # DRAIN-OUT
-    # =========================================================================
-
     operational_end = None
 
 
     for index in range(
 
-        peak_position
-        +
-        1,
+        peak_position + 1,
 
         len(work)
         -
@@ -1504,9 +1408,7 @@ def detect_operational_interval(
 
             index
             :
-            index
-            +
-            required_windows
+            index + required_windows
 
         ]
 
@@ -1589,10 +1491,6 @@ def detect_operational_interval(
 # =============================================================================
 
 def prepare_operational_context():
-    """
-    Calcula uma única vez os intervalos operacionais
-    dos três cenários.
-    """
 
     records = []
 
@@ -1691,14 +1589,6 @@ def smooth_seed_series(
     per_seed,
     mean_column,
 ):
-    """
-    Média móvel centrada de 3 janelas.
-
-    3 x 50 = 150 simulation steps.
-
-    O reindex impede que a média móvel atravesse
-    artificialmente gaps temporais.
-    """
 
     per_seed = (
 
@@ -1832,18 +1722,6 @@ def build_metric_summary(
     scenario,
     metric_column,
 ):
-    """
-    Processamento utilizado por:
-
-        reputacao
-        score
-        utilidade
-
-    1. média por seed em janelas de 50 steps;
-    2. suavização de 150 steps por seed;
-    3. agregação entre as 30 seeds;
-    4. cálculo de IC95%.
-    """
 
     datasets = (
 
@@ -1856,10 +1734,6 @@ def build_metric_summary(
 
     frames = []
 
-
-    # =========================================================================
-    # CADA SEED
-    # =========================================================================
 
     for seed in sorted(
         datasets
@@ -1883,7 +1757,6 @@ def build_metric_summary(
                 subset=[
 
                     "step",
-
                     metric_column,
 
                 ]
@@ -1897,10 +1770,6 @@ def build_metric_summary(
 
             continue
 
-
-        # =========================================================================
-        # JANELAS DE 50 STEPS
-        # =========================================================================
 
         work[
             "window_start"
@@ -1940,7 +1809,6 @@ def build_metric_summary(
                 metric_mean=(
 
                     metric_column,
-
                     "mean",
 
                 ),
@@ -1948,7 +1816,6 @@ def build_metric_summary(
                 n_observations=(
 
                     metric_column,
-
                     "size",
 
                 ),
@@ -1957,10 +1824,6 @@ def build_metric_summary(
 
         )
 
-
-        # =========================================================================
-        # SUAVIZAÇÃO DE 150 STEPS
-        # =========================================================================
 
         per_seed = (
 
@@ -2001,10 +1864,6 @@ def build_metric_summary(
         )
 
 
-    # =========================================================================
-    # TODAS AS SEEDS
-    # =========================================================================
-
     per_seed_df = pd.concat(
 
         frames,
@@ -2013,10 +1872,6 @@ def build_metric_summary(
 
     )
 
-
-    # =========================================================================
-    # AGREGAÇÃO ENTRE SEEDS
-    # =========================================================================
 
     summary = (
 
@@ -2035,7 +1890,6 @@ def build_metric_summary(
             mean_raw=(
 
                 "metric_mean",
-
                 "mean",
 
             ),
@@ -2043,7 +1897,6 @@ def build_metric_summary(
             mean_smooth=(
 
                 "metric_smooth",
-
                 "mean",
 
             ),
@@ -2051,7 +1904,6 @@ def build_metric_summary(
             std_smooth=(
 
                 "metric_smooth",
-
                 "std",
 
             ),
@@ -2059,7 +1911,6 @@ def build_metric_summary(
             n_seeds=(
 
                 "metric_smooth",
-
                 "count",
 
             ),
@@ -2067,7 +1918,6 @@ def build_metric_summary(
             total_observations=(
 
                 "n_observations",
-
                 "sum",
 
             ),
@@ -2075,7 +1925,6 @@ def build_metric_summary(
             median_observations_per_seed=(
 
                 "n_observations",
-
                 "median",
 
             ),
@@ -2097,10 +1946,6 @@ def build_metric_summary(
         "scenario"
     ] = scenario
 
-
-    # =========================================================================
-    # COBERTURA
-    # =========================================================================
 
     minimum_seed_count = int(
 
@@ -2148,10 +1993,6 @@ def build_metric_summary(
 
     )
 
-
-    # =========================================================================
-    # SUPORTE AMOSTRAL
-    # =========================================================================
 
     reference = (
 
@@ -2214,10 +2055,6 @@ def build_metric_summary(
 
     )
 
-
-    # =========================================================================
-    # IC95%
-    # =========================================================================
 
     summary[
         "sem"
@@ -2357,10 +2194,6 @@ def prepare_metric_comparison(
     )
 
 
-    # =========================================================================
-    # CENÁRIOS
-    # =========================================================================
-
     for scenario in SCENARIOS:
 
         result = (
@@ -2401,10 +2234,6 @@ def prepare_metric_comparison(
         )
 
 
-        # =========================================================================
-        # INTERVALO OPERACIONAL COMUM
-        # =========================================================================
-
         summary[
             "inside_common_operational_interval"
         ] = (
@@ -2433,10 +2262,6 @@ def prepare_metric_comparison(
 
         )
 
-
-        # =========================================================================
-        # USADO NA FIGURA
-        # =========================================================================
 
         summary[
             "used_in_plot"
@@ -2491,10 +2316,6 @@ def prepare_metric_comparison(
 
             )
 
-
-        # =========================================================================
-        # DIAGNÓSTICOS
-        # =========================================================================
 
         diagnostic_records.append(
 
@@ -2576,10 +2397,6 @@ def prepare_metric_comparison(
         )
 
 
-    # =========================================================================
-    # CONCATENA
-    # =========================================================================
-
     all_summary = pd.concat(
 
         [
@@ -2645,6 +2462,7 @@ def draw_metric_comparison(
     y_min,
     y_max,
     show_ci,
+    legend_location="upper right",
 ):
 
     summaries = (
@@ -2674,10 +2492,6 @@ def draw_metric_comparison(
     )
 
 
-    # =========================================================================
-    # FIGURA
-    # =========================================================================
-
     fig, ax = plt.subplots(
 
         figsize=(
@@ -2687,10 +2501,6 @@ def draw_metric_comparison(
 
     )
 
-
-    # =========================================================================
-    # CENÁRIOS
-    # =========================================================================
 
     for scenario in SCENARIOS:
 
@@ -2713,10 +2523,6 @@ def draw_metric_comparison(
 
         )
 
-
-        # =========================================================================
-        # CURVA
-        # =========================================================================
 
         plot_y = np.where(
 
@@ -2770,10 +2576,6 @@ def draw_metric_comparison(
         )
 
 
-        # =========================================================================
-        # IC95% OPCIONAL
-        # =========================================================================
-
         if show_ci:
 
             valid = (
@@ -2817,15 +2619,11 @@ def draw_metric_comparison(
             )
 
 
-    # =========================================================================
-    # EIXOS
-    # =========================================================================
-
     ax.set_xlabel(
 
         "Simulation Step",
 
-        fontsize=15,
+        fontsize=17,
 
     )
 
@@ -2834,20 +2632,10 @@ def draw_metric_comparison(
 
         ylabel,
 
-        fontsize=15,
+        fontsize=17,
 
     )
 
-
-    # -------------------------------------------------------------------------
-    # Eixo Y
-    #
-    # Reputation e Score:
-    #     fixos.
-    #
-    # Utility:
-    #     automático na primeira renderização.
-    # -------------------------------------------------------------------------
 
     if (
 
@@ -2868,10 +2656,6 @@ def draw_metric_comparison(
         )
 
 
-    # =========================================================================
-    # EIXO X
-    # =========================================================================
-
     ax.set_xlim(
 
         common_start
@@ -2888,10 +2672,6 @@ def draw_metric_comparison(
 
     )
 
-
-    # =========================================================================
-    # GRID
-    # =========================================================================
 
     ax.grid(
 
@@ -2911,15 +2691,9 @@ def draw_metric_comparison(
     )
 
 
-    # =========================================================================
-    # LEGENDA
-    #
-    # Dentro do gráfico, canto superior direito.
-    # =========================================================================
-
     ax.legend(
 
-        loc="upper right",
+        loc=legend_location,
 
         frameon=True,
 
@@ -2927,14 +2701,10 @@ def draw_metric_comparison(
 
         edgecolor="#D0D0D0",
 
-        fontsize=11.5,
+        fontsize=13,
 
     )
 
-
-    # =========================================================================
-    # BORDAS
-    # =========================================================================
 
     for spine in ax.spines.values():
 
@@ -2947,15 +2717,11 @@ def draw_metric_comparison(
         )
 
 
-    # =========================================================================
-    # TICKS
-    # =========================================================================
-
     ax.tick_params(
 
         axis="both",
 
-        labelsize=13,
+        labelsize=15,
 
     )
 
@@ -3344,6 +3110,8 @@ def plot_utility_comparison(
 
             show_ci=SHOW_UTILITY_CI,
 
+            legend_location="lower right",
+
         )
 
     )
@@ -3491,13 +3259,6 @@ def main():
     )
 
 
-    # =========================================================================
-    # INTERVALO OPERACIONAL
-    #
-    # Calculado uma única vez e reutilizado
-    # por todos os gráficos.
-    # =========================================================================
-
     operational_context = (
 
         prepare_operational_context()
@@ -3510,39 +3271,20 @@ def main():
     )
 
 
-    # =========================================================================
-    # GRÁFICO 1
-    # REPUTATION
-    # =========================================================================
-
     plot_reputation_comparison(
         operational_context
     )
 
-
-    # =========================================================================
-    # GRÁFICO 2
-    # SCORE
-    # =========================================================================
 
     plot_score_comparison(
         operational_context
     )
 
 
-    # =========================================================================
-    # GRÁFICO 3
-    # UTILITY
-    # =========================================================================
-
     plot_utility_comparison(
         operational_context
     )
 
-
-    # =========================================================================
-    # FINAL
-    # =========================================================================
 
     print(
         "\n"

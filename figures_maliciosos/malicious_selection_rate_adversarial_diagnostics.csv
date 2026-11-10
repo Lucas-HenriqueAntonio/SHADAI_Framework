@@ -1,3 +1,3 @@
 scenario,label,metric,plot_windows,min_plot_seeds,typical_observations,minimum_observations,mean_metric,plot_min,plot_max
-MALICIOUS20,Malicious Attack (20%),malicious_selection,22,26,50.0,25.0,0.17240446689680408,0.12551440329218108,0.21839080459770113
-FLOOD5,Flood Attack (intensity 5),malicious_selection,22,26,50.0,25.0,0.25236922152630964,0.2016460905349794,0.29761904761904756
+MALICIOUS20,Malicious Service-Failure (20%),malicious_selection,22,26,50.0,25.0,0.17240446689680408,0.12551440329218108,0.21839080459770113
+FLOOD5,Candidacy Flood (intensity 5),malicious_selection,22,26,50.0,25.0,0.25236922152630964,0.2016460905349794,0.29761904761904756

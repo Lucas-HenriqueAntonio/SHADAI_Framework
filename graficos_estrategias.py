@@ -384,19 +384,19 @@ plt.rcParams.update({
         "DejaVu Sans",
 
     "font.size":
-        12,
+        14,
 
     "axes.labelsize":
-        15,
+        17,
 
     "xtick.labelsize":
-        13,
+        15,
 
     "ytick.labelsize":
-        13,
+        15,
 
     "legend.fontsize":
-        11.5,
+        13,
 
     "pdf.fonttype":
         42,
@@ -4389,7 +4389,7 @@ def plot_reputation_comparison(
             SHOW_REPUTATION_CI,
 
         legend_location=
-            "upper right",
+            "lower right",
 
         filename=
             "reputation_comparison_strategies",
@@ -4429,7 +4429,7 @@ def plot_score_comparison(
             SHOW_SCORE_CI,
 
         legend_location=
-            "upper right",
+            "lower right",
 
         filename=
             "score_comparison_strategies",

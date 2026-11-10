@@ -11,21 +11,21 @@ FIGURAS
 1. Average Normalized Reputation vs. Simulation Step
 
    - Baseline
-   - Malicious Attack (40%)
-   - Flood Attack (intensity 5)
+   - Malicious Service-Failure (40%)
+   - Candidacy Flood (intensity 5)
 
 
 2. Average Utility vs. Simulation Step
 
    - Baseline
-   - Malicious Attack (40%)
-   - Flood Attack (intensity 5)
+   - Malicious Service-Failure (40%)
+   - Candidacy Flood (intensity 5)
 
 
 3. Malicious Selection Rate vs. Simulation Step
 
-   - Malicious Attack (20%)
-   - Flood Attack (intensity 5)
+   - Malicious Service-Failure (20%)
+   - Candidacy Flood (intensity 5)
 
 
 OBSERVAÇÃO IMPORTANTE SOBRE O GRÁFICO 3
@@ -188,7 +188,7 @@ SCENARIOS = {
 
 
     # =========================================================================
-    # C17 — MALICIOUS 40%
+    # C17 — MALICIOUS SERVICE-FAILURE 40%
     #
     # Stress máximo usado nos gráficos de Reputation e Utility.
     # =========================================================================
@@ -196,7 +196,7 @@ SCENARIOS = {
     "MALICIOUS40": {
 
         "label":
-            "Malicious Attack (40%)",
+            "Malicious Service-Failure (40%)",
 
         "directory":
             Path("malicious_ablation"),
@@ -214,7 +214,7 @@ SCENARIOS = {
 
 
     # =========================================================================
-    # C17 — MALICIOUS 20%
+    # C17 — MALICIOUS SERVICE-FAILURE 20%
     #
     # Usado na comparação da taxa de seleção maliciosa.
     # =========================================================================
@@ -222,7 +222,7 @@ SCENARIOS = {
     "MALICIOUS20": {
 
         "label":
-            "Malicious Attack (20%)",
+            "Malicious Service-Failure (20%)",
 
         "directory":
             Path("malicious_ablation"),
@@ -240,13 +240,13 @@ SCENARIOS = {
 
 
     # =========================================================================
-    # C18 — FLOOD 5
+    # C18 — CANDIDACY FLOOD 5
     # =========================================================================
 
     "FLOOD5": {
 
         "label":
-            "Flood Attack (intensity 5)",
+            "Candidacy Flood (intensity 5)",
 
         "directory":
             Path("flood_ablation"),
@@ -391,19 +391,19 @@ plt.rcParams.update({
         "DejaVu Sans",
 
     "font.size":
-        12,
+        14,
 
     "axes.labelsize":
-        15,
+        17,
 
     "xtick.labelsize":
-        13,
+        15,
 
     "ytick.labelsize":
-        13,
+        15,
 
     "legend.fontsize":
-        11.5,
+        13,
 
     "pdf.fonttype":
         42,
@@ -900,7 +900,7 @@ def matches_scenario(
 
 
     # =========================================================================
-    # METADADOS DOS ATAQUES
+    # METADADOS DOS CENÁRIOS ADVERSARIAIS
     # =========================================================================
 
     attack_type = (
@@ -1003,7 +1003,7 @@ def matches_scenario(
 
 
     # =========================================================================
-    # MALICIOUS 40%
+    # MALICIOUS SERVICE-FAILURE 40%
     # =========================================================================
 
     if scenario_key == "MALICIOUS40":
@@ -1076,7 +1076,7 @@ def matches_scenario(
 
 
     # =========================================================================
-    # MALICIOUS 20%
+    # MALICIOUS SERVICE-FAILURE 20%
     # =========================================================================
 
     if scenario_key == "MALICIOUS20":
@@ -1149,7 +1149,7 @@ def matches_scenario(
 
 
     # =========================================================================
-    # FLOOD 5
+    # CANDIDACY FLOOD 5
     # =========================================================================
 
     if scenario_key == "FLOOD5":
@@ -4623,7 +4623,7 @@ def plot_reputation_under_attacks(
                 SHOW_REPUTATION_CI,
 
             legend_location=
-                "upper right",
+                "lower right",
 
         )
 
@@ -4765,7 +4765,7 @@ def plot_utility_under_attacks(
 def plot_malicious_selection_rate():
 
     # =========================================================================
-    # C17 20% vs. C18 flood-5
+    # C17 SERVICE-FAILURE 20% vs. C18 CANDIDACY FLOOD 5
     # Ambos possuem 20% de base maliciosa.
     # =========================================================================
 

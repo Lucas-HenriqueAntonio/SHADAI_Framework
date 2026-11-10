@@ -1,4 +1,4 @@
 scenario,label,metric,plot_windows,min_plot_seeds,typical_observations,minimum_observations,mean_metric,plot_min,plot_max
 BASELINE,Baseline,reputation,22,28,58.0,29.0,0.8946169080534406,0.8711970685185185,0.908601662835249
-MALICIOUS40,Malicious Attack (40%),reputation,22,26,50.0,25.0,0.8913612248641276,0.8615911011904762,0.9116587341269842
-FLOOD5,Flood Attack (intensity 5),reputation,22,26,50.0,25.0,0.893548612955556,0.862781880952381,0.9167423730158729
+MALICIOUS40,Malicious Service-Failure (40%),reputation,22,26,50.0,25.0,0.8913612248641276,0.8615911011904762,0.9116587341269842
+FLOOD5,Candidacy Flood (intensity 5),reputation,22,26,50.0,25.0,0.893548612955556,0.862781880952381,0.9167423730158729
